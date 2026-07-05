@@ -190,25 +190,26 @@
 \end{table}
 
 \subsection{压井液粘度对铁屑运移规律的影响}
-本节选取了两种不同类型的压井液进行比较，分别是牛顿流体的水和氯化钠溶液（比重为1.3）。这两种压井液具有不同的粘度，对铁屑颗粒的携带特性不同。给定$\theta=90^\circ$、$v_{in}=0.27\mathrm{m/s}$条件，通过模拟研究，比较这两种压井液在携带铁屑颗粒方面的效果。通过对不同压井液的性能特点进行分析，可以为选择最适合的压井液粘度提供参考，从而优化洗井操作并提高效率。图1.13描述的是不同压井液粘度下井筒内岩屑颗粒分布情况。从图可以看出，流体粘度对铁屑颗粒运移效率的影响不大。随着压井液粘度的增加，移动铁屑床的速度略微增大。由于随着压井液粘度增大，铁屑颗粒运移效率略微增加，压力出口处的铁屑颗粒有增多现象。
+本节选取了两种不同类型的压井液进行比较，分别是流体的水和氯化钠溶液（比重为1.3）。两种压井液均可视为牛顿流体，但具有不同的粘度，对铁屑颗粒的携带效果可能存在差异。给定$\theta=90^\circ$、$v_{\mathrm{in}}=0.27\mathrm{m/s}$条件，通过模拟比较这两种压井液在携带铁屑颗粒方面的不同效果。图\ref{fig:iron_wire_distribution_velocity}描述的是不同压井液粘度下井筒内铁屑分布情况（以颗粒的速度进行着色）。从图可以看出，压井液粘度对铁屑颗粒运移效率的影响不大。随着压井液粘度的增加，移动铁屑床的速度略微增大。由于随着压井液粘度增大，铁屑颗粒运移效率略微增加，出口处的铁屑颗粒有增多现象。
+%通过对不同压井液的性能特点进行分析，可以为选择最适合的压井液粘度提供参考，从而优化洗井操作并提高效率。
 
 \begin{figure}[htbp]
     \centering
     % --- 子图 (a) ---
     % 使用 minipage 控制宽度，这里设为 0.9\textwidth 让图片大一点
     % [t] 表示顶部对齐，防止因为图片高度不同导致错位
-    \subfloat[$\mu = 1.0\mathrm{mPa}\cdot\mathrm{s}$ 时的铁屑速度分布]{
-        \begin{minipage}[t]{0.9\linewidth}
+    \subfloat[$\mu = 1.0\mathrm{mPa}\cdot\mathrm{s}$]{
+        \begin{minipage}[t]{0.8\linewidth}
             \centering
             % 替换为你的第一张图片文件名
             \includegraphics[width=\linewidth]{figure/iron-wire-distribution-1cp-velocity-colored.png} 
             \label{fig:viscosity_1.0}
         \end{minipage}
     }
-    %\vspace{10pt} % 上下两张图之间的垂直间距，可根据需要调整
+    \vspace{0pt} % 上下两张图之间的垂直间距，可根据需要调整
     % --- 子图 (b) ---
-    \subfloat[$\mu = 1.7\mathrm{mPa}\cdot\mathrm{s}$ 时的铁屑速度分布]{
-        \begin{minipage}[t]{0.9\linewidth}
+    \subfloat[$\mu = 1.7\mathrm{mPa}\cdot\mathrm{s}$]{
+        \begin{minipage}[t]{0.8\linewidth}
             \centering
             % 替换为你的第二张图片文件名
             \includegraphics[width=\linewidth]{figure/iron-wire-distribution-1dot7-cp-velocity-colored.png} 
@@ -216,6 +217,14 @@
         \end{minipage}
     }
     % --- 总标题 ---
-    \caption{压井液粘度对铁屑颗粒速度分布的影响（$\theta=90^\circ$,$v_{\mathrn{in}=0.27\mathrm{m/s}$）}
-    \label{fig:velocity_distribution}
+    \caption{压井液粘度对铁屑颗粒速度分布的影响（$\theta=90^\circ$,\ $v_{\mathrm{in}}=0.27\mathrm{m/s}$）}
+    \label{fig:iron_wire_distribution_velocity}
+\end{figure}
+
+图\ref{fig:iron_wire_mean_velocity_evolution_viscosity}为两种压井液粘度下井筒稳态后铁屑颗粒沉积域铁屑颗粒运移速度图。从图中可以看出，$\mu$从$1.0\mathrm{mPa\cdot s}$增加到$1.7\mathrm{mPa\cdot s}$时，粘度增加到$1.7$倍，但铁屑的平均运移速度只增加到$1.04$倍，证明压井液的粘度对铁屑运移的影响十分有限。
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.7\textwidth]{figure/iron-wire-mean-velocity-evolution-viscosity.jpg}
+    \caption{压井液粘度对铁屑颗粒运移速度时间演变的影响（$\theta=90^\circ$,\ $v_{\mathrm{in}}=0.27\mathrm{m/s}$）}
+    \label{fig:iron_wire_mean_velocity_evolution_viscosity}
 \end{figure}
