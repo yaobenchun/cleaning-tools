@@ -124,6 +124,98 @@
 \end{figure}
 
 \subsection{井筒内铁屑运移及分布规律}
-%20260704想法：仿真->实验->外推。这个研究属于“基础性研究”（与4.适用条件中“拓深技术理论及基础性研究”对应），界定了研究的性质——是基础理论研究，不是工程应用。目的是“揭示影响工具应用效果的主控因素”，对应5.1.2 ①的要求是“研究不同流速、粘度、井斜下的运移规律”，通过实验验证哪些参数是影响运移的“主控因素”（Re（实验已经证明）、井斜角）。
+%20260704想法：仿真->实验->外推。这个研究属于“基础性研究”（与4.适用条件中“拓深技术理论及基础性研究”对应），界定了研究的性质——是基础理论研究，不是工程应用。目的是“揭示影响工具应用效果的主控因素”，对应5.1.2 ①的要求是“研究不同流速、粘度、井斜下的运移规律”，通过实验验证哪些参数是影响运移的“主控因素”（Re（实验已经证明）、井斜角的影响在全井筒模型实验中展示）。
 
-在井下封隔器套铣作业过程中，将产生包含多种形态碎屑的混合物（见图1.11），其中，金属碎屑（尤其是铁屑）对筛管堵塞风险及地层损害程度具有直接影响。经颗粒样本分析表明，金属碎屑主要包含环状颗粒、块状颗粒及丝状颗粒三种形态。其中，丝状铁屑因其特有的几何特征，易通过旋转与缠绕作用形成网状结构，从而显著提升孔隙滞留概率。该类颗粒的高长径比特性不仅加剧了运移过程的复杂性，其各向异性运动模式及增大的比表面积更强化了流体拖曳力与壁面吸附效应，为油井金属碎屑对渗流通道的动态阻塞机制提供了更真实的物理表征。基于上述特性分析，本研究选取丝状铁屑作为典型颗粒开展建模研究，具体模型及参数见图1.12和表1.5。
+在井下封隔器套铣作业过程中，将产生包含多种形态碎屑的混合物（见图\ref{fig:iron_shavings_sample}），其中，金属碎屑（尤其是铁屑）不仅可能导致筛管堵塞风险，还可能导致工具活动部件卡滞。经磨铣封隔器作业上返的碎屑样本分析表明，金属碎屑主要包含环状颗粒、块状颗粒及丝状颗粒三种形态。其中，丝状铁屑因其特有的几何特征，易通过旋转与缠绕作用形成网状结构，从而显著提升孔隙滞留概率。该类颗粒的高长径比特性不仅加剧了运移过程的复杂性，其各向异性运动模式及增大的比表面积更强化了流体拖曳力与壁面吸附效应，为油井金属碎屑对流动通道的动态阻塞机制提供了更真实的物理表征。基于上述特性分析，本研究选取丝状铁屑作为典型颗粒开展建模研究，具体模型及参数见图\ref{fig:iron_particle_comparison}和表\ref{tab:simulation_params}。
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.5\textwidth]{figure/iron-shavings-sample.jpg}
+    \caption{井下封隔器套铣作业中产生的金属碎屑样本}
+    \label{fig:iron_shavings_sample}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    % 子图 (a)
+    \subfloat[实际铁屑颗粒]{%
+        \begin{minipage}[t]{0.48\linewidth}
+            \centering
+            \includegraphics[width=\linewidth]{figure/iron-wire-actual.jpg}
+            \label{fig:actual}
+        \end{minipage}%
+    }
+    \hfill
+    % 子图 (b)
+    \subfloat[铁屑颗粒模型]{%
+        \begin{minipage}[t]{0.48\linewidth}
+            \centering
+            \includegraphics[width=\linewidth]{figure/iron-wire-model.jpg}
+            \label{fig:model}
+        \end{minipage}%
+    }
+    % 总标题
+    \caption{铁屑颗粒及仿真模型}
+    \label{fig:iron_particle_comparison}
+\end{figure}
+
+\begin{table}[htbp]
+    \centering
+    \caption{铁屑颗粒运移仿真参数}
+    \label{tab:simulation_params}
+    % 设置列格式：
+    % c: 居中
+    % p{width}: 固定宽度并自动换行（适合较长的中文名称）
+    \begin{tabular}{ccccc} 
+        \toprule % 绘制顶部粗线
+        % 表头部分
+        序号 & 名称 & 符号 & 数值 & 单位 \\ 
+        \midrule % 绘制中间细线
+        
+        % 数据行
+        1 & 水平井筒长度 & $L$ & 1.5 & m \\
+        2 & 井筒直径 & $D_H$ & 244.475 & mm \\
+        3 & 钻杆直径 & $D_P$ & 88.9 & mm \\
+        4 & 颗粒密度 & $\rho_p$ & 7800.0 & kg/m$^3$ \\
+        5 & 压井液密度 & $\rho_l$ & 1000.0、1300.0 & kg/m$^3$ \\
+        6 & 井斜角 & $\theta$ & 0.0、45.0、90.0 & $^\circ$ \\
+        7 & 压井液入口流速 & $v_{in}$ & 0.17、0.27 & m/s \\
+        8 & 压井液粘度 & $\mu$ & 1.0、1.7 & mPa$\cdot$s \\
+        9 & 沉积域距离井壁高度 & $H$ & 40.0 & mm \\
+        10 & 颗粒与井壁静摩擦系数 & $\mu_s$ & 0.15 & - \\
+        11 & 颗粒与井壁滑动摩擦系数 & $\mu_k$ & 0.1 & - \\
+        
+        \bottomrule % 绘制底部粗线
+    \end{tabular}
+\end{table}
+
+\subsection{压井液粘度对铁屑运移规律的影响}
+本节选取了两种不同类型的压井液进行比较，分别是牛顿流体的水和氯化钠溶液（比重为1.3）。这两种压井液具有不同的粘度，对铁屑颗粒的携带特性不同。给定$\theta=90^\circ$、$v_{in}=0.27\mathrm{m/s}$条件，通过模拟研究，比较这两种压井液在携带铁屑颗粒方面的效果。通过对不同压井液的性能特点进行分析，可以为选择最适合的压井液粘度提供参考，从而优化洗井操作并提高效率。图1.13描述的是不同压井液粘度下井筒内岩屑颗粒分布情况。从图可以看出，流体粘度对铁屑颗粒运移效率的影响不大。随着压井液粘度的增加，移动铁屑床的速度略微增大。由于随着压井液粘度增大，铁屑颗粒运移效率略微增加，压力出口处的铁屑颗粒有增多现象。
+
+\begin{figure}[htbp]
+    \centering
+    % --- 子图 (a) ---
+    % 使用 minipage 控制宽度，这里设为 0.9\textwidth 让图片大一点
+    % [t] 表示顶部对齐，防止因为图片高度不同导致错位
+    \subfloat[$\mu = 1.0\mathrm{mPa}\cdot\mathrm{s}$ 时的铁屑速度分布]{
+        \begin{minipage}[t]{0.9\linewidth}
+            \centering
+            % 替换为你的第一张图片文件名
+            \includegraphics[width=\linewidth]{figure/iron-wire-distribution-1cp-velocity-colored.png} 
+            \label{fig:viscosity_1.0}
+        \end{minipage}
+    }
+    %\vspace{10pt} % 上下两张图之间的垂直间距，可根据需要调整
+    % --- 子图 (b) ---
+    \subfloat[$\mu = 1.7\mathrm{mPa}\cdot\mathrm{s}$ 时的铁屑速度分布]{
+        \begin{minipage}[t]{0.9\linewidth}
+            \centering
+            % 替换为你的第二张图片文件名
+            \includegraphics[width=\linewidth]{figure/iron-wire-distribution-1dot7-cp-velocity-colored.png} 
+            \label{fig:viscosity_1.7}
+        \end{minipage}
+    }
+    % --- 总标题 ---
+    \caption{压井液粘度对铁屑颗粒速度分布的影响（$\theta=90^\circ$,$v_{\mathrn{in}=0.27\mathrm{m/s}$）}
+    \label{fig:velocity_distribution}
+\end{figure}
