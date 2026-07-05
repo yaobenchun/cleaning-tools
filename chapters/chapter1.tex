@@ -218,7 +218,7 @@
     }
     % --- 总标题 ---
     \caption{压井液粘度对铁屑颗粒速度分布的影响（$\theta=90^\circ$,\ $v_{\mathrm{in}}=0.27\mathrm{m/s}$）}
-    \label{fig:iron_wire_distribution_velocity}
+    \label{fig:iron_wire_distribution_viscosity}
 \end{figure}
 
 图\ref{fig:iron_wire_mean_velocity_evolution_viscosity}为两种压井液粘度下井筒稳态后铁屑颗粒沉积域铁屑颗粒运移速度图。从图中可以看出，$\mu$从$1.0\mathrm{mPa\cdot s}$增加到$1.7\mathrm{mPa\cdot s}$时，粘度增加到$1.7$倍，但铁屑的平均运移速度只增加到$1.04$倍，证明压井液的粘度对铁屑运移的影响十分有限。
@@ -228,3 +228,79 @@
     \caption{压井液粘度对铁屑颗粒运移速度时间演变的影响（$\theta=90^\circ$,\ $v_{\mathrm{in}}=0.27\mathrm{m/s}$）}
     \label{fig:iron_wire_mean_velocity_evolution_viscosity}
 \end{figure}
+
+\subsection{压井液流速对铁屑运移规律的影响}
+
+本节探究压井液流速对井筒环形空间内铁屑颗粒运移的影响。选取了水平段为研究对象，给定$\mu=1.7\mathrm{mPa\cdot s}$。
+
+图\ref{fig:iron_wire_distribution_velocity}描述的是两种流速下井筒内铁屑颗粒分布情况，入口流速对铁屑颗粒运移效率的影响是十分明显的。随着压井液流速的增加，移动铁屑床的速度也逐渐增大。由于随着压井液入口流速增大，使产生于颗粒工厂的铁屑颗粒及悬浮层铁屑颗粒具有更大的轴向位移，移动铁屑床产生位置距离流体入口变远，这是由于压井液流速的增大，铁屑颗粒受到流体沿轴向给予的推动力增加，铁屑颗粒沿轴向运移的速度增加，压井液的流动空间更大。同时增大的推动力也能减弱颗粒受自身重力的影响，下沉至井筒底部所经过的轴向距离更长岩屑颗粒的运移效率增加。
+\begin{figure}[htbp]
+    \centering
+    % --- 子图 (a) ---
+    % 使用 minipage 控制宽度，这里设为 0.9\textwidth 让图片大一点
+    % [t] 表示顶部对齐，防止因为图片高度不同导致错位
+    \subfloat[$v_{\mathrm{in}} = 0.17\mathrm{m/s}$]{
+        \begin{minipage}[t]{0.8\linewidth}
+            \centering
+            % 替换为你的第一张图片文件名
+            \includegraphics[width=\linewidth]{figure/iron-wire-distribution-1dot7cp-0dot17mpers.png} 
+            \label{fig:distribution_velocity_0.17}
+        \end{minipage}
+    }
+    \vspace{0pt} % 上下两张图之间的垂直间距，可根据需要调整
+    % --- 子图 (b) ---
+    \subfloat[$v_{\mathrm{in}} = 0.27\mathrm{m/s}$]{
+        \begin{minipage}[t]{0.8\linewidth}
+            \centering
+            % 替换为你的第二张图片文件名
+            \includegraphics[width=\linewidth]{figure/iron-wire-distribution-1dot7cp-0dot27mpers.png} 
+            \label{fig:distribution_velocity_0.27}
+        \end{minipage}
+    }
+    % --- 总标题 ---
+    \caption{压井液流速对铁屑颗粒分布的影响（$\theta=90^\circ$,\ $\mu = 1.7\mathrm{mPa}\cdot\mathrm{s}$）}
+    \label{fig:iron_wire_distribution_velocity}
+\end{figure}
+
+
+
+铁屑颗粒的流动迹线图可以非常直观的描述颗粒的运动轨迹，首先选取井筒内的部分铁屑颗粒，绘制不同压井液流速下部分铁屑流动迹线图，如图\ref{fig:iron_wire_particle_track_velocity}所示。从图中可以看出，铁屑颗粒产生后的运移速度受压井液速度变化影响十分明显，压井液流速增大，铁屑颗粒的运移速度也相应增大，并且流速增大会导致铁屑颗粒在水平井环空中运移的距离更远。
+
+\begin{figure}[htbp]
+	\centering
+	% --- 子图 (a) ---
+	% 使用 minipage 控制宽度，这里设为 0.9\textwidth 让图片大一点
+	% [t] 表示顶部对齐，防止因为图片高度不同导致错位
+	\subfloat[$v_{\mathrm{in}} = 0.17\mathrm{m/s}$]{
+		\begin{minipage}[t]{0.8\linewidth}
+			\centering
+			% 替换为你的第一张图片文件名
+			\includegraphics[width=\linewidth]{figure/iron-wire-particle-track-1dot7cp-0dot17mpers.jpg} 
+			\label{fig:track_velocity_0.17}
+		\end{minipage}
+	}
+	\vspace{0pt} % 上下两张图之间的垂直间距，可根据需要调整
+	% --- 子图 (b) ---
+	\subfloat[$v_{\mathrm{in}} = 0.27\mathrm{m/s}$]{
+		\begin{minipage}[t]{0.8\linewidth}
+			\centering
+			% 替换为你的第二张图片文件名
+			\includegraphics[width=\linewidth]{figure/iron-wire-particle-track-1dot7cp-0dot27mpers.jpg} 
+			\label{fig:track_velocity_0.27}
+		\end{minipage}
+	}
+	% --- 总标题 ---
+	\caption{压井液流速对铁屑颗粒分布的影响（$\theta=90^\circ$,\ $\mu = 1.7\mathrm{mPa}\cdot\mathrm{s}$）}
+	\label{fig:iron_wire_particle_track_velocity}
+\end{figure}
+
+图\ref{fig:iron_wire_mean_velocity_evolution_incoming_velocity}所示为$v_{\mathrm{in}}=0.17\mathrm{m/s}$,\ $0.27\mathrm{m/s}$铁屑颗粒在沉积域中运移速度变化，随着压井液流速的增加，井筒内沉积域铁屑颗粒运移速度也会大幅度增加，于是，压井液的流速对铁屑运移有显著影响。压井液流动产生的携屑作用足以克服井筒内壁摩擦作用，沉积在井筒底部的铁屑形成移动铁屑床。
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.7\textwidth]{figure/iron-wire-mean-velocity-evolution-incoming-velocity.png}
+	\caption{压井液速度对铁屑颗粒运移速度时间演变的影响（$\mu=1.7\mathrm{mPa\cdot s}$）}
+	\label{fig:iron_wire_mean_velocity_evolution_incoming_velocity}
+\end{figure}
+
+
+
