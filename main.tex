@@ -55,21 +55,42 @@
 
 \usepackage{subfig}  %替代 subfigure，插入子图
 
+\usepackage{multirow}  % 画出有单元合并的表格
+
+\usepackage{footmisc} % 推荐加载此宏包以获得更好脚注效果
+
+\usepackage{tabularx}   % 自适应列宽宏包
+
+\usepackage{siunitx} %用于自定义inch的缩写
+
+
+
+% 1. 重命名 \paragraph 为 \subsubsubsection
+\newcommand{\subsubsubsection}[1]{\paragraph{#1}\mbox{}\\}
+
+% 2. 设置章节编号深度为3（包含 subsubsubsection）
+\setcounter{secnumdepth}{3}
+
+% 3. 设置目录显示深度为3（subsubsubsection 不出现在目录中）
+\setcounter{tocdepth}{3}
+
+\newcommand{\inch}{\,\text{''}} %自定义inch的双撇
+
 \begin{document}
 
 % === 封面部分 ===
 \begin{titlepage}
     \centering 
     \vspace*{4cm} 
-    {\Huge \bfseries \textcolor{red}{在此处填写您的项目名称} \par} 
+    {\Huge \bfseries \textcolor{red}{9-5/8\inch 井筒深度清洁关键技术升级研究及应用} \par} 
     \vspace{2cm} 
     {\Large \textcolor{red}{项目结题报告} \par} 
     \vspace{4cm} 
-    {\Large \textcolor{red}{项目负责人：姓名} \par}
+    {\Large \textcolor{red}{项目负责人：高德利} \par}
     \vspace{1cm}
-    {\Large \textcolor{red}{承担单位：单位名称} \par}
+    {\Large \textcolor{red}{承担单位：中国石油大学（北京）} \par}
     \vspace{1cm}
-    {\Large \textcolor{red}{202X年X月X日} \par}
+    {\Large \textcolor{red}{2026年8月15日} \par}
 \end{titlepage}
 
 % === 目录部分 ===
@@ -82,9 +103,31 @@
 \pagenumbering{arabic} 
 \setcounter{page}{1}   
 
-\input{chapters/chapter1} % 引入第一章内容  
-%\input{chapters/chapter2} % 引入第二章内容
 
+% --- 第一章 ---
+\chapter{砂砾、铁屑、结垢物、蜡等井筒内的运移及分布规律研究}
+
+	%\input{chapters/chapter1/chapter1.tex} % 引入颗粒物运移内容  
+% --- 第二章 ---
+\chapter{井筒内颗粒运移实验}
+	%\input{chapters/chapter2/part1-horizontal-sand.tex} % 水平井冲砂
+	\input{chapters/chapter2/part2-full-well-model.tex} % 全井筒模型
+% --- 第三章 ---
+\chapter{深度清洁工具设计}
+\section[“三合一”脉冲式冲刮刷集成式井筒清洁工具设计]{“三合一”脉冲式冲刮刷集成式井筒清洁工具设计\protect\footnote{合同条款：5.1.3井筒高校清洁关键技术配套工具设计——（5）“三合一”脉冲式冲刮刷集成式井筒清洁工具设计}}\label{sec:design_of_3_in_1}
+	%\input{chapters/chapter3/part1-3in1-design.tex}
+	%\input{chapters/chapter3/part1-3in1-verification.tex}
+	%\input{chapters/chapter3/part1-3in1-hydraulic-model.tex}
+	%\input{chapters/chapter3/part1-3in1-setup-and-maintainance.tex}
+\section{“四合一”通刮刷磁集成式井筒清洁工具设计}
+	%\input{chapters/chapter3/part2-4in1.tex}
+	%\input{chapters/chapter3/part2-4in1-scraper-performance.tex}
+\section{大容量强磁吸附工具设计}
+	%\input{chapters/chapter3/part3-magntictool.tex}
+\section{多功能过滤工具设计}
+	%\input{chapters/chapter3/part4-filter.tex}
+\section[可变径刮管工具设计]{可变径刮管工具设计\protect\footnote{合同条款：5.1.3井筒高校清洁关键技术配套工具设计——（4）可变径刮管工具设计}}
+	%\input{chapters/chapter3/part5-variable-tool.tex}
 
 % === 【修改】GB/T 7714-2015 参考文献 ===
 %\clearpage % 参考文献另起一页
