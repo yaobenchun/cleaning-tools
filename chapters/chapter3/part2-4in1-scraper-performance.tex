@@ -1,0 +1,101 @@
+\subsection{刮板刮削效果评价}
+设计了刮板刮削效果评价实验装置，其结构和工作原理如图\ref{fig:scraper_test_rig_mechanism}所示。在工程应用中刮板相对于套管是直线运动，在实验室中复现该过程对设备要求高。考虑到工具上的主要功能结构——刮板通过与套管（垢）之间的相对运动产生清洁作用，在装置设计时抓住“相对运动”这一主要矛盾即可对刮板的使役性能进行模拟。本项目设计了基于转盘的刮板刮削能力评价装置，该装置中，刮板与机架固连，铺设于转盘表面的垢主动旋转以产生相对运动（刮板的主切削运动）。刮板与垢之间是线（面）接触，二者不是严格意义上的相对平动，但转盘的直径较大（0.5m），接触面上刮板与盘面接触线上的旋转运动分量的影响可以忽略。
+
+刮板是靠弹簧支撑的，为了模拟刮板的这种“浮动”支撑效果，在装置上设置了限位块约束刮板五个运动自由度，保留一个沿盘面法线方向的移动自由度。实验中，限位块用大跨距的横梁与机架固连，在刮板与垢之间的背向力较大时，可能产生挠曲变形$\delta _f$，需在计算弹簧压缩量$\delta_s$时进行补偿。
+
+%在扇形硬垢区域内设置测量点，保证实验前后测量位置一致。
+实验记录的数据含义如图\ref{fig:scapter_measurement_mechanism}所示。实验前，先让弹簧处于原长状态，测量距离$l_{11}$和$l_{21}$，这两个尺寸分别是顶板顶部测量基面和限位块顶部、转盘盘面之间的距离。然后，根据弹簧的参考压缩量，将弹簧预紧，测量$l_{11}$、$l_{21}$，记为$l_{12}$、$l_{22}$。转动转盘，使刮板完成一次刮削过程，停止设备后，再次测量尺寸$l_{21}$，记为$l_{23}$。从实验台上取一个参考位置，在划痕的两侧取两个监测点，测量监测点相对于参考位置之间的距离$l_{31}$、$l_{32}$，再测量刮削坑的底部与参考点之间的距离$l_4$。实验中的尺寸测量采用的是精度为0.02mm的游标卡尺。
+
+\begin{figure}[htbp]
+	\centering
+	\subfloat[实验装置结构及原理]{%
+	\includegraphics[width=.9\textwidth]{figure/chapter3/scraper-test-rig.png}
+	\label{fig:scraper_test_rig_mechanism}
+	}
+	\vspace{1em}
+	\subfloat[弹簧变形量测量原理]{%
+	\includegraphics[width=.9\textwidth]{figure/chapter3/scapter-measurement-mechanism.png}
+	\label{fig:scapter_measurement_mechanism}
+	}
+	\caption{刮板刮削性能测试}
+	\label{fig:scraper_test_rig}
+\end{figure}
+
+
+根据几何关系，单次刮削产生的坑深度$\delta_c$、弹簧压缩量估计值$\delta_s$为
+\begin{equation}
+\centering
+	\begin{aligned}
+		\delta_c & =\frac{l_{31}+l_{32}}{2}-l_4\\
+		\delta_f & = l_{11}-l_{12}-l_{21}+l_{23}  \\ 
+		\delta_s & = l_{11}-l_{12} - \delta_f- \delta_c'
+	\end{aligned}
+\end{equation}
+
+垢经刮削后的形貌如图\ref{fig:scale_profile}所示。刮板前刀面附近堆积有粉末状和崩碎状屑，刀齿的容屑槽中也有此类屑，由此证明，所设计的刮板能有效刮除硬垢。在刮削区域的边缘也有这样的屑。从切屑的性质可以推测出，所设计的垢为脆性垢，与文献所述的垢性质吻合。%补充是哪一篇文献
+从图中还可以看出，产屑量与弹簧的压缩量成正相关。
+\begin{figure}[htbp]
+	\centering
+	\subfloat[$\delta_s=3.095\textrm{mm}$]{%
+	\includegraphics[width=.4\textwidth]{figure/chapter3/scale-1.jpg}
+	\label{fig:scale_1}
+	}
+	%\hfill
+	\subfloat[$\delta_s=4.875\textrm{mm}$]{%
+	\includegraphics[width=.4\textwidth]{figure/chapter3/scale-4.jpg}
+	\label{fig:scale_4}
+	}
+	\vspace{1em}
+	\subfloat[$\delta_s=5.155\textrm{mm}$]{%
+	\includegraphics[width=.4\textwidth]{figure/chapter3/scale-3.jpg}
+	\label{fig:scale_3}
+	}
+	%\hfill
+	\subfloat[$\delta_s=6.465\textrm{mm}$]{%
+	\includegraphics[width=.4\textwidth]{figure/chapter3/scale-5.jpg}
+	\label{fig:scale_5}
+	}	
+	\caption{刮板刮后形貌}
+	\label{fig:scale_profile}
+\end{figure}
+
+
+此外，刮板表面的有效刮削功能单元是表面齿，总体上看，刮板主要依靠具有负前角的前刀面进行刮削，其余位置的齿起到辅助作用。刮削中产生的粉末状垢屑极易导致刮板上刀齿前刀面堵塞，如图\ref{fig:scraper_profile}所示。在清理垢时还发现，后刀面在弹簧的巨大预紧力作用下与垢强烈摩擦，后刀面附着有一层质地坚硬的垢变质层，其强度和硬度比垢基材高，在一定程度上减缓了后刀面的磨损。刮板前刀面附近的切削齿堵塞较为严重，增加弹簧的预紧力会加剧这种堵塞效果，这说明此刮板应容易堵塞。横向螺纹齿最容易被堵塞，斜向的三角齿由于容屑槽空间大，切削性能可保持的时间会更长。在实际应用中，可以推测，螺纹齿在刮削的初期就被堵塞而失效。主切削齿在初始阶段承担主要的刮削任务；随着刮削行程的增长，其主切削刃磨钝，三角齿主要起着刮削的作用。在实际应用中，如能建立循环不断冲洗刮板，将有助于屑从容屑槽中排出，对提高刮板的使用效能有促进作用。
+
+\begin{figure}[htbp]
+	\centering
+	\subfloat[$\delta_s=3.095\textrm{mm}$]{%
+	\includegraphics[width=.4\textwidth]{figure/chapter3/scraper-1.jpg}
+	\label{fig:scraper_1}
+	}
+	%\hfill
+	\subfloat[$\delta_s=4.875\textrm{mm}$]{%
+	\includegraphics[width=.4\textwidth]{figure/chapter3/scraper-4.jpg}
+	\label{fig:scraper_4}
+	}
+	\vspace{1em}
+	\subfloat[$\delta_s=5.155\textrm{mm}$]{%
+	\includegraphics[width=.4\textwidth]{figure/chapter3/scraper-3.jpg}
+	\label{fig:scraper_3}
+	}
+	%\hfill
+	\subfloat[$\delta_s=6.465\textrm{mm}$]{%
+	\includegraphics[width=.4\textwidth]{figure/chapter3/scraper-5.jpg}
+	\label{fig:scaper_5}
+	}	
+	\caption{刮板刮后形貌}
+	\label{fig:scraper_profile}
+\end{figure}
+
+
+
+画出图表观察弹簧压缩量与刮削深度的关系，如图\ref{fig:scratch_depth_spring_comprassion}所示。从图中可以看出，弹簧压缩量和刮削的深度之间并非存在简单的正相关关系。在实验开始阶段，刮板与垢表面之间的接触应力大，刮痕的深度较大，随着弹簧压缩量的增加，刮痕的深度先有增加的趋势，后基本上保持不变。该现象出现的原因是不同的实验组对沟槽反复刮削，沟槽的形状趋于贴合刮板轮廓，刮板和垢之间的接触面积增长，抵消了接触力的增加。另一方面，较大的弹簧力极容易导致垢变质从而堵塞刮削结构。由此可以推测，本项目所设计的刮板即便在同一尺寸的套管中，刮削效果也受到套管线重的影响。
+\begin{figure}	
+	\centering
+	\includegraphics[width=.7\textwidth]{figure/chapter3/scatch-depth-sping-comprassion.png}
+	\caption{刮削深度与弹簧压缩量之间的关系}
+	\label{fig:scratch_depth_spring_comprassion}
+\end{figure}
+
+
+%\subsection{毛刷刮削力学仿真}

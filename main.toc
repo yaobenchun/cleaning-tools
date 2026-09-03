@@ -1,14 +1,11 @@
-\contentsline {chapter}{\numberline {第一章\hspace {.3em}} 砂砾、铁屑、结垢物、蜡等井筒内的运移及分布规律研究}{1}{chapter.1}%
-\contentsline {section}{\numberline {1.1}基本理论和模拟条件}{1}{section.1.1}%
-\contentsline {subsection}{\numberline {1.1.1}EDEM理论基础}{1}{subsection.1.1.1}%
-\contentsline {subsection}{\numberline {1.1.2}井筒内铁屑运移及分布规律}{3}{subsection.1.1.2}%
-\contentsline {chapter}{\numberline {第二章\hspace {.3em}}项目研究内容与主要进展}{4}{chapter.2}%
-\contentsline {section}{\numberline {2.1}研究内容一：\textcolor {red}{子课题/研究点名称}}{4}{section.2.1}%
-\contentsline {section}{\numberline {2.2}研究内容二：\textcolor {red}{子课题/研究点名称}}{4}{section.2.2}%
-\contentsline {chapter}{\numberline {第三章\hspace {.3em}}吊袜带}{5}{chapter.3}%
-\contentsline {section}{\numberline {3.1}主要研究成果}{5}{section.3.1}%
-\contentsline {section}{\numberline {3.2}主要创新点}{5}{section.3.2}%
-\contentsline {chapter}{\numberline {第四章\hspace {.3em}}经费使用与执行情况}{6}{chapter.4}%
-\contentsline {chapter}{\numberline {第五章\hspace {.3em}}存在问题与后续建议}{7}{chapter.5}%
-\contentsline {chapter}{\numberline {第六章\hspace {.3em}}结论}{8}{chapter.6}%
-\contentsline {chapter}{参考文献}{9}{chapter.6}%
+\contentsline {chapter}{\numberline {第一章\hspace {.3em}}砂砾、铁屑、结垢物、蜡等井筒内的运移及分布规律研究}{1}{chapter.1}%
+\contentsline {chapter}{\numberline {第二章\hspace {.3em}}井筒内颗粒运移实验}{2}{chapter.2}%
+\contentsline {section}{\numberline {2.1}全井筒模型颗粒运移实验}{2}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}实验结果及讨论}{2}{subsection.2.1.1}%
+\contentsline {chapter}{\numberline {第三章\hspace {.3em}}深度清洁工具设计}{4}{chapter.3}%
+\contentsline {section}{\numberline {3.1}“三合一”脉冲式冲刮刷集成式井筒清洁工具设计}{4}{section.3.1}%
+\contentsline {section}{\numberline {3.2}“四合一”通刮刷磁集成式井筒清洁工具设计}{4}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}刮板刮削效果评价}{4}{subsection.3.2.1}%
+\contentsline {section}{\numberline {3.3}大容量强磁吸附工具设计}{8}{section.3.3}%
+\contentsline {section}{\numberline {3.4}多功能过滤工具设计}{8}{section.3.4}%
+\contentsline {section}{\numberline {3.5}可变径刮管工具设计}{8}{section.3.5}%
