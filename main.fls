@@ -507,6 +507,10 @@ INPUT d:/texlive/2026/texmf-dist/fonts/tfm/zhmetrics/unihei/unihei98.tfm
 INPUT d:/texlive/2026/texmf-dist/fonts/tfm/zhmetrics/unihei/unihei7c.tfm
 INPUT d:/texlive/2026/texmf-dist/fonts/tfm/zhmetrics/unihei/unihei5b.tfm
 INPUT d:/texlive/2026/texmf-dist/fonts/tfm/zhmetrics/unihei/unihei9a.tfm
+INPUT d:/texlive/2026/texmf-dist/fonts/tfm/zhmetrics/unisong/unisong57.tfm
+INPUT d:/texlive/2026/texmf-dist/fonts/tfm/zhmetrics/unisong/unisong66.tfm
+INPUT d:/texlive/2026/texmf-dist/fonts/tfm/zhmetrics/unisong/unisong65.tfm
+INPUT d:/texlive/2026/texmf-dist/fonts/tfm/zhmetrics/unisong/unisong30.tfm
 INPUT d:/texlive/2026/texmf-dist/fonts/tfm/zhmetrics/unihei/unihei5d.tfm
 INPUT d:/texlive/2026/texmf-dist/fonts/tfm/zhmetrics/unihei/unihei8b.tfm
 INPUT d:/texlive/2026/texmf-dist/fonts/tfm/public/newtx/ntx-Bold-tlf-ot1.tfm
@@ -598,6 +602,9 @@ INPUT c:/Windows/Fonts/simhei.ttf
 INPUT c:/Windows/Fonts/simhei.ttf
 INPUT c:/Windows/Fonts/simhei.ttf
 INPUT c:/Windows/Fonts/simhei.ttf
+INPUT c:/Windows/Fonts/simsun.ttc
+INPUT c:/Windows/Fonts/simsun.ttc
+INPUT c:/Windows/Fonts/simsun.ttc
 INPUT c:/Windows/Fonts/simsun.ttc
 INPUT c:/Windows/Fonts/simsun.ttc
 INPUT c:/Windows/Fonts/simsun.ttc
