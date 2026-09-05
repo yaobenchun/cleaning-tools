@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.7.6)  3 SEP 2026 09:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.7.6)  4 SEP 2026 14:50
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1123,7 +1123,7 @@ LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.112 \chapter
+l.111 \chapter
               {‰∫ïÁ≠íÂÜÖÈ¢óÁ≤íËøêÁßªÂÆûÈ™å} [1
 
 
@@ -1134,24 +1134,137 @@ l.112 \chapter
 ]
 Á¨¨‰∏âÁ´†
 LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
-(Font)              scaled to size 18.06749pt on input line 118.
+(Font)              scaled to size 18.06749pt on input line 116.
 
 LaTeX Font Warning: Font shape `OMX/cmex/m/n' in size <18.06749> not available
-(Font)              size <17.28> substituted on input line 118.
+(Font)              size <17.28> substituted on input line 116.
 
 
 LaTeX Font Warning: Font shape `OMX/cmex/m/n' in size <15.05624> not available
-(Font)              size <14.4> substituted on input line 118.
+(Font)              size <14.4> substituted on input line 116.
 
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
-(Font)              scaled to size 15.05624pt on input line 118.
+(Font)              scaled to size 15.05624pt on input line 116.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
-(Font)              scaled to size 9.03374pt on input line 118.
+(Font)              scaled to size 9.03374pt on input line 116.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
-(Font)              scaled to size 6.0pt on input line 118.
-[3
+(Font)              scaled to size 6.0pt on input line 116.
+(./chapters/chapter3/part2-4in1-scraper-performance.tex
+LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
+(Font)              scaled to size 15.05624pt on input line 1.
+LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
+(Font)              scaled to size 8.0pt on input line 4.
+LaTeX Font Info:    Trying to load font information for TS1+ntxtlf on input line 4.
+ (d:/texlive/2026/texmf-dist/tex/latex/newtx/ts1ntxtlf.fd
+File: ts1ntxtlf.fd 2015/01/18 v1.0 fd file for TS1/ntxtlf
+)
+LaTeX Font Info:    Font shape `TS1/ntxtlf/m/n' will be
+(Font)              scaled to size 12.045pt on input line 4.
+<figure/chapter3/scraper-test-rig.png, id=206, 1975.38pt x 1475.5125pt>
+File: figure/chapter3/scraper-test-rig.png Graphic file (type png)
+<use figure/chapter3/scraper-test-rig.png>
+Package pdftex.def Info: figure/chapter3/scraper-test-rig.png  used on input line 11.
+(pdftex.def)             Requested size: 407.66867pt x 304.50833pt.
+<figure/chapter3/scapter-measurement-mechanism.png, id=207, 2997.1975pt x 656.4525pt>
+File: figure/chapter3/scapter-measurement-mechanism.png Graphic file (type png)
+<use figure/chapter3/scapter-measurement-mechanism.png>
+Package pdftex.def Info: figure/chapter3/scapter-measurement-mechanism.png  used on input line 16.
+(pdftex.def)             Requested size: 407.66867pt x 89.28838pt.
+ [3
 
-] (./main.aux)
+{d:/texlive/2026/texmf-dist/fonts/enc/dvips/tex-gyre/q-ts1.enc}]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.45398pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.45398pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.45398pt}.
+
+[4 <./figure/chapter3/scraper-test-rig.png (PNG copy)> <./figure/chapter3/scapter-measurement-mechanism.png (PNG copy)>]
+Overfull \hbox (28.44298pt too wide) in paragraph at lines 26--27
+[]\C70/rm/m/n/12.045/5b û \C70/rm/m/n/12.045/9a å \C70/rm/m/n/12.045/8b ∞ \C70/rm/m/n/12.045/5f U \C70/rm/m/n/12.045/76 Ñ \C70/rm/m/n/12.045/65 p \C70/rm/m/n/12.045/63 n \C70/rm/m/n/12.045/54 + \C70/rm/m/n/12.045/4e I \C70/rm/m/n/12.045/59 Ç \C70/rm/m/n/12.045/56 ˛[][]\OT1/ntxtlf/m/n/12.045 3.1b[][]\C70/rm/m/n/12.045/62 @ \C70/rm/m/n/12.045/79 :|\C70/rm/m/n/12.045/30 ^^B| \C70/rm/m/n/12.045/5b û \C70/rm/m/n/12.045/9a å \C70/rm/m/n/12.045/52 M|\C70/rm/m/n/12.045/ff ^^L| \C70/rm/m/n/12.045/51 H \C70/rm/m/n/12.045/8b © \C70/rm/m/n/12.045/5f 9 \C70/rm/m/n/12.045/7c ' \C70/rm/m/n/12.045/59 ^^D \C70/rm/m/n/12.045/4e é \C70/rm/m/n/12.045/53 ü \C70/rm/m/n/12.045/95 ^^? \C70/rm/m/n/12.045/72 ∂ \C70/rm/m/n/12.045/60 ^^A|\C70/rm/m/n/12.045/ff ^^L| \C70/rm/m/n/12.045/6d K \C70/rm/m/n/12.045/91 œ \C70/rm/m/n/12.045/8d › \C70/rm/m/n/12.045/79 ª$\OML/cmm/m/it/12.045 l[]$\C70/rm/m/n/12.045/54 å$\OML/cmm/m/it/12.045 l[]$|\C70/rm/m/n/12.045/ff ^^L|
+ []
+
+<figure/chapter3/scale-1.jpg, id=271, 3608.48125pt x 2793.43625pt>
+File: figure/chapter3/scale-1.jpg Graphic file (type jpg)
+<use figure/chapter3/scale-1.jpg>
+Package pdftex.def Info: figure/chapter3/scale-1.jpg  used on input line 47.
+(pdftex.def)             Requested size: 144.95316pt x 112.18729pt.
+LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
+(Font)              scaled to size 5.0pt on input line 47.
+<figure/chapter3/scale-4.jpg, id=272, 4034.07124pt x 3023.295pt>
+File: figure/chapter3/scale-4.jpg Graphic file (type jpg)
+<use figure/chapter3/scale-4.jpg>
+Package pdftex.def Info: figure/chapter3/scale-4.jpg  used on input line 52.
+(pdftex.def)             Requested size: 144.95316pt x 108.59404pt.
+<figure/chapter3/scale-3.jpg, id=273, 3656.66125pt x 2872.7325pt>
+File: figure/chapter3/scale-3.jpg Graphic file (type jpg)
+<use figure/chapter3/scale-3.jpg>
+Package pdftex.def Info: figure/chapter3/scale-3.jpg  used on input line 57.
+(pdftex.def)             Requested size: 144.95316pt x 113.8377pt.
+<figure/chapter3/scale-5.jpg, id=274, 4047.12pt x 3035.34pt>
+File: figure/chapter3/scale-5.jpg Graphic file (type jpg)
+<use figure/chapter3/scale-5.jpg>
+Package pdftex.def Info: figure/chapter3/scale-5.jpg  used on input line 62.
+(pdftex.def)             Requested size: 144.95316pt x 108.70247pt.
+<figure/chapter3/scraper-1.jpg, id=276, 1979.395pt x 1597.97pt>
+File: figure/chapter3/scraper-1.jpg Graphic file (type jpg)
+<use figure/chapter3/scraper-1.jpg>
+Package pdftex.def Info: figure/chapter3/scraper-1.jpg  used on input line 75.
+(pdftex.def)             Requested size: 144.95316pt x 117.01414pt.
+<figure/chapter3/scraper-4.jpg, id=277, 3312.375pt x 2647.8925pt>
+File: figure/chapter3/scraper-4.jpg Graphic file (type jpg)
+<use figure/chapter3/scraper-4.jpg>
+Package pdftex.def Info: figure/chapter3/scraper-4.jpg  used on input line 80.
+(pdftex.def)             Requested size: 144.95316pt x 115.83693pt.
+<figure/chapter3/scraper-3.jpg, id=278, 3405.72375pt x 2734.215pt>
+File: figure/chapter3/scraper-3.jpg Graphic file (type jpg)
+<use figure/chapter3/scraper-3.jpg>
+Package pdftex.def Info: figure/chapter3/scraper-3.jpg  used on input line 85.
+(pdftex.def)             Requested size: 144.95316pt x 116.35905pt.
+<figure/chapter3/scraper-5.jpg, id=279, 2828.5675pt x 2262.4525pt>
+File: figure/chapter3/scraper-5.jpg Graphic file (type jpg)
+<use figure/chapter3/scraper-5.jpg>
+Package pdftex.def Info: figure/chapter3/scraper-5.jpg  used on input line 90.
+(pdftex.def)             Requested size: 144.95316pt x 115.92555pt.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.45398pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.45398pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.45398pt}.
+
+[5]
+<figure/chapter3/scatch-depth-sping-comprassion.png, id=307, 216.81pt x 187.1793pt>
+File: figure/chapter3/scatch-depth-sping-comprassion.png Graphic file (type png)
+<use figure/chapter3/scatch-depth-sping-comprassion.png>
+Package pdftex.def Info: figure/chapter3/scatch-depth-sping-comprassion.png  used on input line 108.
+(pdftex.def)             Requested size: 317.0764pt x 273.77647pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.45398pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.45398pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.45398pt}.
+
+[6 <./figure/chapter3/scale-1.jpg> <./figure/chapter3/scale-4.jpg> <./figure/chapter3/scale-3.jpg> <./figure/chapter3/scale-5.jpg>])
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.45398pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.45398pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.45398pt}.
+
+[7 <./figure/chapter3/scraper-1.jpg> <./figure/chapter3/scraper-4.jpg> <./figure/chapter3/scraper-3.jpg> <./figure/chapter3/scraper-5.jpg>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.45398pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.45398pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.45398pt}.
+
+[8 <./figure/chapter3/scatch-depth-sping-comprassion.png>] (./main.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2020/03/25>
@@ -1162,27 +1275,27 @@ LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.78749pt have occurred.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 6C29A8C0142662CEE9F1B792FEEBA40B;1303.
+(rerunfilecheck)             Checksum: 794EA2471F4F8A080E0127E30E3F32CF;1428.
  ) 
 Here is how much of TeX's memory you used:
- 33884 strings out of 469462
- 692204 string characters out of 5468725
- 1029630 words of memory out of 5000000
- 61732 multiletter control sequences out of 15000+600000
- 697039 words of font info for 254 fonts, out of 8000000 for 9000
+ 34742 strings out of 469462
+ 709595 string characters out of 5468725
+ 1067906 words of memory out of 5000000
+ 62464 multiletter control sequences out of 15000+600000
+ 716646 words of font info for 319 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 88i,7n,117p,1204b,1123s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 88i,14n,117p,2079b,1123s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist, replaced by a fixed one
 
 
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist, replaced by a fixed one
 
-<c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><d:/texlive/2026/texmf-dist/fonts/type1/public/newtx/ztmb.pfb><d:/texlive/2026/texmf-dist/fonts/type1/public/newtx/ztmr.pfb>
-Output written on main.pdf (5 pages, 337793 bytes).
+<c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><d:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><d:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><d:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><d:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb><d:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><d:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><d:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb><d:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><d:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><d:/texlive/2026/texmf-dist/fonts/type1/public/tex-gyre/qtmr.pfb><d:/texlive/2026/texmf-dist/fonts/type1/public/newtx/ztmb.pfb><d:/texlive/2026/texmf-dist/fonts/type1/public/newtx/ztmr.pfb>
+Output written on main.pdf (10 pages, 15600313 bytes).
 PDF statistics:
- 472 PDF objects out of 1000 (max. 8388607)
- 325 compressed objects within 4 object streams
- 16 named destinations out of 1000 (max. 500000)
- 277 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 763 PDF objects out of 1000 (max. 8388607)
+ 517 compressed objects within 6 object streams
+ 37 named destinations out of 1000 (max. 500000)
+ 440 words of extra memory for PDF output out of 10000 (max. 10000000)
 
