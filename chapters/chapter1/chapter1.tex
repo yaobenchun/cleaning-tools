@@ -58,26 +58,26 @@
 井筒中的颗粒在运移过程中产生颗粒-颗粒、颗粒-管壁之间的接触是不可避免的，该过程将产生作用力，本文采用EDEM软件进行模拟。EDEM软件的理论基础是离散元法（Discrete Element Method, DEM），DEM对上述两种接触对进行建模，求解接触中颗粒所受外力作用以及力矩。根据工况的不同，可区分干颗粒和湿颗粒两种类型，
 当计算物料为干颗粒时，接触点不存在粘结的作用，EDEM软件默认采用Hertz-Mindlin基本接触模型，颗粒接触受力模型如图\ref{fig:particle_collision}所示。
 \begin{figure}[htbp]
-    \centering
-    % 双颗粒碰撞模型示意图：改用外部图片（原 TikZ 手绘图见 git 历史）
-    \includegraphics[width=8cm]{figure/kelipengzhuang.png}
-    \caption{双颗粒碰撞模型示意图}
-    \label{fig:particle_collision}
+	\centering
+	\subfloat[双颗粒碰撞模型示意图]{%
+		\includegraphics[width=0.45\textwidth]{figure/kelipengzhuang.png}
+		\label{fig:particle_collision}
+	}
+	%\vspace{0pt}
+	\subfloat[Hertz--Mindlin 接触模式示意图]{%
+		\includegraphics[width=0.55\textwidth]{figure/hertz-mindlin-contact-model.png}
+		\label{fig:hertz_mindlin_contact_model}
+	}
+	\caption{颗粒--颗粒碰撞建模}
+	\label{fig:particle_collision_and_contact_model}
 \end{figure}
 
-\begin{figure}[htbp]
-	\centering
-	\includegraphics[width=0.6\textwidth]{figure/hertz-mindlin-contact-model.png}
-	\caption{Hertz--Mindlin 接触模式示意图}
-	\label{fig:hertz_mindlin_contact_model}
-\end{figure}
-
-\begin{figure}[htbp]
-	\centering
-	\includegraphics[width=0.6\textwidth]{figure/hertzian-soft-sphere-model.png}
-	\caption{Hertzian 软球模型}
-	\label{fig:hertzian_soft_sphere_model}
-\end{figure}
+% \begin{figure}[htbp]
+% 	\centering
+% 	\includegraphics[width=0.6\textwidth]{figure/hertzian-soft-sphere-model.png}
+% 	\caption{Hertzian 软球模型}
+% 	\label{fig:hertzian_soft_sphere_model}
+% \end{figure}
 
 
 假设发生弹性接触的两球形颗粒的半径分别为 \(R_{1}\)、\(R_{2}\)，则颗粒间产生的法向接触力大小 \(F_{\mathrm{n}}\) 的计算式为
@@ -92,19 +92,19 @@
 	R_{\mathrm{eq}} & =\left(\frac{1}{R_{1}}+\frac{1}{R_{2}}\right)^{-1}
 	\end{aligned}
 \end{equation}
-式中，\(E_{1}\)、\(E_{2}\) 分别为颗粒1、2 的杨氏模量，$\mathrm{GPa}$；\(\nu_{1}\)、\(\nu_{2}\) 分别为颗粒 1、2 的泊松比。
+式中，\(E_{1}\)、\(E_{2}\) 分别为颗粒1、2 的杨氏模量，$\mathrm{GPa}$；\( \nu_{1} \)、\( \nu_{2} \) 分别为颗粒 1、2 的泊松比。
 
 
 颗粒间法向阻尼力 \(F_{\mathrm{n}}^{\mathrm{d}}\) 及切向阻尼力 \(F_{\mathrm{t}}^{\mathrm{d}}\) 的计算公式为
 \begin{equation}
 	\begin{aligned}
-	F_{\mathrm{n}}^{\mathrm{d}} &= 2\sqrt{\frac{5}{6}}\beta\sqrt{S_{\mathrm{n}}m_{\mathrm{eq}}}\,\nu_{\mathrm{n}}^{\mathrm{rel}}\\
-	F_{\mathrm{t}}^{\mathrm{d}} &= 2\sqrt{\frac{5}{6}}\beta\sqrt{S_{\mathrm{t}}m_{\mathrm{eq}}}\,\nu_{\mathrm{t}}^{\mathrm{rel}}
+	F_{\mathrm{n}}^{\mathrm{d}} &= 2\sqrt{\frac{5}{6}}\beta\sqrt{S_{\mathrm{n}}m_{\mathrm{eq}}}\,v_{\mathrm{n}}^{\mathrm{rel}}\\
+	F_{\mathrm{t}}^{\mathrm{d}} &= 2\sqrt{\frac{5}{6}}\beta\sqrt{S_{\mathrm{t}}m_{\mathrm{eq}}}\,v_{\mathrm{t}}^{\mathrm{rel}}
 	\end{aligned}
 	\label{eq:normal_shear_damping_force}
 \end{equation}
 %这是Tsuji阻尼模型
-式中，\(S_{\mathrm{n}}\) 为法向刚度，\(S_{\mathrm{t}}\) 为切向刚度，$\mathrm{N/m}$；\(\nu_{\mathrm{n}}^{\mathrm{rel}}\) 为法向真实速度，\(\nu_{\mathrm{t}}^{\mathrm{rel}}\) 为切向真实速度，$\mathrm{m/s}$；\(m_{\mathrm{eq}}\) 为等效质量，\(\mathrm{kg}\)；\(\beta\) 为阻尼系数。法向和切向共用同一阻尼系数\(\beta\)，与颗粒碰撞前后的恢复系数\(e\)的关系为
+式中，\(S_{\mathrm{n}}\) 为法向刚度，\(S_{\mathrm{t}}\) 为切向刚度，$\mathrm{N/m}$；\(v_{\mathrm{n}}^{\mathrm{rel}}\) 为法向真实速度，\(v_{\mathrm{t}}^{\mathrm{rel}}\) 为切向真实速度，$\mathrm{m/s}$；\(m_{\mathrm{eq}}\) 为等效质量，\(\mathrm{kg}\)；\(\beta\) 为阻尼系数。法向和切向共用同一阻尼系数\(\beta\)，与颗粒碰撞前后的恢复系数\(e\)的关系为
 \begin{equation}
 	\beta = \frac{\ln e}{\sqrt{\ln^2 e + \pi ^2}}
 \end{equation}
@@ -127,17 +127,17 @@
 \begin{equation}
 	G_{\mathrm{eq}}=\left(\frac{2-\nu_{1}}{G_{1}}+\frac{2-\nu_{2}}{G_{2}}\right)^{-1}
 \end{equation}
-式中，\(G_{1}\)、\(G_{2}\) 分别为球 1、2 的剪切模量。
+式中，\(G_{1}\)、\(G_{2}\) 分别为颗粒 1、2 的剪切模量。
 
-假设两颗粒产生接触前的速度分别为 \(\bm{\nu}_{1}\)、\(\bm{\nu}_{2}\)，\(\bm{n}\) 为产生接触时的法向单位矢量，则
+假设两颗粒产生接触前的速度分别为 \(\bm{v}_{1}\)、\(\bm{v}_{2}\)，\(\bm{n}\) 为产生接触时的法向单位矢量，则
 \begin{equation}
 		\bm{n}=\frac{\bm{r}_{1}-\bm{r}_{2}}{\left|\bm{r}_{1}-\bm{r}_{2}\right|}
 \end{equation}
-进而，\(\nu_{\mathrm{n}}^{\mathrm{rel}}\)和\(\nu_{\mathrm{t}}^{\mathrm{rel}}\)的计算式为
+进而，\(v_{\mathrm{n}}^{\mathrm{rel}}\)和\(v_{\mathrm{t}}^{\mathrm{rel}}\)的计算式为
 \begin{equation}
 	\begin{aligned}
-	\nu_{\mathrm{n}}^{\mathrm{rel}} &= (\bm{\nu}_{1}-\bm{\nu}_{2})\cdot\bm{n} \\
-	\nu_{\mathrm{t}}^{\mathrm{rel}} &= \left|(\bm{\nu}_{1}-\bm{\nu}_{2}) - \nu_{\mathrm{n}}^{\mathrm{rel}}\bm{n} + (\bm{\omega}_{1} \times R_1\bm{n} + \bm{\omega}_{2} \times R_2\bm{n})\right|
+	v_{\mathrm{n}}^{\mathrm{rel}} &= (\bm{v}_{1}-\bm{v}_{2})\cdot\bm{n} \\
+	v_{\mathrm{t}}^{\mathrm{rel}} &= \left|(\bm{v}_{1}-\bm{v}_{2}) - v_{\mathrm{n}}^{\mathrm{rel}}\bm{n} + (\bm{\omega}_{1} \times R_1\bm{n} + \bm{\omega}_{2} \times R_2\bm{n})\right|
 	\end{aligned}
 \end{equation}
 
@@ -150,14 +150,14 @@
 %这是Mindlin理论
 式中，\(\delta_{\mathrm{t}}\)表示两个颗粒的切向重叠量，在两个颗粒建立接触时为零，此后时间步内进行累积
 \begin{equation}
-	\delta_{\mathrm{t}}^{n+1} = \delta_{\mathrm{t}}^{n} + \Delta t \cdot {\nu}_\mathrm{t}^\mathrm{rel}
+	\delta_{\mathrm{t}}^{n+1} = \delta_{\mathrm{t}}^{n} + \Delta t \cdot {v}_\mathrm{t}^\mathrm{rel}
 \end{equation}
 
 综合上述，根据式(\ref{eq:normal_particle_elastic_force})和式(\ref{eq:normal_shear_damping_force})，可得颗粒间的法向总接触力 ；根据式子(\ref{eq:normal_shear_damping_force})和式(\ref{eq:shear_damping_force})，可得颗粒间的切向总接触力。当然，切向摩擦力还要收到库伦摩擦定律的限制，在切向总接触里超过静摩擦力（用静摩擦系数\(\mu_s\)进行表征）时进行截断。
 
 % 法向总接触力
 \begin{equation}
-    \bm{F}_{\mathrm{n}} = F_{\mathrm{n}}\bm{n} + F_{\mathrm{n}}^{\mathrm{d}}\bm{n} = \left(\frac{4}{3}E_{\mathrm{eq}}\sqrt{R_{\mathrm{eq}}}\,\delta^{3/2} + 2\sqrt{\frac{5}{6}}\beta\sqrt{S_{\mathrm{n}}m_{\mathrm{eq}}}\,\nu_{\mathrm{n}}^{\mathrm{rel}}\right)\bm{n}
+    \bm{F}_{\mathrm{n}} = F_{\mathrm{n}}\bm{n} + F_{\mathrm{n}}^{\mathrm{d}}\bm{n} = \left(\frac{4}{3}E_{\mathrm{eq}}\sqrt{R_{\mathrm{eq}}}\,\delta^{3/2} + 2\sqrt{\frac{5}{6}}\beta\sqrt{S_{\mathrm{n}}m_{\mathrm{eq}}}\,v_{\mathrm{n}}^{\mathrm{rel}}\right)\bm{n}
     \label{eq:total_normal_force}
 \end{equation}
 
@@ -165,59 +165,76 @@
 \begin{equation}
     \bm{F}_{\mathrm{t}} = 
     \begin{cases}
-        -S_{\mathrm{t}}\bm{\delta}_{\mathrm{t}} - 2\sqrt{\dfrac{5}{6}}\beta\sqrt{S_{\mathrm{t}}m_{\mathrm{eq}}}\,\bm{\nu}_{\mathrm{t}}^{\mathrm{rel}}, & |\bm{F}_{\mathrm{t}}| \leq \mu_s F_{\mathrm{n}} \\[10pt]
-        -\mu_s F_{\mathrm{n}} \dfrac{\bm{\nu}_{\mathrm{t}}^{\mathrm{rel}}}{\nu_{\mathrm{t}}^{\mathrm{rel}}}, & |\bm{F}_{\mathrm{t}}| > \mu_s F_{\mathrm{n}}
+        -S_{\mathrm{t}}\bm{\delta}_{\mathrm{t}} - 2\sqrt{\dfrac{5}{6}}\beta\sqrt{S_{\mathrm{t}}m_{\mathrm{eq}}}\,\bm{v}_{\mathrm{t}}^{\mathrm{rel}}, & |\bm{F}_{\mathrm{t}}| \leq \mu_s F_{\mathrm{n}} \\[10pt]
+        -\mu_s F_{\mathrm{n}} \dfrac{\bm{v}_{\mathrm{t}}^{\mathrm{rel}}}{v_{\mathrm{t}}^{\mathrm{rel}}}, & |\bm{F}_{\mathrm{t}}| > \mu_s F_{\mathrm{n}}
     \end{cases}
     \label{eq:total_shear_force}
 \end{equation}
 
-考虑滚动摩擦提高颗粒运动仿真准确性很重要，接触表面处产生的力矩可以用滚动摩擦系数	进行表征，即
+考虑滚动摩擦提高颗粒运动仿真准确性很重要，接触表面处产生的力矩可以用滚动摩擦系数进行表征，即
 % 滚动摩擦扭矩（方向恒定扭矩模型）
 \begin{equation}
     \bm{T}_{\mathrm{r}} = -\mu_{\mathrm{r}} F_{\mathrm{n}} R_{\mathrm{eq}} \frac{\bm{\omega}_{\mathrm{rel}}}{|\bm{\omega}_{\mathrm{rel}}|}
     \label{eq:rolling_torque}
 \end{equation}
-式中，\(\mu_{\mathrm{r}}\) 为滚动摩擦系数；\(\bm{\omega}_{\mathrm{rel}}\) 为接触点的相对角速度，\(\mathrm{rad/s}\)。
+式中，\(\mu_{\mathrm{r}}\) 为滚动摩擦系数；\(\bm{\omega}_{\mathrm{rel}}\) 为接触点的相对角速度，\(\mathrm{rad/s}\)。以上给出了颗粒--颗粒接触碰撞过程的完整建模，对于颗粒--壁面的建模也同理，在此处不在赘述。
 
-当处理颗粒为湿颗粒且存在粘性作用时，需要模拟含湿颗粒且颗粒间能形成液桥力的工况，接触模型通常选择为 Hertz--Mindlin with JKR 接触模型，模型接触力的实现基于 Johnson--Kendall--Roberts 理论。该模型的计算基础与 Hertz--Mindlin 基本接触模型相同，是在 Hertz--Mindlin 接触模型基础上引入一个法向接触力。
+当处理湿颗粒且颗粒间存在液桥力等粘性作用时，接触模型通常选用 Hertz--Mindlin with JKR 模型，其法向弹性接触力的计算基于 Johnson--Kendall--Roberts（JKR）理论。
+该模型在 Hertz--Mindlin（无滑移）模型的基础上引入了表面能参数，适用于模拟干粉、湿物料等强粘性系统。
 
-JKR 模型的法向力由重叠量 \(\delta\) 和引入的新参数表面能 \(\gamma\) 实现：
+JKR 模型的法向力取决于法向重叠量 $\alpha$ 和表面能 $\gamma$，其表达式为：
 \begin{equation}
-	F_{\mathrm{JKR}}
-	=-4\sqrt{\pi\gamma E_{\mathrm{eq}}\alpha^{3}}
-	+\frac{4E_{\mathrm{eq}}\alpha^{3}}{3R_{\mathrm{eq}}}
-\end{equation}
-\begin{equation}
-	\delta=\frac{\alpha^{2}}{R_{\mathrm{eq}}}
-	-\sqrt{\frac{4\pi\gamma\alpha}{E_{\mathrm{eq}}}}
+    F_{\mathrm{JKR}}
+    = -4\sqrt{\pi\gamma E^{\mathrm{eq}}\alpha^{3}}
+    + \frac{4E^{\mathrm{eq}}\alpha^{3}}{3R^{\mathrm{eq}}}
+    \label{eq:JKR_force}
 \end{equation}
 
-对于 \(\gamma=0\) 的情况，接触力即变为 Hertz--Mindlin 法向力：
+对应的相对接近距离（即法向重叠量）$\delta$ 为：
 \begin{equation}
-	F_{\mathrm{JKR}}=F_{\mathrm{Hertz}}
-	=\frac{4}{3}E_{\mathrm{eq}}\sqrt{R_{\mathrm{eq}}}\,\alpha^{3/2}
+    \delta = \frac{\alpha^{2}}{R^{\mathrm{eq}}}
+    - \sqrt{\frac{4\pi\gamma\alpha}{E^{\mathrm{eq}}}}
+    \label{eq:JKR_overlap}
 \end{equation}
 
-计算时可根据计算工况调整颗粒表面能及其他参数，调整不同含水率条件下的颗粒状态，不同工况的表面能对颗粒影响较大。该接触模型对颗粒提供凝聚力，即使颗粒间的接触不是直接接触也会存在。颗粒间有非零凝聚力的最大间隙计算式为
+式中：$E^{\mathrm{eq}}$ 为等效杨氏模量；$R^{\mathrm{eq}}$ 为等效半径；$\alpha$ 为考虑粘附力时的接触面半径；$\gamma$ 为表面能（单位：J/m$^{2}$）。
+
+当 $\gamma = 0$ 时，粘附项消失，JKR 法向力退化为经典 Hertz--Mindlin 法向力：
 \begin{equation}
-	\delta_{\mathrm{c}}
-	=\frac{\alpha_{\mathrm{c}}^{2}}{R_{\mathrm{eq}}}
-	-\sqrt{\frac{4\pi\gamma\alpha_{\mathrm{c}}}{E_{\mathrm{eq}}}}
+    F_{\mathrm{JKR}} = F_{\mathrm{Hertz}}
+    = \frac{4}{3}E^{\mathrm{eq}}\sqrt{R^{\mathrm{eq}}}\,\delta^{3/2}
+    \label{eq:Hertz_force}
 \end{equation}
 
-当 \(\delta<\delta_{\mathrm{c}}\) 时，模型计算则计算为 0。当颗粒间的凝聚力达到最大值时，颗粒间的接触不是实际接触，而且接触间隔小于 \(\delta_{\mathrm{c}}\)，其计算式为
+该模型即使在颗粒未发生物理接触的情况下，仍能提供吸引力（凝聚力）。颗粒间存在非零凝聚力的最大间隙 $\delta_{\mathrm{c}}$ 定义为：
 \begin{equation}
-	F_{\mathrm{c}}=-\frac{3}{2}\pi\gamma R_{\mathrm{eq}}
+    \delta_{\mathrm{c}} = \sqrt[3]{\frac{4\pi\alpha_{\mathrm{c}}}{E^{\mathrm{eq}}}}
+    + \frac{\alpha_{\mathrm{c}}^{2}}{R^{\mathrm{eq}}}
+    \label{eq:critical_gap}
 \end{equation}
 
-颗粒与颗粒间接触模型是 EDEM 中使用的 Hertz--Mindlin 默认模型，该模型适用于描述各种形状颗粒之间的接触行为，包括圆形、椭圆形和不规则形状颗粒，如图 1.3、图 1.4 所示。Hertz--Mindlin 模型在描述颗粒间接触力和相互作用时具有广泛的适用性，并且考虑了颗粒的变形和滑移等实际因素。Hertz--Mindlin 接触模型示意图见图 1.3。
+其中临界接触半径 $\alpha_{\mathrm{c}}$ 为：
+\begin{equation}
+    \alpha_{\mathrm{c}} = \left(\frac{9\pi\gamma R^{\mathrm{eq}2}}{2E^{\mathrm{eq}}}\right)^{\frac{1}{3}}
+    \label{eq:critical_radius}
+\end{equation}
 
-此外，在采用 EDEM 软件进行模拟计算过程中，还需要做如下假设：
+当 $\delta < \delta_{\mathrm{c}}$ 时，模型返回零力。最大凝聚力（即拉脱力，pull-off force）发生在颗粒未实际接触且间隙小于 $\delta_{\mathrm{c}}$ 时，其表达式为：
+\begin{equation}
+    F_{\mathrm{c}} = -\frac{3}{2}\pi\gamma R^{\mathrm{eq}}
+    \label{eq:pull_off_force}
+\end{equation}
+
+在实际仿真中，可根据工况调整表面能 $\gamma$ 等参数，以表征不同含水率条件下颗粒的粘性状态。表面能对颗粒流动行为影响显著，含水率越高，所需表面能参数越大。
+
+颗粒间接触采用 EDEM 默认的 Hertz--Mindlin 模型作为基础框架，该模型适用于描述各类形状颗粒（球形、椭球形及不规则颗粒）之间的接触行为，并考虑了颗粒变形、滑移等实际因素。
+
+在采用离散元法进行模拟计算时，通常作如下假设：
 \begin{enumerate}
-	\item 颗粒系统中所有颗粒的点变形总和被认为是颗粒系统的总变形；
-	\item 颗粒之间的接触形式为点接触，接触总是在很小的区域内发生；
-	\item 颗粒与颗粒接触时可以产生部分重叠量，但重叠量大小与颗粒尺寸大小相比要小很多；
-	\item 在每个计算步长内，外界激励不能被任意颗粒同时传播到它的相邻颗粒。在所有的计算时间内，任意颗粒上的合力可以通过相互接触的颗粒之间的相互作用唯一确定。
+    \item 颗粒被视为刚性或近似刚性实体，形变仅在接触区域以重叠量体现；
+    \item 颗粒间接触形式为点接触，接触发生在很小的区域内；
+    \item 颗粒间可产生部分重叠，但重叠量远小于颗粒尺寸；
+    \item 在每个计算步长内，外力不能同时传播到相邻颗粒，任意颗粒上的合力由其直接接触的颗粒唯一确定。
 \end{enumerate}
 
 \subsection{液固相间作用模型}
@@ -233,10 +250,10 @@ JKR 模型的法向力由重叠量 \(\delta\) 和引入的新参数表面能 \(\
 \begin{equation}
 	\beta_{\mathrm{Gidaspow}}=
 	\begin{cases}
-		\dfrac{3C_{\mathrm{d}}\epsilon_{\mathrm{s}}\rho_{\mathrm{l}}\left|\bm{\nu}_{\mathrm{l}}-\bm{\nu}_{\mathrm{s}}\right|}{4d_{\mathrm{s}}}\epsilon_{\mathrm{l}}^{-2.65}, & \epsilon_{\mathrm{l}}>0.8 \\[10pt]
+		\dfrac{3C_{\mathrm{d}}\epsilon_{\mathrm{s}}\rho_{\mathrm{l}}\left|\bm{v}_{\mathrm{l}}-\bm{v}_{\mathrm{s}}\right|}{4d_{\mathrm{s}}}\epsilon_{\mathrm{l}}^{-2.65}, & \epsilon_{\mathrm{l}}>0.8 \\[10pt]
 		\dfrac{\epsilon_{\mathrm{s}}(1-\epsilon_{\mathrm{l}})\mu_{\mathrm{l}}}{\epsilon_{\mathrm{l}}d_{\mathrm{s}}^{2}}
 		+1.75\dfrac{\epsilon_{\mathrm{s}}\rho_{\mathrm{l}}}{d_{\mathrm{s}}}
-		\left|\bm{\nu}_{\mathrm{l}}-\bm{\nu}_{\mathrm{s}}\right|, & \epsilon_{\mathrm{l}}\leq 0.8
+		\left|\bm{v}_{\mathrm{l}}-\bm{v}_{\mathrm{s}}\right|, & \epsilon_{\mathrm{l}}\leq 0.8
 	\end{cases}
 \end{equation}
 其中，\(C_{\mathrm{d}}\) 为阻力系数，其计算公式如下：
@@ -251,14 +268,14 @@ JKR 模型的法向力由重叠量 \(\delta\) 和引入的新参数表面能 \(\
 固相雷诺数表示为
 \begin{equation}
 	Re_{\mathrm{s}}=\frac{d_{\mathrm{s}}\epsilon_{\mathrm{l}}\rho_{\mathrm{l}}
-		\left|\bm{\nu}_{\mathrm{l}}-\bm{\nu}_{\mathrm{s}}\right|}{\mu_{\mathrm{l}}}
+		\left|\bm{v}_{\mathrm{l}}-\bm{v}_{\mathrm{s}}\right|}{\mu_{\mathrm{l}}}
 \end{equation}
 
 升力包括剪切升力（Saffman）和旋转升力（Magnus），垂直于颗粒和流体之间的相对速度方向。施加在岩屑颗粒 \(p\) 上的剪切升力（Saffman）表现形式为
 \begin{equation}
 	\bm{F}_{\mathrm{S}}
 	=C_{\mathrm{LS}}\frac{\rho_{\mathrm{l}}\pi}{8}d_{p}^{3}
-	\left|\bm{\nu}_{\mathrm{l}}-\bm{\nu}_{p}\right|
+	\left|\bm{v}_{\mathrm{l}}-\bm{v}_{p}\right|
 	\sqrt{\omega_{\mathrm{l}}}
 \end{equation}
 其中，\(\omega_{\mathrm{l}}\) 为流体速度的旋度，\(C_{\mathrm{LS}}\) 为剪切升力系数，可以表示为
@@ -289,9 +306,9 @@ JKR 模型的法向力由重叠量 \(\delta\) 和引入的新参数表面能 \(\
 \begin{equation}
 	\bm{F}_{\mathrm{M}}
 	=C_{\mathrm{LM}}\frac{\rho_{\mathrm{l}}\pi}{8}d_{p}^{3}
-	\left|\bm{\nu}_{\mathrm{l}}-\bm{\nu}_{p}\right|
+	\left|\bm{v}_{\mathrm{l}}-\bm{v}_{p}\right|
 	\frac{\left|\bm{\Omega}\times
-		\left(\bm{\nu}_{\mathrm{l}}-\bm{\nu}_{p}\right)\right|}
+		\left(\bm{v}_{\mathrm{l}}-\bm{v}_{p}\right)\right|}
 	{\left|\bm{\Omega}\right|}
 \end{equation}
 其中，\(C_{\mathrm{LM}}\) 为剪切升力系数，可以表示为：
@@ -315,16 +332,16 @@ JKR 模型的法向力由重叠量 \(\delta\) 和引入的新参数表面能 \(\
 对于密度恒定的不可压缩流体，假设液相质量为常数，液体流动遵循 N--S 方程。液固两相流模型中流体相的连续性方程和 N--S 方程由下式给出：
 \begin{equation}
 	\frac{\partial(\rho_{\mathrm{l}}\epsilon_{\mathrm{l}})}{\partial t}
-	+\nabla\cdot(\rho_{\mathrm{l}}\epsilon_{\mathrm{l}}\bm{\nu}_{\mathrm{l}})=0
+	+\nabla\cdot(\rho_{\mathrm{l}}\epsilon_{\mathrm{l}}\bm{v}_{\mathrm{l}})=0
 \end{equation}
 \begin{equation}
-	\frac{\partial(\rho_{\mathrm{l}}\epsilon_{\mathrm{l}}\bm{\nu}_{\mathrm{l}})}{\partial t}
-	+\nabla\cdot(\rho_{\mathrm{l}}\epsilon_{\mathrm{l}}\bm{\nu}_{\mathrm{l}}\bm{\nu}_{\mathrm{l}})
+	\frac{\partial(\rho_{\mathrm{l}}\epsilon_{\mathrm{l}}\bm{v}_{\mathrm{l}})}{\partial t}
+	+\nabla\cdot(\rho_{\mathrm{l}}\epsilon_{\mathrm{l}}\bm{v}_{\mathrm{l}}\bm{v}_{\mathrm{l}})
 	=-\epsilon_{\mathrm{l}}\nabla P
 	-\nabla\cdot(\epsilon_{\mathrm{l}}\bm{\tau}_{\mathrm{l}})
 	+\epsilon_{\mathrm{l}}\rho_{\mathrm{l}}\bm{g}+\bm{F}_{p}
 \end{equation}
-式中，\(\bm{g}\) 为重力加速度，\(\rho_{\mathrm{l}}\) 为流体密度，\(P\) 和 \(\epsilon_{\mathrm{l}}\) 分别为流体相压力和体积分数，\(\bm{\nu}_{\mathrm{l}}\) 为流体速度，\(\bm{F}_{p}\) 为液固相间作用力，\(\bm{\tau}_{\mathrm{l}}\) 表示粘性应力张量。其中，液固相间作用力及粘性应力张量公式为
+式中，\(\bm{g}\) 为重力加速度，\(\rho_{\mathrm{l}}\) 为流体密度，\(P\) 和 \(\epsilon_{\mathrm{l}}\) 分别为流体相压力和体积分数，\(\bm{v}_{\mathrm{l}}\) 为流体速度，\(\bm{F}_{p}\) 为液固相间作用力，\(\bm{\tau}_{\mathrm{l}}\) 表示粘性应力张量。其中，液固相间作用力及粘性应力张量公式为
 \begin{equation}
 	\bm{F}_{p}
 	=-\frac{\sum_{i=1}^{k_{\mathrm{c}}}\bm{F}_{i,p}}{\Delta V}
@@ -332,11 +349,11 @@ JKR 模型的法向力由重叠量 \(\delta\) 和引入的新参数表面能 \(\
 \begin{equation}
 	\bm{\tau}_{\mathrm{l}}
 	=\mu_{\mathrm{l}}\left[
-	\nabla\bm{\nu}_{\mathrm{l}}
-	+\left(\nabla\bm{\nu}_{\mathrm{l}}\right)^{T}
+	\nabla\bm{v}_{\mathrm{l}}
+	+\left(\nabla\bm{v}_{\mathrm{l}}\right)^{T}
 	\right]
 	-\frac{2}{3}\mu_{\mathrm{l}}
-	\left(\nabla\cdot\bm{\nu}_{\mathrm{l}}\right)\bm{I}
+	\left(\nabla\cdot\bm{v}_{\mathrm{l}}\right)\bm{I}
 \end{equation}
 式中，\(\bm{F}_{p}\) 为液体对颗粒 \(p\) 的作用力，\(\mu_{\mathrm{l}}\) 为流体粘度，\(\bm{I}\) 为单位二阶张量。
 
@@ -345,7 +362,7 @@ JKR 模型的法向力由重叠量 \(\delta\) 和引入的新参数表面能 \(\
 考虑到高精度、应用简单、计算效率和通用性等需求，本文采用 \(k-\epsilon\) 标准模型作为研究基础来计算钻井液的湍流粘度，其中 \(k\) 为湍流动能，\(\epsilon\) 为耗散率。\(k\) 和 \(\epsilon\) 的输运方程分别表示为：
 \begin{equation}
 	\frac{\partial}{\partial t}(\rho_{\mathrm{l}}k)
-	+\frac{\partial}{\partial x_{i}}(\rho_{\mathrm{l}}k\nu_{\mathrm{l},i})
+	+\frac{\partial}{\partial x_{i}}(\rho_{\mathrm{l}}kv_{\mathrm{l},i})
 	=\frac{\partial}{\partial x_{j}}\left[
 	\left(\mu+\frac{\mu_{\mathrm{t}}}{\sigma_{k}}\right)
 	\frac{\partial k}{\partial x_{j}}
@@ -354,7 +371,7 @@ JKR 模型的法向力由重叠量 \(\delta\) 和引入的新参数表面能 \(\
 \end{equation}
 \begin{equation}
 	\frac{\partial}{\partial t}(\rho_{\mathrm{l}}\epsilon)
-	+\frac{\partial}{\partial x_{i}}(\rho_{\mathrm{l}}\epsilon\nu_{\mathrm{l},i})
+	+\frac{\partial}{\partial x_{i}}(\rho_{\mathrm{l}}\epsilon v_{\mathrm{l},i})
 	=\frac{\partial}{\partial x_{j}}\left[
 	\left(\mu+\frac{\mu_{\mathrm{t}}}{\sigma_{\epsilon}}\right)
 	\frac{\partial\epsilon}{\partial x_{j}}
@@ -363,7 +380,7 @@ JKR 模型的法向力由重叠量 \(\delta\) 和引入的新参数表面能 \(\
 	\left(G_{k}+C_{3\epsilon}G_{b}\right)
 	-C_{2\epsilon}\rho_{\mathrm{l}}\frac{\epsilon^{2}}{k}
 \end{equation}
-式中，\(\rho_{\mathrm{l}}\) 为液相密度，kg/m\(^{3}\)；\(\nu_{\mathrm{l}}\) 为液相速度，m/s；\(C_{1\epsilon}\)、\(C_{2\epsilon}\)、\(C_{3\epsilon}\) 为常数，且 \(C_{1\epsilon}=1.44\)，\(C_{2\epsilon}=1.92\)。\(\sigma_{k}\) 和 \(\sigma_{\epsilon}\) 分别为 \(k\) 和 \(\epsilon\) 的湍流普朗特数，其取值为 \(\sigma_{k}=1.0\)，\(\sigma_{\epsilon}=1.3\)。\(G_{k}\) 表示由于平均速度梯度产生的湍流动能；\(Y_{\mathrm{M}}\) 表示可压缩湍流脉动膨胀对整体耗散率的影响；\(\mu_{\mathrm{t}}\) 表示湍流粘度系数。\(G_{k}\)、\(Y_{\mathrm{M}}\)、\(\mu_{\mathrm{t}}\) 公式表示如下：
+式中，\(\rho_{\mathrm{l}}\) 为液相密度，kg/m\(^{3}\)；\(v_{\mathrm{l}}\) 为液相速度，m/s；\(C_{1\epsilon}\)、\(C_{2\epsilon}\)、\(C_{3\epsilon}\) 为常数，且 \(C_{1\epsilon}=1.44\)，\(C_{2\epsilon}=1.92\)。\(\sigma_{k}\) 和 \(\sigma_{\epsilon}\) 分别为 \(k\) 和 \(\epsilon\) 的湍流普朗特数，其取值为 \(\sigma_{k}=1.0\)，\(\sigma_{\epsilon}=1.3\)。\(G_{k}\) 表示由于平均速度梯度产生的湍流动能；\(Y_{\mathrm{M}}\) 表示可压缩湍流脉动膨胀对整体耗散率的影响；\(\mu_{\mathrm{t}}\) 表示湍流粘度系数。\(G_{k}\)、\(Y_{\mathrm{M}}\)、\(\mu_{\mathrm{t}}\) 公式表示如下：
 \begin{equation}
 	Y_{\mathrm{M}}=2\rho_{\mathrm{l}}\epsilon M^{2}
 \end{equation}
@@ -400,13 +417,13 @@ JKR 模型的法向力由重叠量 \(\delta\) 和引入的新参数表面能 \(\
 		颗粒密度 & \(\rho_{\mathrm{P}}\) & -- & kg/m\(^{3}\) \\
 		洗井液密度 & \(\rho_{\mathrm{l}}\) & -- & kg/m\(^{3}\) \\
 		井斜角 & \(\theta\) & 0.0、45.0、90.0 & \(^{\circ}\) \\
-		洗井液入口流速 & \(\nu_{\mathrm{c}}\) & 0.17、0.27、0.37、0.59 & m/s \\
+		洗井液入口流速 & \(v_{\mathrm{c}}\) & 0.17、0.27、0.37、0.59 & m/s \\
 		洗井液粘度 & \(\mu\) & 1.0、1.7 & mPa·s \\
 		\bottomrule
 	\end{tabular}
 \end{table}
 
-在井筒内颗粒物运移特性的研究中，基于对颗粒动力学行为控制作用的大小，选择流体流速 \(\nu_{\mathrm{c}}\)、流体粘度 \(\mu\) 和井斜角 \(\theta\) 作为主要控制变量。首先，流体流速 \(\nu_{\mathrm{c}}\) 是决定颗粒悬浮与输运能力的关键参数，流速直接影响流体的动能和湍流强度，进而调控颗粒的启动阈值、悬浮状态及沉积风险。其次，流体粘度 \(\mu\) 通过改变流体的粘滞阻力，显著影响颗粒的沉降速度及与流体的相互作用，高粘度流体可增强颗粒携带能力，但可能增加流动阻力。最后，井斜角 \(\theta\) 作为几何特征的核心变量，通过改变重力在井筒轴线方向的分量，直接影响颗粒的受力平衡：在斜井或水平井中，重力分量的减弱会加剧颗粒沉降的方位选择性，导致非对称沉积。这三个因素共同构成了颗粒运移的“动力--阻力--几何”三元耦合机制，能够系统表征复杂井筒环境下颗粒迁移的物理本质，为优化携粒效率、预测床层形成提供理论支撑。考虑到颗粒属性的不同会对其运移行为产生显著影响，于是，下文分别研究砂砾、铁屑、结垢物和蜡颗粒的运移和分布规律。
+在井筒内颗粒物运移特性的研究中，基于对颗粒动力学行为控制作用的大小，选择流体流速 \(v_{\mathrm{c}}\)、流体粘度 \(\mu\) 和井斜角 \(\theta\) 作为主要控制变量。首先，流体流速 \(v_{\mathrm{c}}\) 是决定颗粒悬浮与输运能力的关键参数，流速直接影响流体的动能和湍流强度，进而调控颗粒的启动阈值、悬浮状态及沉积风险。其次，流体粘度 \(\mu\) 通过改变流体的粘滞阻力，显著影响颗粒的沉降速度及与流体的相互作用，高粘度流体可增强颗粒携带能力，但可能增加流动阻力。最后，井斜角 \(\theta\) 作为几何特征的核心变量，通过改变重力在井筒轴线方向的分量，直接影响颗粒的受力平衡：在斜井或水平井中，重力分量的减弱会加剧颗粒沉降的方位选择性，导致非对称沉积。这三个因素共同构成了颗粒运移的“动力--阻力--几何”三元耦合机制，能够系统表征复杂井筒环境下颗粒迁移的物理本质，为优化携粒效率、预测床层形成提供理论支撑。考虑到颗粒属性的不同会对其运移行为产生显著影响，于是，下文分别研究砂砾、铁屑、结垢物和蜡颗粒的运移和分布规律。
 
 \section{井筒内砂砾运移及分布规律研究}
 
@@ -457,7 +474,7 @@ JKR 模型的法向力由重叠量 \(\delta\) 和引入的新参数表面能 \(\
 	\end{tabular}
 \end{table}
 
-本项目涉及到的四类工具中，“四合一”工具的外部功能单元多，结构最为复杂，在工具的几何变径处会产生边界层分离和回流现象，是砂砾沉积的“危险位置”。于是，本文选择“四合一”工具的扶正器和强磁位置作为对象，研究砂砾在此处的沉积行为。建立强磁部位与 \(7'\) 井筒环空流体仿真模型，仿真模型数据见表 1.4。研究不同环空流速下（\(\nu_{\mathrm{c}}=0.37\) m/s、\(0.59\) m/s）砂砾的运移及沉降规律，探究砂砾是否会出现沉积或者堵塞现象。计算结果如图 1.8 所示。
+本项目涉及到的四类工具中，“四合一”工具的外部功能单元多，结构最为复杂，在工具的几何变径处会产生边界层分离和回流现象，是砂砾沉积的“危险位置”。于是，本文选择“四合一”工具的扶正器和强磁位置作为对象，研究砂砾在此处的沉积行为。建立强磁部位与 \(7'\) 井筒环空流体仿真模型，仿真模型数据见表 1.4。研究不同环空流速下（\(v_{\mathrm{c}}=0.37\) m/s、\(0.59\) m/s）砂砾的运移及沉降规律，探究砂砾是否会出现沉积或者堵塞现象。计算结果如图 1.8 所示。
 
 \begin{table}[H]
 	\centering
@@ -472,7 +489,7 @@ JKR 模型的法向力由重叠量 \(\delta\) 和引入的新参数表面能 \(\
 		颗粒密度 & \(\rho_{\mathrm{P}}\) & 2650.0 & kg/m\(^{3}\) \\
 		洗井液密度 & \(\rho_{\mathrm{l}}\) & 1000.0 & kg/m\(^{3}\) \\
 		井斜角 & \(\theta\) & 90.0 & \(^{\circ}\) \\
-		洗井液入口流速 & \(\nu_{\mathrm{c}}\) & 0.37、0.59 & m/s \\
+		洗井液入口流速 & \(v_{\mathrm{c}}\) & 0.37、0.59 & m/s \\
 		洗井液粘度 & \(\mu\) & 1.0 & mPa·s \\
 		\bottomrule
 	\end{tabular}
