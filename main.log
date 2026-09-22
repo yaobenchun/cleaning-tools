@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2026.7.19)  21 SEP 2026 15:31
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2026.7.19)  21 SEP 2026 22:58
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1281,13 +1281,14 @@ File: figure/fluid-domain-polyhedral-mesh.jpg Graphic file (type bmp)
  [8]
 File: figure/sand-sample.jpg Graphic file (type bmp)
 <figure/sand-sample.jpg>
- [9] [10]
+ [9]
 File: figure/tool-and-wellbore-simulation-model.png Graphic file (type bmp)
 <figure/tool-and-wellbore-simulation-model.png>
-File: figure/sand-distribution-tool-vin-dot37.png Graphic file (type bmp)
-<figure/sand-distribution-tool-vin-dot37.png>
+ [10]
 File: figure/sand-distribution-annular-vin-dot37.png Graphic file (type bmp)
 <figure/sand-distribution-annular-vin-dot37.png>
+LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/m/n' will be
+(Font)              scaled to size 5.0pt on input line 521.
 File: figure/sand-distribution-annular-vin-dot59.png Graphic file (type bmp)
 <figure/sand-distribution-annular-vin-dot59.png>
  [11]
@@ -1305,66 +1306,62 @@ File: figure/sand-mass-in-annular-VS-time-flowrate.png Graphic file (type bmp)
  [13]
 File: figure/sand-volume-fraction-vin-dot17.png Graphic file (type bmp)
 <figure/sand-volume-fraction-vin-dot17.png>
- [14]
 File: figure/sand-volume-fraction-vin-dot27.png Graphic file (type bmp)
 <figure/sand-volume-fraction-vin-dot27.png>
+ [14]
 File: figure/sand-volume-fraction-vin-dot69.png Graphic file (type bmp)
 <figure/sand-volume-fraction-vin-dot69.png>
- [15]
 File: figure/b-point-height-VS-flowrate.png Graphic file (type bmp)
 <figure/b-point-height-VS-flowrate.png>
- [16]
+ [15]
 File: figure/sand-volume-fraction-velocity-at-b-point-flowrate.png Graphic file (type bmp)
 <figure/sand-volume-fraction-velocity-at-b-point-flowrate.png>
- [17]
+ [16]
 File: figure/sand-mass-in-annular-VS-time-viscosity.png Graphic file (type bmp)
 <figure/sand-mass-in-annular-VS-time-viscosity.png>
 File: figure/sand-volume-fraction-mu-1cp.png Graphic file (type bmp)
 <figure/sand-volume-fraction-mu-1cp.png>
- [18]
+ [17]
 File: figure/sand-volume-fraction-mu-5cp.png Graphic file (type bmp)
 <figure/sand-volume-fraction-mu-5cp.png>
 File: figure/b-point-height-VS-viscosity.png Graphic file (type bmp)
 <figure/b-point-height-VS-viscosity.png>
- [19]
+ [18]
 File: figure/sand-volume-fraction-velocity-at-b-point-viscosity.png Graphic file (type bmp)
 <figure/sand-volume-fraction-velocity-at-b-point-viscosity.png>
- [20]
+ [19]
 File: figure/iron-shavings-sample.jpg Graphic file (type bmp)
 <figure/iron-shavings-sample.jpg>
 File: figure/iron-wire-actual.jpg Graphic file (type bmp)
 <figure/iron-wire-actual.jpg>
 File: figure/iron-wire-model.jpg Graphic file (type bmp)
 <figure/iron-wire-model.jpg>
+ [20]
 File: figure/iron-wire-distribution-1cp-velocity-colored.png Graphic file (type bmp)
 <figure/iron-wire-distribution-1cp-velocity-colored.png>
-LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/m/n' will be
-(Font)              scaled to size 5.0pt on input line 778.
 File: figure/iron-wire-distribution-1dot7-cp-velocity-colored.png Graphic file (type bmp)
 <figure/iron-wire-distribution-1dot7-cp-velocity-colored.png>
 File: figure/iron-wire-mean-velocity-evolution-viscosity.jpg Graphic file (type bmp)
 <figure/iron-wire-mean-velocity-evolution-viscosity.jpg>
- [21]
+ [21] [22]
 File: figure/iron-wire-distribution-1dot7cp-0dot17mpers.png Graphic file (type bmp)
 <figure/iron-wire-distribution-1dot7cp-0dot17mpers.png>
 File: figure/iron-wire-distribution-1dot7cp-0dot27mpers.png Graphic file (type bmp)
 <figure/iron-wire-distribution-1dot7cp-0dot27mpers.png>
- [22] [23]
 File: figure/iron-wire-particle-track-1dot7cp-0dot17mpers.jpg Graphic file (type bmp)
 <figure/iron-wire-particle-track-1dot7cp-0dot17mpers.jpg>
 File: figure/iron-wire-particle-track-1dot7cp-0dot27mpers.jpg Graphic file (type bmp)
 <figure/iron-wire-particle-track-1dot7cp-0dot27mpers.jpg>
 File: figure/iron-wire-mean-velocity-evolution-incoming-velocity.png Graphic file (type bmp)
 <figure/iron-wire-mean-velocity-evolution-incoming-velocity.png>
- [24]
+ [23] [24]
 File: figure/iron-wire-distribution-1dot7cp-0dot27mpers-3angles.jpg Graphic file (type bmp)
 <figure/iron-wire-distribution-1dot7cp-0dot27mpers-3angles.jpg>
- [25]
 File: figure/iron-wire-particle-track-1dot7cp-0dot27mpers-3angles.jpg Graphic file (type bmp)
 <figure/iron-wire-particle-track-1dot7cp-0dot27mpers-3angles.jpg>
 File: figure/iron-wire-mean-velocity-evolution-3angles.png Graphic file (type bmp)
 <figure/iron-wire-mean-velocity-evolution-3angles.png>
- [26]
+ [25] [26]
 
 LaTeX Warning: Reference `tab:basr_simulation_params' on page 27 undefined on input line 914.
 
@@ -1453,13 +1450,13 @@ LaTeX Warning: There were undefined references.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: DA910DD2E389FFD9F30A394F3398F16E;7930.
+(rerunfilecheck)             Checksum: E447839388B1BD61C4E768006ED52374;7930.
  ) 
 Here is how much of TeX's memory you used:
- 36852 strings out of 468174
- 848634 string characters out of 5433150
- 1201131 words of memory out of 5000000
- 64919 multiletter control sequences out of 15000+600000
+ 36840 strings out of 468174
+ 848110 string characters out of 5433150
+ 1201065 words of memory out of 5000000
+ 64908 multiletter control sequences out of 15000+600000
  641471 words of font info for 124 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  93i,13n,117p,1215b,1170s stack positions out of 10000i,1000n,20000p,200000b,200000s
