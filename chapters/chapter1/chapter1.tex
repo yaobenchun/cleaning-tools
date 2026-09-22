@@ -429,7 +429,7 @@ JKR 模型的法向力取决于法向重叠量 $\alpha$ 和表面能 $\gamma$，
 
 洗井作业中，冲砂工具和管柱的砂堵问题直接影响作业安全与效率。砂堵的本质是砂砾在工具与井筒环空内的异常堆积，其后果不仅限于工具功能失效，例如冲砂液循环中断、卡钻，还会导致非计划停工、设备维修成本攀升。通过仿真研究井筒内工具与井筒环空砂砾运移规律，可以预测砂砾在井筒环空内的运移速度以及沉积规律，为冲砂作业提供理论指导。
 
-根据现场提供的砂砾样本（见图 1.7）及其粒度分级统计数据（参见表 0.2），建立相对应的大小与数量的砂砾颗粒仿真模型（具体参数见表 0.3）。
+根据现场提供的砂砾样本（见图\ref{fig:sand_sample}）及其粒度分级统计数据（参见表\ref{tab:real_sand_parameter}），建立相对应的大小与数量的砂砾颗粒仿真模型（具体参数见表\ref{tab:simulation_sand_parameter}）。
 
 \begin{figure}[htbp]
 	\centering
@@ -441,6 +441,7 @@ JKR 模型的法向力取决于法向重叠量 $\alpha$ 和表面能 $\gamma$，
 \begin{table}[H]
 	\centering
 	\caption{砂砾粒度分级统计}
+	\label{tab:real_sand_parameter}
 	\begin{tabularx}{.9\textwidth}{CCC}
 		\toprule
 		分类 & 粒级区间/\(\mu\)m & 含量/\% \\
@@ -461,6 +462,7 @@ JKR 模型的法向力取决于法向重叠量 $\alpha$ 和表面能 $\gamma$，
 \begin{table}[H]
 	\centering
 	\caption{仿真颗粒粒径及数量分布}
+	\label{tab:simulation_sand_parameter}
 	\begin{tabularx}{.9\textwidth}{CCCC}
 		\toprule
 		类型 & 砂砾颗粒数量/个 & 粒径分布比例/\% & 粒径大小/\(\mu\)m \\
