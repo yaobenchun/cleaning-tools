@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.11.7)  23 SEP 2026 14:30
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.11.7)  23 SEP 2026 14:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1161,81 +1161,4 @@ File: figure/sand-mass-in-annular-VS-time-viscosity.png Graphic file (type bmp)
  [15]
 File: figure/sand-volume-fraction-mu-1cp.png Graphic file (type bmp)
 <figure/sand-volume-fraction-mu-1cp.png>
-File: figure/sand-volume-fraction-mu-5cp.png Graphic file (type bmp)
-<figure/sand-volume-fraction-mu-5cp.png>
- [16]
-File: figure/b-point-height-VS-viscosity.png Graphic file (type bmp)
-<figure/b-point-height-VS-viscosity.png>
-File: figure/sand-volume-fraction-velocity-at-b-point-viscosity.png Graphic file (type bmp)
-<figure/sand-volume-fraction-velocity-at-b-point-viscosity.png>
- [17]
-File: figure/tool-and-wellbore-simulation-model.png Graphic file (type bmp)
-<figure/tool-and-wellbore-simulation-model.png>
-File: figure/sand-distribution-annular-vin-dot37.png Graphic file (type bmp)
-<figure/sand-distribution-annular-vin-dot37.png>
-LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/m/n' will be
-(Font)              scaled to size 5.0pt on input line 667.
-File: figure/sand-distribution-annular-vin-dot59.png Graphic file (type bmp)
-<figure/sand-distribution-annular-vin-dot59.png>
- [18]
-File: figure/iron-shavings-sample.jpg Graphic file (type bmp)
-<figure/iron-shavings-sample.jpg>
-File: figure/iron-wire-actual.jpg Graphic file (type bmp)
-<figure/iron-wire-actual.jpg>
-File: figure/iron-wire-model.jpg Graphic file (type bmp)
-<figure/iron-wire-model.jpg>
-File: figure/iron-wire-distribution-1cp-velocity-colored.png Graphic file (type bmp)
-<figure/iron-wire-distribution-1cp-velocity-colored.png>
-File: figure/iron-wire-distribution-1dot7-cp-velocity-colored.png Graphic file (type bmp)
-<figure/iron-wire-distribution-1dot7-cp-velocity-colored.png>
-File: figure/iron-wire-mean-velocity-evolution-viscosity.jpg Graphic file (type bmp)
-<figure/iron-wire-mean-velocity-evolution-viscosity.jpg>
- [19]
-File: figure/iron-wire-distribution-1dot7cp-0dot17mpers.png Graphic file (type bmp)
-<figure/iron-wire-distribution-1dot7cp-0dot17mpers.png>
-File: figure/iron-wire-distribution-1dot7cp-0dot27mpers.png Graphic file (type bmp)
-<figure/iron-wire-distribution-1dot7cp-0dot27mpers.png>
-File: figure/iron-wire-particle-track-1dot7cp-0dot17mpers.jpg Graphic file (type bmp)
-<figure/iron-wire-particle-track-1dot7cp-0dot17mpers.jpg>
-File: figure/iron-wire-particle-track-1dot7cp-0dot27mpers.jpg Graphic file (type bmp)
-<figure/iron-wire-particle-track-1dot7cp-0dot27mpers.jpg>
- [20] [21]
-File: figure/iron-wire-mean-velocity-evolution-incoming-velocity.png Graphic file (type bmp)
-<figure/iron-wire-mean-velocity-evolution-incoming-velocity.png>
- [22] [23]
-File: figure/iron-wire-distribution-1dot7cp-0dot27mpers-3angles.jpg Graphic file (type bmp)
-<figure/iron-wire-distribution-1dot7cp-0dot27mpers-3angles.jpg>
-File: figure/iron-wire-particle-track-1dot7cp-0dot27mpers-3angles.jpg Graphic file (type bmp)
-<figure/iron-wire-particle-track-1dot7cp-0dot27mpers-3angles.jpg>
-File: figure/iron-wire-mean-velocity-evolution-3angles.png Graphic file (type bmp)
-<figure/iron-wire-mean-velocity-evolution-3angles.png>
- [24] [25]
-
-LaTeX Warning: Reference `tab:basr_simulation_params' on page 26 undefined on input line 919.
-
-File: figure/BaSr-sample.png Graphic file (type bmp)
-<figure/BaSr-sample.png>
-File: figure/BaSr-SEM.png Graphic file (type bmp)
-<figure/BaSr-SEM.png>
-File: figure/BaSr-model.png Graphic file (type bmp)
-<figure/BaSr-model.png>
-File: figure/BaSr-distribution-Vin.jpg Graphic file (type bmp)
-<figure/BaSr-distribution-Vin.jpg>
-[26]
-File: figure/BaSr-mean-velocity-evolution-vin-dot37.png Graphic file (type bmp)
-<figure/BaSr-mean-velocity-evolution-vin-dot37.png>
-File: figure/BaSr-mean-velocity-evolution-vin-dot59.png Graphic file (type bmp)
-<figure/BaSr-mean-velocity-evolution-vin-dot59.png>
- [27]
-File: figure/BaSr-distribution-3angles.jpg Graphic file (type bmp)
-<figure/BaSr-distribution-3angles.jpg>
- [28]
-File: figure/BaSr-mean-velocity-evolution-big-size.png Graphic file (type bmp)
-<figure/BaSr-mean-velocity-evolution-big-size.png>
-File: figure/BaSr-mean-velocity-evolution-small-size.png Graphic file (type bmp)
-<figure/BaSr-mean-velocity-evolution-small-size.png>
- [29]
-File: figure/Wax-mean-velocity-Vin-dot37mpersec.png Graphic file (type bmp)
-<figure/Wax-mean-velocity-Vin-dot37mpersec.png>
-File: figure/Wax-mean-velocity-Vin-dot59mpersec.png Graphic file (type bmp)
-<figure/Wax-mean-velocit
+File: figure/sand-volume-f
