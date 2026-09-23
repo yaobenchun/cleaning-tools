@@ -1,59 +1,70 @@
 % !TeX root = ../../main.tex
 
 \label{keliyunyi}
-在修井作业过程中，井筒内原有颗粒物以及作业过程中产生的新生颗粒物会显著影响井筒工况。颗粒物的存在不仅可能降低井下工具的工作效率，还可能诱发卡钻等重大安全事故。颗粒在井筒内的悬浮状态及运移特性受多种因素共同影响，主要包括颗粒粒径与密度、井眼尺寸与井斜角度，以及洗井液密度、粘度和流速等。本章基于流体动力学与颗粒动力学理论，针对砂砾、铁屑、结垢物和蜡质等典型颗粒物在井筒内的运移规律开展系统研究。通过构建Fluent与EDEM双向耦合仿真模型，定量分析流体参数（流速、粘度）和井筒结构参数（井斜角度）对固体颗粒运移轨迹、沉积速率及空间分布特征的影响规律。
-
-本章仿真方案的具体实施步骤如下：首先，构建颗粒物模型并设置相关参数，基于EDEM平台按照实际物理尺寸完成颗粒注入；其次，构建三维井筒、管柱及环空的几何模型，在Fluent中建立流体仿真模型，设置流体域边界条件；随后，建立Fluent与EDEM之间的双向耦合接口，模拟真实井筒工况下流速、粘度等关键参数对颗粒物运移轨迹、沉积速率及空间分布特征的影响，具体操作流程如图\ref{fig:flowchart}所示；最后，利用后处理模块对仿真结果进行定量分析，包括颗粒分布统计和动力学参数提取。
-    \begin{figure}[htbp]
-        \centering
-        \begin{tikzpicture}[node distance=2cm] % 节点间距为2cm
-            % 1. 流场初始化（起始节点）
-            \node (init) [startstop] {流场初始化};
-            % 2. 连续相流场计算（处理节点）
-            \node (flow) [process, below of=init] {连续相流场计算};
-            % 3. 颗粒模型注入（处理节点）
-            \node (inject) [process, below of=flow] {颗粒模型注入};
-            % 4. 颗粒时间步长计算（处理节点）
-            \node (time1) [process, below of=inject] {颗粒时间步长计算};
-            % 6. 颗粒轨迹计算（处理节点）
-            \node (trajectory) [process, below of=time1] {颗粒轨迹计算};
-            % 7. 更新连续相源项（处理节点）
-            \node (update) [process, below of=trajectory] {更新连续相源项};
-            % 8. 判断是否收敛（决策节点）
-            \node (converge) [decision, below of=update] {是否收敛};
-            % 9. 判断是否计算完成（决策节点）
-            \node (complete) [decision, below of=converge] {是否计算完成};
-            % 10. 计算结果（终止节点）
-            \node (result) [startstop, below of=complete] {计算结果};
-            % 11. 更新下一步时间数据（右侧辅助节点）
-            \node (nextstep) [process, right of=complete, xshift=4cm] {更新下一步时间数据};
-
-            % 绘制箭头连线
-            \draw [arrow] (init) -- (flow);                          % 流场初始化 → 连续相流场计算
-            \draw [arrow] (flow) -- (inject);                        % 连续相流场计算 → 颗粒模型注入
-            \draw [arrow] (inject) -- (time1);                       % 颗粒模型注入 → 颗粒时间步长计算
-            \draw [arrow] (time1) -- (trajectory);                   % 颗粒时间步长计算 → 颗粒轨迹计算
-            \draw [arrow] (trajectory) -- (update);                  % 颗粒轨迹计算 → 更新连续相源项
-            \draw [arrow] (update) -- (converge);                    % 更新连续相源项 → 判断是否收敛
-
-            % 收敛判断分支（未收敛→返回连续相流场计算）
-            \draw [arrow] (converge.west) -- ++(-1,0) |- (flow.west) node[midway, left] {否};
-
-            % 收敛后→计算完成判断
-            \draw [arrow] (converge) -- (complete) node [midway, right] {是};
-
-            % 计算完成判断分支（未完成→更新下一步时间数据→返回连续相流场计算）
-            \draw [arrow] (complete.east) -- (nextstep.west) node[midway, above] {否};
-            \draw [arrow] (nextstep.north) |- (flow.east);
-
-            % 计算完成→输出结果
-            \draw [arrow] (complete) -- (result) node[midway, right] {是};
-        \end{tikzpicture}
-        \caption{颗粒运移模型计算流程图}
-        \label{fig:flowchart}  
-    \end{figure}
+在修井作业过程中，井筒内原有颗粒物以及作业过程中产生的新生颗粒物会显著影响井筒工况。颗粒物的存在不仅可能降低井下工具的工作效率，还可能诱发卡钻等重大安全事故。颗粒在井筒内的悬浮状态及运移特性受多种因素共同影响，主要包括颗粒粒径与密度、井眼尺寸与井斜角度，以及洗井液密度、粘度和流速等。本章基于流体动力学与颗粒动力学理论，针对砂砾、铁屑、结垢物和蜡质等典型颗粒物在井筒内的运移规律开展系统研究。通过构建Fluent-EDEM双向耦合仿真模型及多相流模型，定量分析流体参数（流速、粘度）和井筒结构参数（井斜角度）对固体颗粒运移轨迹、沉积速率及空间分布特征的影响规律。
+%这里缺少一个相当于是对整个章节进行的总结
 
 \section{基本理论和模拟条件}  
+
+\subsection{液相控制模型}
+
+对于密度恒定的不可压缩流体，假设液相质量为常数，液体流动遵循 N--S 方程。液固两相流模型中流体相的连续性方程和 N--S 方程由下式给出
+\begin{equation}
+	\frac{\partial(\rho_{\mathrm{l}}\epsilon_{\mathrm{l}})}{\partial t}
+	+\nabla\cdot(\rho_{\mathrm{l}}\epsilon_{\mathrm{l}}\bm{v}_{\mathrm{l}})=0
+\end{equation}
+\begin{equation}
+	\frac{\partial(\rho_{\mathrm{l}}\epsilon_{\mathrm{l}}\bm{v}_{\mathrm{l}})}{\partial t}
+	+\nabla\cdot(\rho_{\mathrm{l}}\epsilon_{\mathrm{l}}\bm{v}_{\mathrm{l}}\bm{v}_{\mathrm{l}})
+	=-\epsilon_{\mathrm{l}}\nabla P
+	-\nabla\cdot(\epsilon_{\mathrm{l}}\bm{\tau}_{\mathrm{l}})
+	+\epsilon_{\mathrm{l}}\rho_{\mathrm{l}}\bm{g}+\bm{F}_{p}
+\end{equation}
+式中，\(\rho_{\mathrm{l}}\) 为流体密度； \(\epsilon_{\mathrm{l}}\)和 \(P\) 分别为流体体积分数和压力；\(\bm{v}_{\mathrm{l}}\) 为流体速度；\(\bm{\tau}_{\mathrm{l}}\) 表示粘性应力张量；\(\bm{g}\) 为重力加速度；\(\bm{F}_{\mathrm{p}}\) 为液固相间作用力。其中，液固相间作用力及粘性应力张量公式为
+\begin{equation}
+	\bm{F}_{\mathrm{p}}
+	=-\frac{\sum_{i=1}^{k_{\mathrm{c}}}\bm{F}_{i,\mathrm{p}}}{\Delta V}
+\end{equation}
+\begin{equation}
+	\bm{\tau}_{\mathrm{l}}
+	=\mu_{\mathrm{l}}\left[
+	\nabla\bm{v}_{\mathrm{l}}
+	+\left(\nabla\bm{v}_{\mathrm{l}}\right)^{\mathrm{T}}
+	\right]
+	-\frac{2}{3}\mu_{\mathrm{l}}
+	\left(\nabla\cdot\bm{v}_{\mathrm{l}}\right)\bm{I}
+\end{equation}
+式中，\(\bm{F}_{i,\mathrm{p}}\) 为单个颗粒\(i\)受到的流体作用力；\(\mu_{\mathrm{l}}\) 为流体粘度，\(\bm{I}\) 为单位二阶张量。
+
+流动需要考虑湍流的影响。考虑到高精度、应用简单、计算效率和通用性等需求，本文采用 \(k\)-\(\varepsilon\) 标准模型作为研究基础来计算钻井液的湍流粘度，其中 \(k\) 为湍流动能，\(\varepsilon\) 为耗散率。\(k\) 和 \(\varepsilon\) 的输运方程分别表示为：
+\begin{equation}
+	\frac{\partial}{\partial t}(\rho_{\mathrm{l}}k)
+	+\frac{\partial}{\partial x_{i}}(\rho_{\mathrm{l}}kv_{\mathrm{l},i})
+	=\frac{\partial}{\partial x_{j}}\left[
+	\left(\mu+\frac{\mu_{\mathrm{t}}}{\sigma_{k}}\right)
+	\frac{\partial k}{\partial x_{j}}
+	\right]
+	+G_{k}-\rho_{\mathrm{l}}\varepsilon-Y_{\mathrm{M}}
+\end{equation}
+\begin{equation}
+	\frac{\partial}{\partial t}(\rho_{\mathrm{l}}\varepsilon)
+	+\frac{\partial}{\partial x_{i}}(\rho_{\mathrm{l}}\varepsilon v_{\mathrm{l},i})
+	=\frac{\partial}{\partial x_{j}}\left[
+	\left(\mu+\frac{\mu_{\mathrm{t}}}{\sigma_{\varepsilon}}\right)
+	\frac{\partial\varepsilon}{\partial x_{j}}
+	\right]
+	+C_{1\varepsilon}\frac{\varepsilon}{k}
+	\left(G_{k}+C_{3\varepsilon}G_{b}\right)
+	-C_{2\varepsilon}\rho_{\mathrm{l}}\frac{\varepsilon^{2}}{k}
+\end{equation}
+式中，\(v_{\mathrm{l}}\) 为液相速度，m/s；\(C_{1\varepsilon}\)、\(C_{2\varepsilon}\)、\(C_{3\varepsilon}\) 为常数，且 \(C_{1\varepsilon}=1.44\)，\(C_{2\varepsilon}=1.92\)。\(\sigma_{k}\) 和 \(\sigma_{\varepsilon}\) 分别为 \(k\) 和 \(\varepsilon\) 的湍流普朗特数，其取值为 \(\sigma_{k}=1.0\)，\(\sigma_{\varepsilon}=1.3\)。\(G_{k}\) 表示由于平均速度梯度产生的湍流动能；\(Y_{\mathrm{M}}\) 表示可压缩湍流脉动膨胀对整体耗散率的影响；\(\mu_{\mathrm{t}}\) 表示湍流粘度系数。\(G_{k}\)、\(Y_{\mathrm{M}}\)、\(\mu_{\mathrm{t}}\) 公式表示如下：
+\begin{equation}
+	Y_{\mathrm{M}}=2\rho_{\mathrm{l}}\varepsilon M^{2}
+\end{equation}
+\begin{equation}
+	\mu_{\mathrm{t}}=\frac{\rho_{\mathrm{l}}C_{\mu}k^{2}}{\varepsilon}
+\end{equation}
+
 \subsection{EDEM理论基础} 
 井筒中的颗粒在运移过程中产生颗粒-颗粒、颗粒-管壁之间的接触是不可避免的，该过程将产生作用力，本文采用EDEM软件进行模拟。EDEM软件的理论基础是离散元法（Discrete Element Method, DEM），DEM对上述两种接触对进行建模，求解接触中颗粒所受外力作用以及力矩。根据工况的不同，可区分干颗粒和湿颗粒两种类型，
 当计算物料为干颗粒时，接触点不存在粘结的作用，EDEM软件默认采用Hertz-Mindlin基本接触模型，颗粒接触受力模型如图\ref{fig:particle_collision}所示。
@@ -327,109 +338,68 @@ JKR 模型的法向力取决于法向重叠量 $\alpha$ 和表面能 $\gamma$，
 	\right]
 \end{equation}
 
-\subsection{液相控制模型}
 
-对于密度恒定的不可压缩流体，假设液相质量为常数，液体流动遵循 N--S 方程。液固两相流模型中流体相的连续性方程和 N--S 方程由下式给出：
-\begin{equation}
-	\frac{\partial(\rho_{\mathrm{l}}\epsilon_{\mathrm{l}})}{\partial t}
-	+\nabla\cdot(\rho_{\mathrm{l}}\epsilon_{\mathrm{l}}\bm{v}_{\mathrm{l}})=0
-\end{equation}
-\begin{equation}
-	\frac{\partial(\rho_{\mathrm{l}}\epsilon_{\mathrm{l}}\bm{v}_{\mathrm{l}})}{\partial t}
-	+\nabla\cdot(\rho_{\mathrm{l}}\epsilon_{\mathrm{l}}\bm{v}_{\mathrm{l}}\bm{v}_{\mathrm{l}})
-	=-\epsilon_{\mathrm{l}}\nabla P
-	-\nabla\cdot(\epsilon_{\mathrm{l}}\bm{\tau}_{\mathrm{l}})
-	+\epsilon_{\mathrm{l}}\rho_{\mathrm{l}}\bm{g}+\bm{F}_{p}
-\end{equation}
-式中，\(\bm{g}\) 为重力加速度，\(\rho_{\mathrm{l}}\) 为流体密度，\(P\) 和 \(\epsilon_{\mathrm{l}}\) 分别为流体相压力和体积分数，\(\bm{v}_{\mathrm{l}}\) 为流体速度，\(\bm{F}_{p}\) 为液固相间作用力，\(\bm{\tau}_{\mathrm{l}}\) 表示粘性应力张量。其中，液固相间作用力及粘性应力张量公式为
-\begin{equation}
-	\bm{F}_{p}
-	=-\frac{\sum_{i=1}^{k_{\mathrm{c}}}\bm{F}_{i,p}}{\Delta V}
-\end{equation}
-\begin{equation}
-	\bm{\tau}_{\mathrm{l}}
-	=\mu_{\mathrm{l}}\left[
-	\nabla\bm{v}_{\mathrm{l}}
-	+\left(\nabla\bm{v}_{\mathrm{l}}\right)^{T}
-	\right]
-	-\frac{2}{3}\mu_{\mathrm{l}}
-	\left(\nabla\cdot\bm{v}_{\mathrm{l}}\right)\bm{I}
-\end{equation}
-式中，\(\bm{F}_{p}\) 为液体对颗粒 \(p\) 的作用力，\(\mu_{\mathrm{l}}\) 为流体粘度，\(\bm{I}\) 为单位二阶张量。
+Fluent与EDEM耦合仿真的具体实施步骤如下：首先，构建颗粒物模型并设置相关参数，基于EDEM平台按照实际物理尺寸完成颗粒注入；其次，构建三维井筒、管柱及环空的几何模型，在Fluent中建立流体仿真模型，设置流体域边界条件；随后，建立Fluent与EDEM之间的双向耦合接口，模拟真实井筒工况下流速、粘度等关键参数对颗粒物运移轨迹、沉积速率及空间分布特征的影响，具体操作流程如图\ref{fig:flowchart}所示；最后，利用后处理模块对仿真结果进行定量分析，包括颗粒分布统计和动力学参数提取。
 
-\subsection{湍流模型}
+    \begin{figure}[htbp]
+        \centering
+        \begin{tikzpicture}[node distance=2cm] % 节点间距为2cm
+            % 1. 流场初始化（起始节点）
+            \node (init) [startstop] {流场初始化};
+            % 2. 连续相流场计算（处理节点）
+            \node (flow) [process, below of=init] {连续相流场计算};
+            % 3. 颗粒模型注入（处理节点）
+            \node (inject) [process, below of=flow] {颗粒模型注入};
+            % 4. 颗粒时间步长计算（处理节点）
+            \node (time1) [process, below of=inject] {颗粒时间步长计算};
+            % 6. 颗粒轨迹计算（处理节点）
+            \node (trajectory) [process, below of=time1] {颗粒轨迹计算};
+            % 7. 更新连续相源项（处理节点）
+            \node (update) [process, below of=trajectory] {更新连续相源项};
+            % 8. 判断是否收敛（决策节点）
+            \node (converge) [decision, below of=update] {是否收敛};
+            % 9. 判断是否计算完成（决策节点）
+            \node (complete) [decision, below of=converge] {是否计算完成};
+            % 10. 计算结果（终止节点）
+            \node (result) [startstop, below of=complete] {计算结果};
+            % 11. 更新下一步时间数据（右侧辅助节点）
+            \node (nextstep) [process, right of=complete, xshift=4cm] {更新下一步时间数据};
 
-考虑到高精度、应用简单、计算效率和通用性等需求，本文采用 \(k-\epsilon\) 标准模型作为研究基础来计算钻井液的湍流粘度，其中 \(k\) 为湍流动能，\(\epsilon\) 为耗散率。\(k\) 和 \(\epsilon\) 的输运方程分别表示为：
-\begin{equation}
-	\frac{\partial}{\partial t}(\rho_{\mathrm{l}}k)
-	+\frac{\partial}{\partial x_{i}}(\rho_{\mathrm{l}}kv_{\mathrm{l},i})
-	=\frac{\partial}{\partial x_{j}}\left[
-	\left(\mu+\frac{\mu_{\mathrm{t}}}{\sigma_{k}}\right)
-	\frac{\partial k}{\partial x_{j}}
-	\right]
-	+G_{k}-\rho_{\mathrm{l}}\epsilon-Y_{\mathrm{M}}
-\end{equation}
-\begin{equation}
-	\frac{\partial}{\partial t}(\rho_{\mathrm{l}}\epsilon)
-	+\frac{\partial}{\partial x_{i}}(\rho_{\mathrm{l}}\epsilon v_{\mathrm{l},i})
-	=\frac{\partial}{\partial x_{j}}\left[
-	\left(\mu+\frac{\mu_{\mathrm{t}}}{\sigma_{\epsilon}}\right)
-	\frac{\partial\epsilon}{\partial x_{j}}
-	\right]
-	+C_{1\epsilon}\frac{\epsilon}{k}
-	\left(G_{k}+C_{3\epsilon}G_{b}\right)
-	-C_{2\epsilon}\rho_{\mathrm{l}}\frac{\epsilon^{2}}{k}
-\end{equation}
-式中，\(\rho_{\mathrm{l}}\) 为液相密度，kg/m\(^{3}\)；\(v_{\mathrm{l}}\) 为液相速度，m/s；\(C_{1\epsilon}\)、\(C_{2\epsilon}\)、\(C_{3\epsilon}\) 为常数，且 \(C_{1\epsilon}=1.44\)，\(C_{2\epsilon}=1.92\)。\(\sigma_{k}\) 和 \(\sigma_{\epsilon}\) 分别为 \(k\) 和 \(\epsilon\) 的湍流普朗特数，其取值为 \(\sigma_{k}=1.0\)，\(\sigma_{\epsilon}=1.3\)。\(G_{k}\) 表示由于平均速度梯度产生的湍流动能；\(Y_{\mathrm{M}}\) 表示可压缩湍流脉动膨胀对整体耗散率的影响；\(\mu_{\mathrm{t}}\) 表示湍流粘度系数。\(G_{k}\)、\(Y_{\mathrm{M}}\)、\(\mu_{\mathrm{t}}\) 公式表示如下：
-\begin{equation}
-	Y_{\mathrm{M}}=2\rho_{\mathrm{l}}\epsilon M^{2}
-\end{equation}
-\begin{equation}
-	\mu_{\mathrm{t}}=\frac{\rho_{\mathrm{l}}C_{\mu}k^{2}}{\epsilon}
-\end{equation}
+            % 绘制箭头连线
+            \draw [arrow] (init) -- (flow);                          % 流场初始化 → 连续相流场计算
+            \draw [arrow] (flow) -- (inject);                        % 连续相流场计算 → 颗粒模型注入
+            \draw [arrow] (inject) -- (time1);                       % 颗粒模型注入 → 颗粒时间步长计算
+            \draw [arrow] (time1) -- (trajectory);                   % 颗粒时间步长计算 → 颗粒轨迹计算
+            \draw [arrow] (trajectory) -- (update);                  % 颗粒轨迹计算 → 更新连续相源项
+            \draw [arrow] (update) -- (converge);                    % 更新连续相源项 → 判断是否收敛
 
-为了模拟井筒内携带颗粒的特性，模型需要通过设计一个环形空间来实现。研究中建立了内径 \(\phi 88.9\) mm、外径 \(\phi 244.475\) mm、\(\phi 177.8\) mm、总长度为 \(1.5\) m 的光滑管柱，用于模拟钻杆（\(3\)-\(1/2'\)）和井筒（\(9\)-\(5/8'\)、\(7'\)），套管和钻杆同心。在模拟过程中，内部钻杆固定，钻井液以一定速度垂直于入口方向流入环形空间，并从另一端出口流出。环空模型如图 1.5、图 1.6 所示。在 EDEM 软件中，颗粒产生于“颗粒工厂”，其初始速度、角速度为零，角度随机。计算采用了非稳态 \(k-\epsilon\) 湍流模型，将颗粒设置为离散相，并利用多面体网格进行建模。边界条件包括速度入口、压力出口，管壁采用无滑移条件。一般计算参数具体数值见表 1.1，重力方向始终竖直向下，对于不同 \(\theta\) 的情况，流体域旋转相应角度。
+            % 收敛判断分支（未收敛→返回连续相流场计算）
+            \draw [arrow] (converge.west) -- ++(-1,0) |- (flow.west) node[midway, left] {否};
 
-\begin{figure}[htbp]
-	\centering
-	\includegraphics[width=0.9\textwidth]{figure/fluid-domain-geometry.png}
-	\caption{流体域几何模型示意图}
-	\label{fig:fluid_domain_geometry}
-\end{figure}
+            % 收敛后→计算完成判断
+            \draw [arrow] (converge) -- (complete) node [midway, right] {是};
 
-\begin{figure}[htbp]
-	\centering
-	\includegraphics[width=0.9\textwidth]{figure/fluid-domain-polyhedral-mesh.jpg}
-	\caption{流体域多面体单元离散示意图}
-	\label{fig:fluid_domain_mesh}
-\end{figure}
+            % 计算完成判断分支（未完成→更新下一步时间数据→返回连续相流场计算）
+            \draw [arrow] (complete.east) -- (nextstep.west) node[midway, above] {否};
+            \draw [arrow] (nextstep.north) |- (flow.east);
 
-\begin{table}[H]
-	\centering
-	\caption{一般计算参数}
-	\begin{tabularx}{.9\textwidth}{CCCC}
-		\toprule
-		名称 & 符号 & 数值 & 单位 \\
-		\midrule
-		水平井筒长度 & \(L\) & 1.5 & m \\
-		井筒直径 & \(D_{\mathrm{H}}\) & 244.475/177.8 & \(\mathrm{mm}\) \\
-		钻杆直径 & \(D_{\mathrm{P}}\) & 88.9 & \(\mathrm{mm}\) \\
-		颗粒密度 & \(\rho_{\mathrm{P}}\) & -- & \(\mathrm{kg/m^{3}}\) \\
-		洗井液密度 & \(\rho_{\mathrm{l}}\) & -- & \(\mathrm{kg/m^{3}}\) \\
-		井斜角 & \(\theta\) & 0.0、45.0、90.0 & \(^{\circ}\) \\
-		洗井液入口流速 & \(v_{\mathrm{c}}\) & 0.17、0.27、0.37、0.59 & \(\mathrm{m/s}\) \\
-		洗井液粘度 & \(\mu\) & 1.0、1.7 & \(\mathrm{mPa\cdot s}\) \\
-		\bottomrule
-	\end{tabularx}
-\end{table}
+            % 计算完成→输出结果
+            \draw [arrow] (complete) -- (result) node[midway, right] {是};
+        \end{tikzpicture}
+        \caption{颗粒运移模型计算流程图}
+        \label{fig:flowchart}  
+    \end{figure}
+
 
 在井筒内颗粒物运移特性的研究中，基于对颗粒动力学行为控制作用的大小，选择流体流速 \(v_{\mathrm{c}}\)、流体粘度 \(\mu\) 和井斜角 \(\theta\) 作为主要控制变量。首先，流体流速 \(v_{\mathrm{c}}\) 是决定颗粒悬浮与输运能力的关键参数，流速直接影响流体的动能和湍流强度，进而调控颗粒的启动阈值、悬浮状态及沉积风险。其次，流体粘度 \(\mu\) 通过改变流体的粘滞阻力，显著影响颗粒的沉降速度及与流体的相互作用，高粘度流体可增强颗粒携带能力，但可能增加流动阻力。最后，井斜角 \(\theta\) 作为几何特征的核心变量，通过改变重力在井筒轴线方向的分量，直接影响颗粒的受力平衡：在斜井或水平井中，重力分量的减弱会加剧颗粒沉降的方位选择性，导致非对称沉积。这三个因素共同构成了颗粒运移的“动力--阻力--几何”三元耦合机制，能够系统表征复杂井筒环境下颗粒迁移的物理本质，为优化携粒效率、预测床层形成提供理论支撑。考虑到颗粒属性的不同会对其运移行为产生显著影响，于是，下文分别研究砂砾、铁屑、结垢物和蜡颗粒的运移和分布规律。
 
 \section{井筒内砂砾运移及分布规律研究}
 
+\subsection{砂砾在环空中的运移及分布}
+
 洗井作业中，冲砂工具和管柱的砂堵问题直接影响作业安全与效率。砂堵的本质是砂砾在工具与井筒环空内的异常堆积，其后果不仅限于工具功能失效，例如冲砂液循环中断、卡钻，还会导致非计划停工、设备维修成本攀升。通过仿真研究井筒内工具与井筒环空砂砾运移规律，可以预测砂砾在井筒环空内的运移速度以及沉积规律，为冲砂作业提供理论指导。
 
-根据现场提供的砂砾样本（见图\ref{fig:sand_sample}）及其粒度分级统计数据（参见表\ref{tab:real_sand_parameter}），建立相对应的大小与数量的砂砾颗粒仿真模型（具体参数见表\ref{tab:simulation_sand_parameter}）。
+根据现场提供的砂砾样本（见图\ref{fig:sand_sample}）及其粒度分级统计数据（参见表\ref{tab:real_sand_parameter}），建立相对应的大小与数量的砂砾颗粒仿真模型（具体参数见表\ref{tab:simulation_sand_parameter}）。在 EDEM 软件中，颗粒产生于“颗粒工厂”，其初始速度、角速度为零，角度随机。
 
 \begin{figure}[htbp]
 	\centering
@@ -476,79 +446,15 @@ JKR 模型的法向力取决于法向重叠量 $\alpha$ 和表面能 $\gamma$，
 	\end{tabularx}
 \end{table}
 
-本项目涉及到的四类工具中，“四合一”工具的外部功能单元多，结构最为复杂，在工具的几何变径处会产生边界层分离和回流现象，是砂砾沉积的“危险位置”。于是，本文选择“四合一”工具的扶正器和强磁位置作为对象，研究砂砾在此处的沉积行为。建立强磁部位与 \(7'\) 井筒环空流体仿真模型，仿真模型数据见表 1.4。研究不同环空流速下（\(v_{\mathrm{c}}=0.37\) m/s、\(0.59\) m/s）砂砾的运移及沉降规律，探究砂砾是否会出现沉积或者堵塞现象。计算结果如图 1.8 所示。
+根据实际工况，在钻井过程中，钻井液携带砂砾颗粒进入环空，因此内部环境为复杂的液--固两相流湍流流场，故选用欧拉两相流模型对环空砂砾运移进行数值模拟，将环空流场视为稳定的不可压缩湍流流场。
 
-\begin{table}[H]
-	\centering
-	\caption{“四合一”工具砂砾沉积仿真模型数据}
-	\begin{tabularx}{.9\textwidth}{CCCC}
-		\toprule
-		名称 & 符号 & 数值 & 单位 \\
-		\midrule
-		水平井筒长度 & \(L\) & 1.5 & m \\
-		井筒直径 & \(D_{\mathrm{H}}\) & 177.8 & mm \\
-		钻杆直径 & \(D_{\mathrm{P}}\) & 88.9 & mm \\
-		颗粒密度 & \(\rho_{\mathrm{P}}\) & 2650.0 & kg/m\(^{3}\) \\
-		洗井液密度 & \(\rho_{\mathrm{l}}\) & 1000.0 & kg/m\(^{3}\) \\
-		井斜角 & \(\theta\) & 90.0 & \(^{\circ}\) \\
-		洗井液入口流速 & \(v_{\mathrm{c}}\) & 0.37、0.59 & m/s \\
-		洗井液粘度 & \(\mu\) & 1.0 & mPa·s \\
-		\bottomrule
-	\end{tabularx}
-\end{table}
+% \subsubsection{幂律流体}
 
-\begin{figure}[htbp]
-	\centering
-	\includegraphics[width=\textwidth]{figure/tool-and-wellbore-simulation-model.png}
-	\caption{工具及井筒仿真模型}
-	\label{fig:tool_wellbore_model}
-\end{figure}
-
-图 1.9 描述的是洗井液流速 \(0.37\) m/s 下井筒与工具环空内砂砾颗粒分布情况。从图可以看出，部分砂砾颗粒由于重力作用会在工具前端产生堆积，同时砂砾颗粒会随着工具的导流结构进行运移，在强磁部件的凹槽内也会有少量的砂砾堆积现象。
-
-% \begin{figure}[htbp]
-% 	\centering
-% 	\includegraphics[width=\textwidth]{figure/sand-distribution-tool-vin-dot37.png}
-% 	\caption{洗井液流速 0.37 m/s 下井筒与工具环空内砂砾颗粒分布}
-% 	\label{fig:sand_distribution_tool_vin_dot37}
-% \end{figure}
-
-图 1.10 描述的是相同时间步环空流速 \(0.37\) m/s、\(0.59\) m/s 下砂砾颗粒分布。从图中可以看出，环空流速增大时，靠近压力出口的砂砾颗粒越多，砂砾颗粒的运移效率明显加快。在相同时间步下，环空流速越大，颗粒运移速度越快。由于环空流速增大，流体的拖曳力增大，砂砾颗粒在轴向的速度增大，砂砾颗粒由于重力作用产生的沉积位置与流体入口的距离也变远。
-
-\begin{figure}[htbp]
-	\centering
-	\subfloat[$v_\mathrm{c}=0.37 \mathrm{m/s}$]{%
-		\includegraphics[width=0.98\textwidth]{figure/sand-distribution-annular-vin-dot37.png}
-		\label{fig:sand_distribution_annular_vin_dot37}
-	}
-	\vspace{0pt}
-	\subfloat[$v_\mathrm{c}=0.59 \mathrm{m/s}$]{%
-		\includegraphics[width=0.98\textwidth]{figure/sand-distribution-annular-vin-dot59.png}
-		\label{fig:sand_distribution_annular_vin_dot59}
-	}
-	\caption{相同时间步不同环空流速下砂砾颗粒分布}
-	\label{fig:sand_distribution_annular_vin}
-\end{figure}
-
-通过仿真发现，在冲砂作业时，如果环空流体中砂砾体积分数越大，越容易在工具与井筒下壁之间的环空中产生沉积，环空流速增大，砂砾运移效率加快，建议在作业时增大洗井液流速即增大冲砂液排量以减小砂砾堆积的风险，降低砂堵概率。同时，工具的导流结构也对砂砾运移起到关键作用，砂砾颗粒会随着工具的导流结构进行运移，降低了砂堵的风险，为工具安全作业提供保障。
-
-上述研究仅仅从宏观上观测砂砾在井筒环空中的运移情况，无法提取井筒环空中不同具体位置的砂砾体积分数、砂砾速度及砂砾床厚度等数据。为此，本研究考虑井筒环空不同位置的砂砾量，基于欧拉液固两相流模型和 \(SST k-\omega\) 模型，建立了三维井眼环空颗粒运移模型，在分析砂砾体积分数和砂砾速度的基础上，通过 Fluent 分析整个环空中砂砾质量，提出了环空内含有颗粒质量的变化方法，分析了幂律流体中环空流速、井斜角度、洗井液粘度等对环空内沉降的砂床高度的影响。所得结论对水平井和大位移井环空内井筒清洁和高效作业具有指导意义。
-
-\subsection{数值模型建立}
-
-根据实际工况，在钻井过程中，钻井液携带砂砾颗粒进入环空，因此内部环境为复杂的液--固两相流湍流流场，故选用 Eulerian 两相流模型对环空砂砾运移进行数值模拟，将环空流场视为稳定的不可压缩湍流流场。
-
-\subsubsection{幂律流体}
-
-钻井液属于非牛顿流体，其本构方程符合幂律流体，流变参数
-\begin{equation}
-	\tau=K\dot{\gamma}^{n}
-\end{equation}
-其中，\(K\) 为钻具内钻井液稠度系数，\(n\) 为钻井液流变指数。依据相关文献，\(K=2.38\)，\(n=0.80\)。
-
-\subsection{几何模型及边界条件}
-
-\subsubsection{几何模型}
+% 钻井液属于非牛顿流体，其本构方程符合幂律流体，流变参数
+% \begin{equation}
+% 	\tau=K\dot{\gamma}^{n}
+% \end{equation}
+% 其中，\(K\) 为钻具内钻井液稠度系数，\(n\) 为钻井液流变指数。依据相关文献，\(K=2.38\)，\(n=0.80\)。
 
 根据现场实际油井组合参数建立环空三维模型，如图 1.11 所示。实际水平井段很长，为了研究方便，取水平井模型长 \(1.5\) m，取曲率半径 \(1\) m、曲率为 \(90^{\circ}\) 的圆弧弯管模型模拟不同井斜角度，考虑井壁和钻杆表面光滑，计算流域由钻杆和井壁表面组成。采用多面体单元对所建模型进行网格划分。
 
@@ -559,9 +465,26 @@ JKR 模型的法向力取决于法向重叠量 $\alpha$ 和表面能 $\gamma$，
 	\label{fig:annular_3d_model}
 \end{figure}
 
-\subsubsection{边界条件}
-
 考虑模拟运算中的收敛性和稳定性，湍流流场的计算采用二阶迎风格式和 SIMPLE 算法。根据实际工况对模型入口边界条件定义，具体为：洗井液速度入口和砂砾颗粒入口；出口边界条件为 outlet；将井壁与钻杆表面设为 stationary wall。具体模拟参数如下：井眼直径 244.475 mm，钻杆直径 88.9 mm，砂砾密度 \(2650\) kg/m\(^{3}\)，洗井液密度 1000、1300、1400 kg/m\(^{3}\)，砂砾直径 250 \(\mu\)m，钻井液入口排量 25、40、100 m\(^{3}\)/h，洗井液粘度为 1、2.3、5 cp。
+
+\begin{table}[H]
+	\centering
+	\caption{一般计算参数}
+	\begin{tabularx}{.9\textwidth}{CCCC}
+		\toprule
+		名称 & 符号 & 数值 & 单位 \\
+		\midrule
+		水平井筒长度 & \(L\) & 1.5 & m \\
+		井筒直径 & \(D_{\mathrm{H}}\) & 244.475/177.8 & \(\mathrm{mm}\) \\
+		钻杆直径 & \(D_{\mathrm{P}}\) & 88.9 & \(\mathrm{mm}\) \\
+		颗粒密度 & \(\rho_{\mathrm{P}}\) & -- & \(\mathrm{kg/m^{3}}\) \\
+		洗井液密度 & \(\rho_{\mathrm{l}}\) & -- & \(\mathrm{kg/m^{3}}\) \\
+		井斜角 & \(\theta\) & 0.0、45.0、90.0 & \(^{\circ}\) \\
+		洗井液入口流速 & \(v_{\mathrm{c}}\) & 0.17、0.27、0.37、0.59 & \(\mathrm{m/s}\) \\
+		洗井液粘度 & \(\mu\) & 1.0、1.7 & \(\mathrm{mPa\cdot s}\) \\
+		\bottomrule
+	\end{tabularx}
+\end{table}
 
 \subsection{数值模拟及结果分析}
 
@@ -694,6 +617,86 @@ JKR 模型的法向力取决于法向重叠量 $\alpha$ 和表面能 $\gamma$，
 	\caption{b 点不同洗井液粘度下砂砾体积分数和轴向速度云图}
 	\label{fig:sand_volume_fraction_velocity_at_b_point_viscosity}
 \end{figure}
+
+\subsection{工具周围砂砾的运移及分布}
+
+本项目涉及到的四类工具中，“四合一”工具的外部功能单元多，结构最为复杂，在工具的几何变径处会产生边界层分离和回流现象，是砂砾沉积的“危险位置”。于是，本文选择“四合一”工具的扶正器和强磁位置作为对象，研究砂砾在此处的沉积行为。建立强磁部位与 \(7'\) 井筒环空流体仿真模型，仿真模型数据见表 1.4。研究不同环空流速下（\(v_{\mathrm{c}}=0.37\) m/s、\(0.59\) m/s）砂砾的运移及沉降规律，探究砂砾是否会出现沉积或者堵塞现象。计算结果如图 1.8 所示。
+
+\begin{table}[H]
+	\centering
+	\caption{“四合一”工具砂砾沉积仿真模型数据}
+	\begin{tabularx}{.9\textwidth}{CCCC}
+		\toprule
+		名称 & 符号 & 数值 & 单位 \\
+		\midrule
+		水平井筒长度 & \(L\) & 1.5 & m \\
+		井筒直径 & \(D_{\mathrm{H}}\) & 177.8 & mm \\
+		钻杆直径 & \(D_{\mathrm{P}}\) & 88.9 & mm \\
+		颗粒密度 & \(\rho_{\mathrm{P}}\) & 2650.0 & kg/m\(^{3}\) \\
+		洗井液密度 & \(\rho_{\mathrm{l}}\) & 1000.0 & kg/m\(^{3}\) \\
+		井斜角 & \(\theta\) & 90.0 & \(^{\circ}\) \\
+		洗井液入口流速 & \(v_{\mathrm{c}}\) & 0.37、0.59 & m/s \\
+		洗井液粘度 & \(\mu\) & 1.0 & mPa·s \\
+		\bottomrule
+	\end{tabularx}
+\end{table}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=\textwidth]{figure/tool-and-wellbore-simulation-model.png}
+	\caption{工具及井筒仿真模型}
+	\label{fig:tool_wellbore_model}
+\end{figure}
+
+图 1.9 描述的是洗井液流速 \(0.37\) m/s 下井筒与工具环空内砂砾颗粒分布情况。从图可以看出，部分砂砾颗粒由于重力作用会在工具前端产生堆积，同时砂砾颗粒会随着工具的导流结构进行运移，在强磁部件的凹槽内也会有少量的砂砾堆积现象。
+
+% \begin{figure}[htbp]
+% 	\centering
+% 	\includegraphics[width=\textwidth]{figure/sand-distribution-tool-vin-dot37.png}
+% 	\caption{洗井液流速 0.37 m/s 下井筒与工具环空内砂砾颗粒分布}
+% 	\label{fig:sand_distribution_tool_vin_dot37}
+% \end{figure}
+
+图 1.10 描述的是相同时间步环空流速 \(0.37\) m/s、\(0.59\) m/s 下砂砾颗粒分布。从图中可以看出，环空流速增大时，靠近压力出口的砂砾颗粒越多，砂砾颗粒的运移效率明显加快。在相同时间步下，环空流速越大，颗粒运移速度越快。由于环空流速增大，流体的拖曳力增大，砂砾颗粒在轴向的速度增大，砂砾颗粒由于重力作用产生的沉积位置与流体入口的距离也变远。
+
+\begin{figure}[htbp]
+	\centering
+	\subfloat[$v_\mathrm{c}=0.37 \mathrm{m/s}$]{%
+		\includegraphics[width=0.98\textwidth]{figure/sand-distribution-annular-vin-dot37.png}
+		\label{fig:sand_distribution_annular_vin_dot37}
+	}
+	\vspace{0pt}
+	\subfloat[$v_\mathrm{c}=0.59 \mathrm{m/s}$]{%
+		\includegraphics[width=0.98\textwidth]{figure/sand-distribution-annular-vin-dot59.png}
+		\label{fig:sand_distribution_annular_vin_dot59}
+	}
+	\caption{相同时间步不同环空流速下砂砾颗粒分布}
+	\label{fig:sand_distribution_annular_vin}
+\end{figure}
+
+通过仿真发现，在冲砂作业时，如果环空流体中砂砾体积分数越大，越容易在工具与井筒下壁之间的环空中产生沉积，环空流速增大，砂砾运移效率加快，建议在作业时增大洗井液流速即增大冲砂液排量以减小砂砾堆积的风险，降低砂堵概率。同时，工具的导流结构也对砂砾运移起到关键作用，砂砾颗粒会随着工具的导流结构进行运移，降低了砂堵的风险，为工具安全作业提供保障。
+
+上述研究仅仅从宏观上观测砂砾在井筒环空中的运移情况，无法提取井筒环空中不同具体位置的砂砾体积分数、砂砾速度及砂砾床厚度等数据。为此，本研究考虑井筒环空不同位置的砂砾量，基于欧拉液固两相流模型和 SST \( k\)-\(\omega\) 模型，建立了三维井眼环空颗粒运移模型，在分析砂砾体积分数和砂砾速度的基础上，通过 Fluent 分析整个环空中砂砾质量，提出了环空内含有颗粒质量的变化方法，分析了环空流速、井斜角度、洗井液粘度等对环空内沉降的砂床高度的影响。所得结论对水平井和大位移井环空内井筒清洁和高效作业具有指导意义。
+
+%以下是水平井筒内砂砾运移及分布规律研究的具体内容，由于模拟结果目前和实验对不上，所以，先不展示。
+
+% 为了模拟井筒内携带颗粒的特性，模型需要通过设计一个环形空间来实现。研究中建立了内径 \(\phi 88.9\) mm、外径 \(\phi 244.475\) mm、\(\phi 177.8\) mm、总长度为 \(1.5\) m 的光滑管柱，用于模拟钻杆（\(3\)-\(1/2'\)）和井筒（\(9\)-\(5/8'\)、\(7'\)），套管和钻杆同心。在模拟过程中，内部钻杆固定，钻井液以一定速度垂直于入口方向流入环形空间，并从另一端出口流出。环空模型如图 1.5、图 1.6 所示。计算采用了非稳态 \(k-\varepsilon\) 湍流模型，将颗粒设置为离散相，并利用多面体网格进行建模。边界条件包括速度入口、压力出口，管壁采用无滑移条件。一般计算参数具体数值见表 1.1，重力方向始终竖直向下，对于不同 \(\theta\) 的情况，流体域旋转相应角度。
+
+% \begin{figure}[htbp]
+% 	\centering
+% 	\includegraphics[width=0.9\textwidth]{figure/fluid-domain-geometry.png}
+% 	\caption{流体域几何模型示意图}
+% 	\label{fig:fluid_domain_geometry}
+% \end{figure}
+
+% \begin{figure}[htbp]
+% 	\centering
+% 	\includegraphics[width=0.9\textwidth]{figure/fluid-domain-polyhedral-mesh.jpg}
+% 	\caption{流体域多面体单元离散示意图}
+% 	\label{fig:fluid_domain_mesh}
+% \end{figure}
+
+
 
 \section{井筒内铁屑运移及分布规律}
 %20260704想法：仿真->实验->外推。这个研究属于“基础性研究”（与4.适用条件中“拓深技术理论及基础性研究”对应），界定了研究的性质——是基础理论研究，不是工程应用。目的是“揭示影响工具应用效果的主控因素”，对应5.1.2 ①的要求是“研究不同流速、粘度、井斜下的运移规律”，通过实验验证哪些参数是影响运移的“主控因素”（Re（实验已经证明）、井斜角的影响在全井筒模型实验中展示）。
