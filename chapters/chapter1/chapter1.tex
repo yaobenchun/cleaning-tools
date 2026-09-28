@@ -490,8 +490,6 @@ Fluent与EDEM耦合仿真的具体实施步骤如下：首先，构建颗粒物�
 %需核实
 %砂的质量产率是多少
 
-\subsection{数值模拟及结果分析}
-
 \subsubsection{环空砂砾沉降分析}
 
 通过对井筒环空内砂砾质量进行仿真，得到钻杆静止时环空内砂砾沉降质量变化曲线，如图 \ref{fig:sand_mass_in_annular_VS_time} 所示。由图可知，环空内砂砾质量曲线先呈线性增长，在 \(30 \mathrm{s}\) 后不再继续增长，而是随时间在稳定值上下波动。这说明井筒内进入的砂砾量与出口排出的砂砾量接近，可判断环空内沉积的砂砾量达到稳定值，平均砂砾质量为 \(63.294\mathrm{kg}\)。
@@ -516,12 +514,16 @@ Fluent与EDEM耦合仿真的具体实施步骤如下：首先，构建颗粒物�
 	\includegraphics[width=0.6\textwidth]{figure/chapter1/sand-volume-fraction-cloud-sections.png}
 	\label{fig:sand_volume_fraction_cloud_sections}
 	}
-	\caption{环空中砂砾轴向速度和体积分数云图\(v_{\mathrm{in}}=0.17 \mathrm{m/s}\)}
+	\caption{环空中砂砾轴向速度和体积分数云图（\(v_{\mathrm{in}}=0.17 \mathrm{m/s}\)）}
 \end{figure}
 
 \subsubsection{洗井液流速对环空砂砾沉积的影响}
 
-图\ref{fig:sand_mass_in_annular_VS_time_flowrate} 为 \(v_{\mathrm{in}}=0.17,0.27,0.69 \mathrm{m/s}\)（对应泵排量分别为 25、40、100 m\(^{3}\)/h）时环空内砂砾质量随时间的变化曲线（粘度 \(\mu = 2.3 \mathrm{mPa\cdot s}\)）。由图可以看出，随着时间的延长，环空内沉降的砂砾质量趋于稳定，并且随着流速升高，环空内沉降的砂砾质量减小，达稳定的时间加快。假设环空内体积分数最大且沉积高度最高的位置为最容易发生砂堵位置，定为砂堵点（简称 b 点）。图 \ref{fig:sand_volume_fraction_vin_dot17} 为流速为 \(0.17\) m/s 时环空内砂砾的体积分数云图，b 点出现在水平段距离入口 \(1280\) mm 处，高度为 \(68\) mm。砂砾床主要沉积在水平段，随着井斜角度增加，砂砾体积分数逐渐减小，井斜 \(75^{\circ}\) 时，砂砾体积分数接近于零。
+图\ref{fig:sand_mass_in_annular_VS_time_flowrate} 为 \(v_{\mathrm{in}}=0.17,0.27,0.69 \mathrm{m/s}\)（对应泵排量分别为 25、40、100 m\(^{3}\)/h）时环空内砂砾质量随时间的变化曲线（粘度 \(\mu = 2.3 \mathrm{mPa\cdot s}\)）。由图可以看出，随着时间的延长，环空内沉降的砂砾质量趋于稳定，并且随着流速升高，环空内沉降的砂砾质量减小，达稳定的时间加快。
+
+假设环空内体积分数最大且沉积高度最高的位置为最容易发生砂堵位置，定为砂堵点（简称 b 点）。图 \ref{fig:b_point_flowrate} 为流速 \(v_{\mathrm{in}}=0.17,0.27,0.69 \mathrm{m/s}\)三种情况下环空内砂砾的体积分数云图，随着流速的增大，砂砾体积分数逐渐减小，砂砾床高度降低，砂堵风险下降。
+
+图\ref{fig:sand_volume_fraction_vin_dot17} 为流速为 \(v_{\mathrm{in}}=0.17\mathrm{m/s}\) 时环空内砂砾的体积分数云图，b 点出现在水平段距离入口 \(1280\) mm 处。砂砾床主要沉积在水平段，随着井斜角度增加，砂砾体积分数逐渐减小，井斜 \(\theta =75^{\circ}\) 时，砂砾体积分数接近于零，说明洗井液携砂能力较弱。\(v_{\mathrm{in}}=0.27\mathrm{m/s}\)时，b点出现在水平段距离入口 \(1150\) mm 处，砂砾床主要沉积在水平段，相对于 \(v_{\mathrm{in}}=0.17 \mathrm{m/s}\) 的工况，砂砾在井斜段体积分数有所增加，砂砾向出口运移的效率增大。当\(v_{\mathrm{in}}=0.69 \mathrm{m/s}\) 时，b 点出现在水平段距离入口 \(1530\) mm 处，直井段和小井斜段沙砾的沉积情况均较微弱。图\ref{fig:b_point_height_VS_flowrate} 为 b 点高度随洗井液流速变化曲线，随着洗井液流速增大，b 点高度呈现接近线性降低的趋势。
 %既然这里提到主要沉积在水平段，可以给后面的实验佐证
 
 \begin{figure}[htbp]
@@ -531,7 +533,7 @@ Fluent与EDEM耦合仿真的具体实施步骤如下：首先，构建颗粒物�
 	\label{fig:sand_mass_in_annular_VS_time_flowrate}
 \end{figure}
 
-图\ref{fig:sand_volume_fraction_vin_dot27} 为流速为 \(0.27\) m/s 时环空内砂砾的体积分数云图，B点出现在水平段距离入口 \(1150\) mm 处，高度为 \(64\) mm。砂砾床主要沉积在水平段，相对于 \(0.17\) m/s 流速工况，砂砾在井斜段体积分数有所增加，砂砾向出口运移的效率增大。图\ref{fig:sand_volume_fraction_vin_dot69} 为流速为 \(0.69\) m/s 时环空内砂砾的体积分数云图，B 点出现在水平段距离入口 \(1530\) mm 处，高度为 \(32\) mm。砂砾床沉积在水平段及小倾角井斜段，砂砾床高度明显降低，砂堵风险明显下降，且井斜段砂砾体积分数明显增大，砂砾运移效率增大。图\ref{fig:b_point_height_VS_flowrate} 为 B 点高度随洗井液流速变化曲线，由图中可以看到随着洗井液流速增大，b 点高度逐渐减小。
+
 
 \begin{figure}[htbp]
 	\centering
@@ -549,66 +551,75 @@ Fluent与EDEM耦合仿真的具体实施步骤如下：首先，构建颗粒物�
 		\includegraphics[width=0.55\textwidth]{figure/sand-volume-fraction-vin-dot69.png}
 		\label{fig:sand_volume_fraction_vin_dot69}
 	}
-	\caption{流速对环空内砂砾的体积分数的影响}
+	\caption{流速对环空内砂砾的体积分数的影响}\label{fig:b_point_flowrate}
 \end{figure}
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.7\textwidth]{figure/b-point-height-VS-flowrate.png}
+	\includegraphics[width=0.6\textwidth]{figure/chapter1/b-point-height-VS-flowrate.png}
 	\caption{b 点高度随洗井液流速变化曲线}
 	\label{fig:b_point_height_VS_flowrate}
 \end{figure}
 
 %这个结果可以和实验进行对比
 
-图 1.20 为 b 点不同洗井液流速下砂砾体积分数和轴向速度云图，随着洗井液流速增大，b 点砂砾体积分数减小，且砂砾流速增大，这说明环空排量的增大，增强了流体的携砂能力，促进了砂砾颗粒在环空中的流动性，增加了砂砾颗粒能量，为砂砾运移提供了更大的拖曳力，从而有效地提高了井筒内砂砾颗粒的运移效率。因此在实际作业中，要想减小砂堵风险，宜尽量采用更大的冲砂排量。
+图\ref{fig:sand_volume_fraction_velocity_at_b_point_flowrate}为 b 点不同洗井液流速下砂砾体积分数和轴向速度云图。下部砂浓度高，对应沙砾的沉积区，顶部砂浓度低，砂的浓度存在明显的梯度分布。砂床的上顶面接近于平面。流速\(v_{\mathrm{in}}\)从\(0.17 \mathrm{m/s}\)增大到\(0.27 \mathrm{m/s}\)时，砂床的降低效应不显著，但增大到\(0.27 \mathrm{m/s}\)时，砂床高度明显降低。环空排量的增大，增强了流体的携砂能力，促进了砂砾颗粒在环空中的流动性，增加了砂砾颗粒能量，为砂砾运移提供了更大的拖曳力，从而有效地提高了井筒内砂砾颗粒的运移效率。因此，在实际作业中，宜尽量采用较大排量冲砂。
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.8\textwidth]{figure/sand-volume-fraction-velocity-at-b-point-flowrate.png}
-	\caption{b 点不同洗井液流速下砂砾体积分数和轴向速度云图}
+	\includegraphics[width=0.9\textwidth]{figure/sand-volume-fraction-velocity-at-b-point-flowrate.png}
+	\caption{不同洗井液流速下b点所在截面砂砾体积分数和轴向速度云图}
 	\label{fig:sand_volume_fraction_velocity_at_b_point_flowrate}
 \end{figure}
 
-\subsubsection{洗井液粘度对环空砂砾沉积的影响}
 
-图 1.21 为流速 \(0.27\) m/s 时，粘度分别取 1.0、2.3、5.0 cp 时，不同粘度下环空内砂砾质量随时间的变化曲线。由图可以看出，随着时间的延长，环空内沉降的砂砾质量趋于稳定，并且随着粘度增大，环空内沉降的砂砾质量减小，且到达稳定的时间加快。
 
+固定 \(v_{\mathrm{in}} = 0.27\) m/s 研究洗井液粘度对环空沙砾沉积的影响。图\ref{fig:sand_mass_in_annular_VS_time_viscosity}为\(\mu =1.0\)，\(2.3\)，\(5.0 \mathrm{mPa\cdot s}\)三种粘度条件下环空内砂砾质量随时间的变化曲线。随着冲砂过程的持续，三组算例中的环空砂砾质量均逐步趋于动态平衡。洗井液粘度对砂砾沉积量及到达平衡的速率具有显著影响，随着粘度增加，颗粒受到的流体拖拽力与悬浮能力增强，显著抑制了固相颗粒在环空底部的沉降积累，使环空内最终沉降的砂砾总质量明显减小；同时，高粘度流体对颗粒运移的响应调控更为迅速，使系统达到动态平衡所需的时间显著缩短。
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.7\textwidth]{figure/sand-mass-in-annular-VS-time-viscosity.png}
+	\includegraphics[width=0.5\textwidth]{figure/chapter1/sand-mass-in-annular-VS-time-viscosity.png}
 	\caption{不同粘度下环空内砂砾质量随时间的变化曲线}
 	\label{fig:sand_mass_in_annular_VS_time_viscosity}
 \end{figure}
 
-图 1.22 为粘度为 \(1.0\) cp 时环空内砂砾的体积分数云图，则粘度为 \(1.0\) cp 时，b 点出现在水平段距离入口 \(800\)--\(1400\) mm 处，高度为 \(77.5\) mm。砂砾床主要沉积在水平段，随着井斜角度增加，砂砾体积分数逐渐减小，井斜 \(75^{\circ}\) 时，砂砾体积分数接近于 0。
+图\ref{fig:volume_rate_distribution_viscosity} 为 \(\mu =1.0\mathrm{mPa\cdot s}\)和\(\mu =5.0\mathrm{mPa\cdot s}\)两种情况下环空内砂砾的体积分数云图。低粘度条件（\(\mu = 1.0\ \mathrm{mPa\cdot s}\)）下，洗井液的悬浮与携砂能力较弱，砂砾主要在水平段及低倾角井斜段沉积形成明显的砂床。其中，最严重沉积点 b 点出现在水平段距离入口 \(800\text{--}1400\ \mathrm{mm}\) 区域，此时 b 点砂床高度增至 \(77.5\ \mathrm{mm}\)。随着井斜角 \(\theta\) 的增大，重力在管轴垂直方向的分量减小，砂砾沉积现象逐渐减弱；当井斜角达到 \(\theta = 75^{\circ}\) 时，环空内砂砾体积分数已接近于零。高粘度条件（\(\mu = 5.0\ \mathrm{mPa\cdot s}\)）下，流体的剪切应力与悬浮能力显著增强，有效地阻碍了砂砾向管底的沉降。此时，b 点向入口方向微移至距离入口 \(1000\ \mathrm{mm}\) 处，且砂床高度大幅削减至仅 \(25\ \mathrm{mm}\)。
+
+图\ref{fig:b_point_height_VS_viscosity} 为 b 点砂床高度随洗井液粘度的定量变化曲线。由图可知，随着洗井液粘度由 \(1.0\ \mathrm{mPa\cdot s}\) 增加至 \(2.3\ \mathrm{mPa\cdot s}\) 和 \(5.0\ \mathrm{mPa\cdot s}\)，b 点高度由 \(77.5\ \mathrm{mm}\) 单调递减至 \(64\ \mathrm{mm}\) 和 \(25\ \mathrm{mm}\)，整体呈近似线性下降趋势。这一规律与提高入口流速的影响一致，表明增大洗井液粘度能够显著抑制井底及水平段的砂床积聚，有效防范井底砂堵风险。
 
 \begin{figure}[htbp]
 	\centering
+	\subfloat[\(\mu =1.0 \mathrm{mPa\cdot s}\)]{
 	\includegraphics[width=0.7\textwidth]{figure/sand-volume-fraction-mu-1cp.png}
-	\caption{粘度为 1.0 cp 时环空内砂砾的体积分数云图}
 	\label{fig:sand_volume_fraction_mu_1cp}
-\end{figure}
-
-图 1.23 为粘度为 \(5.0\) cp 时环空内砂砾的体积分数云图，则粘度为 \(5.0\) cp 时，b 点出现在水平段距离入口 \(1000\) mm 处，高度为 \(25\) mm。砂砾床沉积在水平段及小倾角井斜段，砂砾床高度明显降低，砂堵风险明显下降，且井斜段砂砾体积分数明显增大，砂砾运移效率增大。
-
-\begin{figure}[htbp]
-	\centering
+	}
+	\vspace{-1em}
+	\subfloat[\(\mu =5.0 \mathrm{mPa\cdot s}\)]{
 	\includegraphics[width=0.7\textwidth]{figure/sand-volume-fraction-mu-5cp.png}
-	\caption{粘度为 5.0 cp 时环空内砂砾的体积分数云图}
 	\label{fig:sand_volume_fraction_mu_5cp}
+	}
+	\caption{不同粘度下环空内砂砾的体积分数云图}
+	\label{fig:volume_rate_distribution_viscosity}
 \end{figure}
-
-图 1.24 为 b 点高度随洗井液粘度变化曲线，由图中可以看到随着洗井液粘度增大，b 点高度逐渐减小。
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.7\textwidth]{figure/b-point-height-VS-viscosity.png}
+	\includegraphics[width=0.5\textwidth]{figure/chapter1/b-point-height-VS-viscosity.png}
 	\caption{b 点高度随洗井液粘度变化曲线}
 	\label{fig:b_point_height_VS_viscosity}
 \end{figure}
 
-图 1.25 为 b 点不同洗井液粘度下砂砾体积分数和轴向速度云图，随着洗井液粘度增大，b 点砂砾体积分数减小，但砂砾流速有减小的趋势，这说明洗井液粘度的增大，增大了流体的携砂能力，但是会减小环空中流体的流动性，这说明增大洗井液粘度可以抑制砂堵在井底的形成，但是也会增加砂砾上返的时间。因此在实际作业中，要想减小砂堵风险，宜采用粘度更大的洗井液。
+图\ref{fig:sand_volume_fraction_velocity_at_b_point_viscosity} 进一步展示了在相同入口流量条件下，b 点处不同粘度下的砂砾体积分数与轴向速度截面云图。结合质量守恒与水动力学机制分析如下：
+\begin{enumerate}
+    \item 砂床形貌对有效过流面积的调控\ 低粘度（\(\mu = 1.0\ \mathrm{mPa\cdot s}\)）时，由于大量砂砾沉降在管底，形成了较厚的砂床（高体积分数红色区域占比较大），导致环空上部的有效过流截面积被严重压缩。在入口总流量恒定的前提下（\(Q = A_{\mathrm{eff}} \cdot v_{\mathrm{avg}}\)），过流面积 \(A_{\mathrm{eff}}\) 的减小逼迫上部流体以更高的局部速度挤过狭窄流道，因此出现了高达 \(1.30\ \mathrm{m/s}\) 的轴向速度峰值。
+    \item 高粘度下速度场的均匀化作用\ 随着粘度增加至 \(\mu = 5.0\ \mathrm{mPa\cdot s}\)，携砂能力增强使管底砂床高度急剧下降，环空的有效过流面积得到恢复。此时流体不再需要强行“挤过”狭窄通道，速度分布更加均匀，使得截面最大轴向速度下降至 \(0.86\ \mathrm{m/s}\)。同时，粘度增大使得流体的剪切应力传递更为充分，速度剖面趋于平缓，增加了对砂床表面的冲刷拖拽效果，有利于固相颗粒的整体运移。
+\end{enumerate}
+图\ref{fig:sand_volume_fraction_velocity_at_b_point_viscosity} 进一步展示了在相同入口流量条件下，b 点处不同粘度下的砂砾体积分数与轴向速度截面云图。结合质量守恒与水动力学机制分析如下：
+\begin{enumerate}
+    \item 砂床形貌对有效过流面积的调控\ 低粘度（\(\mu = 1.0\ \mathrm{mPa\cdot s}\)）时，由于大量砂砾沉降在管底，形成了较厚的砂床（高体积分数红色区域占比较大），导致环空上部的有效过流截面积被严重压缩。在入口总流量恒定的前提下（\(Q = A_{\mathrm{eff}} \cdot v_{\mathrm{avg}}\)），过流面积 \(A_{\mathrm{eff}}\) 的减小逼迫上部流体以更高的局部速度挤过狭窄流道，因此出现了高达 \(1.30\ \mathrm{m/s}\) 的轴向速度峰值。
+    \item 高粘度下速度场的均匀化作用\ 随着粘度增加至 \(\mu = 5.0\ \mathrm{mPa\cdot s}\)，携砂能力增强使管底砂床高度急剧下降，环空的有效过流面积得到恢复。此时流体不再需要强行“挤过”狭窄通道，速度分布更加均匀，使得截面最大轴向速度下降至 \(0.86\ \mathrm{m/s}\)。同时，粘度增大使得流体的剪切应力传递更为充分，速度剖面趋于平缓，增加了对砂床表面的冲刷拖拽效果，有利于固相颗粒的整体运移。
+\end{enumerate}
+
+综上所述，在实际冲砂作业中，适当增大洗井液粘度可以有效控制井底砂床高度、解除因过流面积缩小而导致的局部高流速冲蚀问题，同时防止井底卡钻与砂堵。然而，考虑到高粘度流体同时会带来更大的沿程泵压损耗，工程上应结合泵注能力合理控制洗井液粘度。
 
 \begin{figure}[htbp]
 	\centering
