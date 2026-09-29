@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2026.7.19)  28 SEP 2026 20:59
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2026.7.19)  29 SEP 2026 19:33
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1292,7 +1292,7 @@ File: figure/chapter1/sand-mass-in-annular-VS-time-flowrate.png Graphic file (ty
 File: figure/sand-volume-fraction-vin-dot17.png Graphic file (type bmp)
 <figure/sand-volume-fraction-vin-dot17.png>
 LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/m/n' will be
-(Font)              scaled to size 5.0pt on input line 543.
+(Font)              scaled to size 5.0pt on input line 544.
 File: figure/sand-volume-fraction-vin-dot27.png Graphic file (type bmp)
 <figure/sand-volume-fraction-vin-dot27.png>
 File: figure/sand-volume-fraction-vin-dot69.png Graphic file (type bmp)
@@ -1310,203 +1310,36 @@ File: figure/sand-volume-fraction-mu-5cp.png Graphic file (type bmp)
 <figure/sand-volume-fraction-mu-5cp.png>
 File: figure/chapter1/b-point-height-VS-viscosity.png Graphic file (type bmp)
 <figure/chapter1/b-point-height-VS-viscosity.png>
- [15]
 File: figure/sand-volume-fraction-velocity-at-b-point-viscosity.png Graphic file (type bmp)
 <figure/sand-volume-fraction-velocity-at-b-point-viscosity.png>
- [16] [17]
+ [15]
+Overfull \vbox (30.56985pt too high) has occurred while \output is active []
+
+ [16]
 File: figure/tool-and-wellbore-simulation-model.png Graphic file (type bmp)
 <figure/tool-and-wellbore-simulation-model.png>
 File: figure/sand-distribution-annular-vin-dot37.png Graphic file (type bmp)
 <figure/sand-distribution-annular-vin-dot37.png>
 File: figure/sand-distribution-annular-vin-dot59.png Graphic file (type bmp)
 <figure/sand-distribution-annular-vin-dot59.png>
- [18]
+ [17]
 File: figure/iron-shavings-sample.jpg Graphic file (type bmp)
 <figure/iron-shavings-sample.jpg>
 File: figure/iron-wire-actual.jpg Graphic file (type bmp)
 <figure/iron-wire-actual.jpg>
 File: figure/iron-wire-model.jpg Graphic file (type bmp)
 <figure/iron-wire-model.jpg>
+ [18]
 File: figure/iron-wire-distribution-1cp-velocity-colored.png Graphic file (type bmp)
 <figure/iron-wire-distribution-1cp-velocity-colored.png>
 File: figure/iron-wire-distribution-1dot7-cp-velocity-colored.png Graphic file (type bmp)
 <figure/iron-wire-distribution-1dot7-cp-velocity-colored.png>
- [19]
 File: figure/iron-wire-mean-velocity-evolution-viscosity.jpg Graphic file (type bmp)
 <figure/iron-wire-mean-velocity-evolution-viscosity.jpg>
 File: figure/iron-wire-distribution-1dot7cp-0dot17mpers.png Graphic file (type bmp)
 <figure/iron-wire-distribution-1dot7cp-0dot17mpers.png>
 File: figure/iron-wire-distribution-1dot7cp-0dot27mpers.png Graphic file (type bmp)
 <figure/iron-wire-distribution-1dot7cp-0dot27mpers.png>
- [20] [21]
+ [19] [20]
 File: figure/iron-wire-particle-track-1dot7cp-0dot17mpers.jpg Graphic file (type bmp)
 <figure/iron-wire-particle-track-1dot7cp-0dot17mpers.jpg>
-File: figure/iron-wire-particle-track-1dot7cp-0dot27mpers.jpg Graphic file (type bmp)
-<figure/iron-wire-particle-track-1dot7cp-0dot27mpers.jpg>
-File: figure/iron-wire-mean-velocity-evolution-incoming-velocity.png Graphic file (type bmp)
-<figure/iron-wire-mean-velocity-evolution-incoming-velocity.png>
- [22] [23]
-File: figure/iron-wire-distribution-1dot7cp-0dot27mpers-3angles.jpg Graphic file (type bmp)
-<figure/iron-wire-distribution-1dot7cp-0dot27mpers-3angles.jpg>
-File: figure/iron-wire-particle-track-1dot7cp-0dot27mpers-3angles.jpg Graphic file (type bmp)
-<figure/iron-wire-particle-track-1dot7cp-0dot27mpers-3angles.jpg>
- [24]
-File: figure/iron-wire-mean-velocity-evolution-3angles.png Graphic file (type bmp)
-<figure/iron-wire-mean-velocity-evolution-3angles.png>
-
-
-LaTeX Warning: Reference `tab:basr_simulation_params' on page 25 undefined on input line 929.
-
-File: figure/BaSr-sample.png Graphic file (type bmp)
-<figure/BaSr-sample.png>
-File: figure/BaSr-SEM.png Graphic file (type bmp)
-<figure/BaSr-SEM.png>
-File: figure/BaSr-model.png Graphic file (type bmp)
-<figure/BaSr-model.png>
-[25] [26]
-File: figure/BaSr-distribution-Vin.jpg Graphic file (type bmp)
-<figure/BaSr-distribution-Vin.jpg>
-File: figure/BaSr-mean-velocity-evolution-vin-dot37.png Graphic file (type bmp)
-<figure/BaSr-mean-velocity-evolution-vin-dot37.png>
-File: figure/BaSr-mean-velocity-evolution-vin-dot59.png Graphic file (type bmp)
-<figure/BaSr-mean-velocity-evolution-vin-dot59.png>
- [27]
-File: figure/BaSr-distribution-3angles.jpg Graphic file (type bmp)
-<figure/BaSr-distribution-3angles.jpg>
-File: figure/BaSr-mean-velocity-evolution-big-size.png Graphic file (type bmp)
-<figure/BaSr-mean-velocity-evolution-big-size.png>
-File: figure/BaSr-mean-velocity-evolution-small-size.png Graphic file (type bmp)
-<figure/BaSr-mean-velocity-evolution-small-size.png>
- [28]
-File: figure/Wax-mean-velocity-Vin-dot37mpersec.png Graphic file (type bmp)
-<figure/Wax-mean-velocity-Vin-dot37mpersec.png>
-File: figure/Wax-mean-velocity-Vin-dot59mpersec.png Graphic file (type bmp)
-<figure/Wax-mean-velocity-Vin-dot59mpersec.png>
- [29] [30]
-File: figure/wax-distribution-3angles.png Graphic file (type bmp)
-<figure/wax-distribution-3angles.png>
-File: figure/Wax-mean-velocity-Vin-dot59mpersec-theta-0.png Graphic file (type bmp)
-<figure/Wax-mean-velocity-Vin-dot59mpersec-theta-0.png>
-File: figure/Wax-mean-velocity-Vin-dot59mpersec-theta-90.png Graphic file (type bmp)
-<figure/Wax-mean-velocity-Vin-dot59mpersec-theta-90.png>
- [31] [32]) [33]
-第二章
-[34
-
-]
-第三章
-(./chapters/chapter3/part2-4in1.tex [35
-
-]
-File: figure/chapter3/structure-4-in-1.png Graphic file (type bmp)
-<figure/chapter3/structure-4-in-1.png>
-LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/m/n' will be
-(Font)              scaled to size 10.53937pt on input line 25.
-LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/m/n' will be
-(Font)              scaled to size 7.0pt on input line 29.
- [36]
-File: figure/chapter3/mechanism-scratcher-4-in-1.png Graphic file (type bmp)
-<figure/chapter3/mechanism-scratcher-4-in-1.png>
-File: figure/chapter3/mechanism-swiper-4-in-1.png Graphic file (type bmp)
-<figure/chapter3/mechanism-swiper-4-in-1.png>
-File: figure/chapter3/mechanism-mag-sub-4-in-1.png Graphic file (type bmp)
-<figure/chapter3/mechanism-mag-sub-4-in-1.png>
-File: figure/chapter3/mechanism-torsional-spring-4-in-1.png Graphic file (type bmp)
-<figure/chapter3/mechanism-torsional-spring-4-in-1.png>
-File: figure/chapter3/dynamic-system-torsional-spring-mechanism-4-in-1.png Graphic file (type bmp)
-<figure/chapter3/dynamic-system-torsional-spring-mechanism-4-in-1.png>
- [37]
-File: figure/chapter3/upper-sub-4-in-1.png Graphic file (type bmp)
-<figure/chapter3/upper-sub-4-in-1.png>
-File: figure/chapter3/lowwer-sub-4-in-1.png Graphic file (type bmp)
-<figure/chapter3/lowwer-sub-4-in-1.png>
- [38]
-File: figure/chapter3/inner-pipe-for-strength-analysis.png Graphic file (type bmp)
-<figure/chapter3/inner-pipe-for-strength-analysis.png>
- [39]
-File: figure/chapter3/flat-shear-key.png Graphic file (type bmp)
-<figure/chapter3/flat-shear-key.png>
- [40] [41]
-File: figure/chapter3/inner-pipe-tensile-strength-simulation.png Graphic file (type bmp)
-<figure/chapter3/inner-pipe-tensile-strength-simulation.png>
-File: figure/chapter3/inner-pipe-torsional-strength-simulation.png Graphic file (type bmp)
-<figure/chapter3/inner-pipe-torsional-strength-simulation.png>
- [42]
-File: figure/chapter3/pitch-spring.png Graphic file (type bmp)
-<figure/chapter3/pitch-spring.png>
-File: figure/chapter3/oscillating-spring.png Graphic file (type bmp)
-<figure/chapter3/oscillating-spring.png>
- [43] [44]) (./chapters/chapter3/part2-4in1-scraper-performance.tex [45]
-File: figure/chapter3/scraper-test-rig.png Graphic file (type bmp)
-<figure/chapter3/scraper-test-rig.png>
-File: figure/chapter3/scapter-measurement-mechanism.png Graphic file (type bmp)
-<figure/chapter3/scapter-measurement-mechanism.png>
- [46] [47]
-File: figure/chapter3/scale-1.jpg Graphic file (type bmp)
-<figure/chapter3/scale-1.jpg>
-File: figure/chapter3/scale-4.jpg Graphic file (type bmp)
-<figure/chapter3/scale-4.jpg>
-File: figure/chapter3/scale-3.jpg Graphic file (type bmp)
-<figure/chapter3/scale-3.jpg>
-File: figure/chapter3/scale-5.jpg Graphic file (type bmp)
-<figure/chapter3/scale-5.jpg>
-File: figure/chapter3/scraper-1.jpg Graphic file (type bmp)
-<figure/chapter3/scraper-1.jpg>
-File: figure/chapter3/scraper-4.jpg Graphic file (type bmp)
-<figure/chapter3/scraper-4.jpg>
-File: figure/chapter3/scraper-3.jpg Graphic file (type bmp)
-<figure/chapter3/scraper-3.jpg>
-File: figure/chapter3/scraper-5.jpg Graphic file (type bmp)
-<figure/chapter3/scraper-5.jpg>
- [48] [49]
-File: figure/chapter3/scatch-depth-sping-comprassion.jpg Graphic file (type bmp)
-<figure/chapter3/scatch-depth-sping-comprassion.jpg>
- [50] [51]) (./chapters/bib.tex [52] [53
-
-
-]) [54] (./chapters/appendix1.tex [55
-
-]
-
-LaTeX Warning: Reference `citimoni' on page 56 undefined on input line 53.
-
-
-LaTeX Warning: Reference `shuilimaichong' on page 56 undefined on input line 54.
-
-
-LaTeX Warning: Reference `darongliangqiangci' on page 56 undefined on input line 62.
-
-
-LaTeX Warning: Reference `duogongnengguolv' on page 56 undefined on input line 63.
-
-
-LaTeX Warning: Reference `kebianjingguaguan' on page 56 undefined on input line 64.
-
-
-LaTeX Warning: Reference `sanheyi' on page 56 undefined on input line 65.
-
-[56]) [57] (./main.aux)
- ***********
-LaTeX2e <2025-11-01>
-L3 programming layer <2020/03/25>
- ***********
-
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: There were multiply-defined labels.
-
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: E1DAFCFB3E5F9CD8F72495AD0F568735;9314.
- ) 
-Here is how much of TeX's memory you used:
- 37226 strings out of 468174
- 865115 string characters out of 5433150
- 1207346 words of memory out of 5000000
- 65257 multiletter control sequences out of 15000+600000
- 645530 words of font info for 142 fonts, out of 8000000 for 9000
- 1348 hyphenation exceptions out of 8191
- 93i,16n,117p,1215b,1151s stack positions out of 10000i,1000n,20000p,200000b,200000s
-
-Output written on main.pdf (60 pages).
