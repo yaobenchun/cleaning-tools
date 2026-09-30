@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2026.7.19)  29 SEP 2026 19:33
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2026.7.19)  1 OCT 2026 07:40
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1343,3 +1343,87 @@ File: figure/iron-wire-distribution-1dot7cp-0dot27mpers.png Graphic file (type b
  [19] [20]
 File: figure/iron-wire-particle-track-1dot7cp-0dot17mpers.jpg Graphic file (type bmp)
 <figure/iron-wire-particle-track-1dot7cp-0dot17mpers.jpg>
+File: figure/iron-wire-particle-track-1dot7cp-0dot27mpers.jpg Graphic file (type bmp)
+<figure/iron-wire-particle-track-1dot7cp-0dot27mpers.jpg>
+File: figure/iron-wire-mean-velocity-evolution-incoming-velocity.png Graphic file (type bmp)
+<figure/iron-wire-mean-velocity-evolution-incoming-velocity.png>
+ [21] [22]
+File: figure/iron-wire-distribution-1dot7cp-0dot27mpers-3angles.jpg Graphic file (type bmp)
+<figure/iron-wire-distribution-1dot7cp-0dot27mpers-3angles.jpg>
+File: figure/iron-wire-particle-track-1dot7cp-0dot27mpers-3angles.jpg Graphic file (type bmp)
+<figure/iron-wire-particle-track-1dot7cp-0dot27mpers-3angles.jpg>
+File: figure/iron-wire-mean-velocity-evolution-3angles.png Graphic file (type bmp)
+<figure/iron-wire-mean-velocity-evolution-3angles.png>
+ [23] [24]
+
+LaTeX Warning: Reference `tab:basr_simulation_params' on page 25 undefined on input line 921.
+
+File: figure/BaSr-sample.png Graphic file (type bmp)
+<figure/BaSr-sample.png>
+File: figure/BaSr-SEM.png Graphic file (type bmp)
+<figure/BaSr-SEM.png>
+File: figure/BaSr-model.png Graphic file (type bmp)
+<figure/BaSr-model.png>
+[25]
+File: figure/BaSr-distribution-Vin.jpg Graphic file (type bmp)
+<figure/BaSr-distribution-Vin.jpg>
+File: figure/BaSr-mean-velocity-evolution-vin-dot37.png Graphic file (type bmp)
+<figure/BaSr-mean-velocity-evolution-vin-dot37.png>
+File: figure/BaSr-mean-velocity-evolution-vin-dot59.png Graphic file (type bmp)
+<figure/BaSr-mean-velocity-evolution-vin-dot59.png>
+ [26]
+File: figure/BaSr-distribution-3angles.jpg Graphic file (type bmp)
+<figure/BaSr-distribution-3angles.jpg>
+File: figure/BaSr-mean-velocity-evolution-big-size.png Graphic file (type bmp)
+<figure/BaSr-mean-velocity-evolution-big-size.png>
+File: figure/BaSr-mean-velocity-evolution-small-size.png Graphic file (type bmp)
+<figure/BaSr-mean-velocity-evolution-small-size.png>
+ [27] [28]
+File: figure/Wax-mean-velocity-Vin-dot37mpersec.png Graphic file (type bmp)
+<figure/Wax-mean-velocity-Vin-dot37mpersec.png>
+File: figure/Wax-mean-velocity-Vin-dot59mpersec.png Graphic file (type bmp)
+<figure/Wax-mean-velocity-Vin-dot59mpersec.png>
+ [29]
+File: figure/wax-distribution-3angles.png Graphic file (type bmp)
+<figure/wax-distribution-3angles.png>
+File: figure/Wax-mean-velocity-Vin-dot59mpersec-theta-0.png Graphic file (type bmp)
+<figure/Wax-mean-velocity-Vin-dot59mpersec-theta-0.png>
+File: figure/Wax-mean-velocity-Vin-dot59mpersec-theta-90.png Graphic file (type bmp)
+<figure/Wax-mean-velocity-Vin-dot59mpersec-theta-90.png>
+ [30] [31] [32]) [33]
+第二章
+[34
+
+]
+第三章
+(./chapters/chapter3/part2-4in1.tex [35
+
+]
+File: figure/chapter3/structure-4-in-1.png Graphic file (type bmp)
+<figure/chapter3/structure-4-in-1.png>
+LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/m/n' will be
+(Font)              scaled to size 10.53937pt on input line 25.
+LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/m/n' will be
+(Font)              scaled to size 7.0pt on input line 29.
+ [36]
+File: figure/chapter3/mechanism-scratcher-4-in-1.png Graphic file (type bmp)
+<figure/chapter3/mechanism-scratcher-4-in-1.png>
+File: figure/chapter3/mechanism-swiper-4-in-1.png Graphic file (type bmp)
+<figure/chapter3/mechanism-swiper-4-in-1.png>
+File: figure/chapter3/mechanism-mag-sub-4-in-1.png Graphic file (type bmp)
+<figure/chapter3/mechanism-mag-sub-4-in-1.png>
+File: figure/chapter3/mechanism-torsional-spring-4-in-1.png Graphic file (type bmp)
+<figure/chapter3/mechanism-torsional-spring-4-in-1.png>
+File: figure/chapter3/dynamic-system-torsional-spring-mechanism-4-in-1.png Graphic file (type bmp)
+<figure/chapter3/dynamic-system-torsional-spring-mechanism-4-in-1.png>
+ [37]
+File: figure/chapter3/upper-sub-4-in-1.png Graphic file (type bmp)
+<figure/chapter3/upper-sub-4-in-1.png>
+File: figure/chapter3/lowwer-sub-4-in-1.png Graphic file (type bmp)
+<figure/chapter3/lowwer-sub-4-in-1.png>
+ [38]
+File: figure/chapter3/inner-pipe-for-strength-analysis.png Graphic file (type bmp)
+<figure/chapter3/inner-pipe-for-strength-analysis.png>
+ [39]
+File: figure/chapter3/flat-shear-key.png Graphic file (type bmp)
+<figure/chapter3/flat-shear-ke
