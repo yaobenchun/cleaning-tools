@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2026.7.19)  1 OCT 2026 07:40
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2026.7.19)  2 OCT 2026 09:45
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1087,6 +1087,33 @@ Package translations Info: No language package found. I am going to use `english
 
 LaTeX Warning: Label `tab:simulation_params' multiply defined.
 
+
+LaTeX Warning: Label `fig:scale_1' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:scale_1' multiply defined.
+
+
+LaTeX Warning: Label `fig:scale_4' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:scale_4' multiply defined.
+
+
+LaTeX Warning: Label `fig:scale_3' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:scale_3' multiply defined.
+
+
+LaTeX Warning: Label `fig:scale_5' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:scale_5' multiply defined.
+
+
+LaTeX Warning: Label `fig:scale_profile' multiply defined.
+
 )
 \openout1 = `main.aux'.
 
@@ -1242,11 +1269,11 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 
-])
+] [2])
 \tf@toc=\write5
 \openout5 = `main.toc'.
 
- [2]
+ [3]
 第一章
 (./chapters/chapter1/chapter1.tex [1
 
@@ -1340,21 +1367,22 @@ File: figure/iron-wire-distribution-1dot7cp-0dot17mpers.png Graphic file (type b
 <figure/iron-wire-distribution-1dot7cp-0dot17mpers.png>
 File: figure/iron-wire-distribution-1dot7cp-0dot27mpers.png Graphic file (type bmp)
 <figure/iron-wire-distribution-1dot7cp-0dot27mpers.png>
- [19] [20]
+ [19] [20] [21]
 File: figure/iron-wire-particle-track-1dot7cp-0dot17mpers.jpg Graphic file (type bmp)
 <figure/iron-wire-particle-track-1dot7cp-0dot17mpers.jpg>
 File: figure/iron-wire-particle-track-1dot7cp-0dot27mpers.jpg Graphic file (type bmp)
 <figure/iron-wire-particle-track-1dot7cp-0dot27mpers.jpg>
 File: figure/iron-wire-mean-velocity-evolution-incoming-velocity.png Graphic file (type bmp)
 <figure/iron-wire-mean-velocity-evolution-incoming-velocity.png>
- [21] [22]
+ [22]
 File: figure/iron-wire-distribution-1dot7cp-0dot27mpers-3angles.jpg Graphic file (type bmp)
 <figure/iron-wire-distribution-1dot7cp-0dot27mpers-3angles.jpg>
+ [23]
 File: figure/iron-wire-particle-track-1dot7cp-0dot27mpers-3angles.jpg Graphic file (type bmp)
 <figure/iron-wire-particle-track-1dot7cp-0dot27mpers-3angles.jpg>
 File: figure/iron-wire-mean-velocity-evolution-3angles.png Graphic file (type bmp)
 <figure/iron-wire-mean-velocity-evolution-3angles.png>
- [23] [24]
+ [24]
 
 LaTeX Warning: Reference `tab:basr_simulation_params' on page 25 undefined on input line 921.
 
@@ -1374,11 +1402,12 @@ File: figure/BaSr-mean-velocity-evolution-vin-dot59.png Graphic file (type bmp)
  [26]
 File: figure/BaSr-distribution-3angles.jpg Graphic file (type bmp)
 <figure/BaSr-distribution-3angles.jpg>
+ [27]
 File: figure/BaSr-mean-velocity-evolution-big-size.png Graphic file (type bmp)
 <figure/BaSr-mean-velocity-evolution-big-size.png>
 File: figure/BaSr-mean-velocity-evolution-small-size.png Graphic file (type bmp)
 <figure/BaSr-mean-velocity-evolution-small-size.png>
- [27] [28]
+ [28]
 File: figure/Wax-mean-velocity-Vin-dot37mpersec.png Graphic file (type bmp)
 <figure/Wax-mean-velocity-Vin-dot37mpersec.png>
 File: figure/Wax-mean-velocity-Vin-dot59mpersec.png Graphic file (type bmp)
@@ -1390,7 +1419,7 @@ File: figure/Wax-mean-velocity-Vin-dot59mpersec-theta-0.png Graphic file (type b
 <figure/Wax-mean-velocity-Vin-dot59mpersec-theta-0.png>
 File: figure/Wax-mean-velocity-Vin-dot59mpersec-theta-90.png Graphic file (type bmp)
 <figure/Wax-mean-velocity-Vin-dot59mpersec-theta-90.png>
- [30] [31] [32]) [33]
+ [30] [31]) [32] [33]
 第二章
 [34
 
@@ -1424,6 +1453,152 @@ File: figure/chapter3/lowwer-sub-4-in-1.png Graphic file (type bmp)
  [38]
 File: figure/chapter3/inner-pipe-for-strength-analysis.png Graphic file (type bmp)
 <figure/chapter3/inner-pipe-for-strength-analysis.png>
- [39]
+ [39] [40]
 File: figure/chapter3/flat-shear-key.png Graphic file (type bmp)
-<figure/chapter3/flat-shear-ke
+<figure/chapter3/flat-shear-key.png>
+ [41] [42]
+File: figure/simulation/xinzhoulashen.png Graphic file (type bmp)
+<figure/simulation/xinzhoulashen.png>
+File: figure/simulation/xinzhouniuju.png Graphic file (type bmp)
+<figure/simulation/xinzhouniuju.png>
+ [43]
+File: figure/chapter3/pitch-spring.png Graphic file (type bmp)
+<figure/chapter3/pitch-spring.png>
+File: figure/chapter3/oscillating-spring.png Graphic file (type bmp)
+<figure/chapter3/oscillating-spring.png>
+ [44] [45] [46]) (./chapters/chapter3/part2-4in1-scraper-performance.tex [47]
+File: figure/chapter3/scraper-test-rig.png Graphic file (type bmp)
+<figure/chapter3/scraper-test-rig.png>
+File: figure/chapter3/scapter-measurement-mechanism.png Graphic file (type bmp)
+<figure/chapter3/scapter-measurement-mechanism.png>
+ [48]
+File: figure/chapter3/scale-1.jpg Graphic file (type bmp)
+<figure/chapter3/scale-1.jpg>
+File: figure/chapter3/scale-4.jpg Graphic file (type bmp)
+<figure/chapter3/scale-4.jpg>
+File: figure/chapter3/scale-3.jpg Graphic file (type bmp)
+<figure/chapter3/scale-3.jpg>
+File: figure/chapter3/scale-5.jpg Graphic file (type bmp)
+<figure/chapter3/scale-5.jpg>
+File: figure/chapter3/scraper-1.jpg Graphic file (type bmp)
+<figure/chapter3/scraper-1.jpg>
+File: figure/chapter3/scraper-4.jpg Graphic file (type bmp)
+<figure/chapter3/scraper-4.jpg>
+File: figure/chapter3/scraper-3.jpg Graphic file (type bmp)
+<figure/chapter3/scraper-3.jpg>
+File: figure/chapter3/scraper-5.jpg Graphic file (type bmp)
+<figure/chapter3/scraper-5.jpg>
+ [49] [50]
+File: figure/chapter3/scatch-depth-sping-comprassion.jpg Graphic file (type bmp)
+<figure/chapter3/scatch-depth-sping-comprassion.jpg>
+
+
+LaTeX Warning: Reference `fig:helical_scraper_test_rig' on page 51 undefined on input line 118.
+
+File: figure/chapter3/scale-1.jpg Graphic file (type bmp)
+<figure/chapter3/scale-1.jpg>
+File: figure/chapter3/scale-4.jpg Graphic file (type bmp)
+<figure/chapter3/scale-4.jpg>
+File: figure/chapter3/scale-3.jpg Graphic file (type bmp)
+<figure/chapter3/scale-3.jpg>
+File: figure/chapter3/scale-5.jpg Graphic file (type bmp)
+<figure/chapter3/scale-5.jpg>
+[51] [52] [53]) (./chapters/chapter3/part5-variable-tool.tex
+File: figure/chapter3/part5/variable-scrapter-structure.png Graphic file (type bmp)
+<figure/chapter3/part5/variable-scrapter-structure.png>
+ [54] [55] [56] [57] [58]
+File: figure/chapter3/part5/inner-pipe.png Graphic file (type bmp)
+<figure/chapter3/part5/inner-pipe.png>
+File: figure/simulation/guadaoxinzhou-lashen.png Graphic file (type bmp)
+<figure/simulation/guadaoxinzhou-lashen.png>
+File: figure/simulation/gaudaoxinzhou-niuju.png Graphic file (type bmp)
+<figure/simulation/gaudaoxinzhou-niuju.png>
+ [59]
+File: figure/chapter3/part5/unsetup/ball.png Graphic file (type bmp)
+<figure/chapter3/part5/unsetup/ball.png>
+File: figure/chapter3/part5/unsetup/unsetup-satefy-screw.png Graphic file (type bmp)
+<figure/chapter3/part5/unsetup/unsetup-satefy-screw.png>
+File: figure/chapter3/part5/unsetup/unsetup-two-subs.png Graphic file (type bmp)
+<figure/chapter3/part5/unsetup/unsetup-two-subs.png>
+File: figure/chapter3/part5/unsetup/unsetup-fasten-parts.png Graphic file (type bmp)
+<figure/chapter3/part5/unsetup/unsetup-fasten-parts.png>
+File: figure/chapter3/part5/unsetup/rotary-lever-set.png Graphic file (type bmp)
+<figure/chapter3/part5/unsetup/rotary-lever-set.png>
+File: figure/chapter3/part5/unsetup/end-links.png Graphic file (type bmp)
+<figure/chapter3/part5/unsetup/end-links.png>
+File: figure/chapter3/part5/unsetup/unsetup-scraper.png Graphic file (type bmp)
+<figure/chapter3/part5/unsetup/unsetup-scraper.png>
+File: figure/chapter3/part5/unsetup/left-links.png Graphic file (type bmp)
+<figure/chapter3/part5/unsetup/left-links.png>
+ [60]
+File: figure/chapter3/part5/unsetup/unsetup-inner-pipe.png Graphic file (type bmp)
+<figure/chapter3/part5/unsetup/unsetup-inner-pipe.png>
+File: figure/chapter3/part5/unsetup/unsetup-ball-and-seat.png Graphic file (type bmp)
+<figure/chapter3/part5/unsetup/unsetup-ball-and-seat.png>
+File: figure/chapter3/part5/unsetup/reseting-assembly.png Graphic file (type bmp)
+<figure/chapter3/part5/unsetup/reseting-assembly.png>
+File: figure/chapter3/part5/unsetup/resetting-assembly-unsetup.png Graphic file (type bmp)
+<figure/chapter3/part5/unsetup/resetting-assembly-unsetup.png>
+File: figure/chapter3/part5/unsetup/middle-body-inner-pipe-ball.png Graphic file (type bmp)
+<figure/chapter3/part5/unsetup/middle-body-inner-pipe-ball.png>
+ [61]
+File: figure/chapter3/part5/unsetup/middle-inner-pipe-unsetup.png Graphic file (type bmp)
+<figure/chapter3/part5/unsetup/middle-inner-pipe-unsetup.png>
+File: figure/chapter3/part5/unsetup/piston-spring-limiter.png Graphic file (type bmp)
+<figure/chapter3/part5/unsetup/piston-spring-limiter.png>
+LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/b/n' will be
+(Font)              scaled to size 10.53937pt on input line 359.
+File: figure/chapter3/part5/10LperSec.png Graphic file (type bmp)
+<figure/chapter3/part5/10LperSec.png>
+File: figure/chapter3/part5/20LperSec.png Graphic file (type bmp)
+<figure/chapter3/part5/20LperSec.png>
+File: figure/chapter3/part5/30LperSec.png Graphic file (type bmp)
+<figure/chapter3/part5/30LperSec.png>
+File: figure/chapter3/part5/40LperSec.png Graphic file (type bmp)
+<figure/chapter3/part5/40LperSec.png>
+ [62] [63] [64] [65] [66]) (./chapters/bib.tex [67] [68
+
+
+]) [69] (./chapters/appendix1.tex [70
+
+]
+
+LaTeX Warning: Reference `citimoni' on page 71 undefined on input line 53.
+
+
+LaTeX Warning: Reference `shuilimaichong' on page 71 undefined on input line 54.
+
+
+LaTeX Warning: Reference `darongliangqiangci' on page 71 undefined on input line 62.
+
+
+LaTeX Warning: Reference `duogongnengguolv' on page 71 undefined on input line 63.
+
+
+LaTeX Warning: Reference `sanheyi' on page 71 undefined on input line 65.
+
+[71]) [72] (./main.aux)
+ ***********
+LaTeX2e <2025-11-01>
+L3 programming layer <2020/03/25>
+ ***********
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: C7431814A4E51E106BF4F1B3234E50CD;11780.
+ ) 
+Here is how much of TeX's memory you used:
+ 37509 strings out of 468174
+ 879102 string characters out of 5433150
+ 1212227 words of memory out of 5000000
+ 65509 multiletter control sequences out of 15000+600000
+ 645546 words of font info for 144 fonts, out of 8000000 for 9000
+ 1348 hyphenation exceptions out of 8191
+ 93i,16n,117p,1215b,1151s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+Output written on main.pdf (76 pages).
