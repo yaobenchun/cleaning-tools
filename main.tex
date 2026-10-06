@@ -117,6 +117,24 @@
   {}
 \titlespacing*{\subsection}{0pt}{10pt}{4pt}
 
+% 用 titlesec 显式设置 paragraph 格式，去掉加粗
+\titleformat{\paragraph}[block]
+  {\normalfont\normalsize}
+  {\theparagraph}
+  {1em}
+  {}
+
+\titlespacing*{\paragraph}{0pt}{1ex}{1ex}
+
+% 1. 重命名 \paragraph 为 \subsubsubsection
+\newcommand{\subsubsubsection}[1]{\paragraph{#1}}
+
+% 2. 设置章节编号深度为3（包含 subsubsubsection）
+\setcounter{secnumdepth}{3}
+
+% 3. 设置目录显示深度为3（subsubsubsection 不出现在目录中）
+\setcounter{tocdepth}{3}
+
 % 6. 其他常用宏包
 \usepackage{graphicx}
 \usepackage{float}         % 提供 [H]：把图片精确固定在正文位置（不浮动，避免图跑到别的页/别的段落下面）      
@@ -150,17 +168,6 @@
 
 \usepackage{siunitx} %用于自定义inch的缩写
 
-
-
-% 1. 重命名 \paragraph 为 \subsubsubsection
-\newcommand{\subsubsubsection}[1]{\paragraph{#1}\mbox{}\\}
-
-% 2. 设置章节编号深度为3（包含 subsubsubsection）
-\setcounter{secnumdepth}{3}
-
-% 3. 设置目录显示深度为3（subsubsubsection 不出现在目录中）
-\setcounter{tocdepth}{3}
-
 \newcommand{\inch}{\,\text{''}} %自定义inch的双撇
 
 \newcolumntype{C}{>{\centering\arraybackslash}X}
@@ -173,6 +180,17 @@
 \renewcommand{\bottomfraction}{0.9}
 % 正文最少占 10%
 \renewcommand{\textfraction}{0.1}
+
+
+% 导言区：再挂一个钩子，防止 ctex 覆盖
+\AtBeginDocument{
+  \titleformat{\paragraph}[block]
+    {\normalfont\normalsize}
+    {\theparagraph}
+    {1em}
+    {}%
+  \titlespacing*{\paragraph}{0pt}{1ex}{1ex}%
+}
 
 \begin{document}
 
@@ -204,10 +222,14 @@
 
 % --- 第一章 ---
 \chapter{砂砾、铁屑、结垢物、蜡等井筒内的运移及分布规律研究}
-	\input{chapters/chapter1/chapter1.tex} % 引入颗粒物运移内容  
+    % 引入颗粒物运移内容  
+    %\input{chapters/chapter1/part1-theory-basis.tex} 
+    \input{chapters/chapter1/part2-sand-sendiment.tex}
+    %\input{chapters/chapter1/part3-iron-wire-sendiment.tex}
+    %\input{chapters/chapter1/part4-scale-wax.tex}
 % --- 第二章 ---
 \chapter{井筒内颗粒运移实验}
-	%\input{chapters/chapter2/part1-horizontal-sand.tex} % 水平井冲砂
+	\input{chapters/chapter2/part1-horizontal-sand.tex} % 水平井冲砂
 	%\input{chapters/chapter2/part2-full-well-model.tex} % 全井筒模型
 % --- 第三章 ---
 \chapter{深度清洁工具设计}

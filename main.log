@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2026.7.19)  4 OCT 2026 19:51
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2026.7.19)  5 OCT 2026 13:38
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -914,3 +914,483 @@ Package: subfig 2005/06/28 ver: 1.3 subfig package
 \c@subfigure=\count381
 \c@subfigure@save=\count382
 \c@lofdepth=\count383
+\c@subtable=\count384
+\c@subtable@save=\count385
+\c@lotdepth=\count386
+\sf@top=\skip86
+\sf@bottom=\skip87
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2024/11/12 v2.9 Span multiple rows of a table
+\multirow@colwidth=\skip88
+\multirow@cntb=\count387
+\multirow@dima=\skip89
+\bigstrutjot=\dimen357
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/footmisc/footmisc.sty
+Package: footmisc 2025/05/09 v7.0b a miscellany of footnote facilities
+\FN@temptoken=\toks44
+\footnotemargin=\dimen358
+Package footmisc Info: Declaring symbol style bringhurst on input line 549.
+Package footmisc Info: Declaring symbol style chicago on input line 557.
+Package footmisc Info: Declaring symbol style wiley on input line 566.
+Package footmisc Info: Declaring symbol style lamport-robust on input line 577.
+Package footmisc Info: Declaring symbol style lamport* on input line 597.
+Package footmisc Info: Declaring symbol style lamport*-robust on input line 618.
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/tools/tabularx.sty
+Package: tabularx 2023/12/11 v2.12a `tabularx' package (DPC)
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/tools/array.sty
+Package: array 2025/09/25 v2.6n Tabular extension package (FMi)
+\col@sep=\dimen359
+\ar@mcellbox=\box74
+\extrarowheight=\dimen360
+\NC@list=\toks45
+\extratabsurround=\skip90
+\backup@length=\skip91
+\ar@cellbox=\box75
+)
+\TX@col@width=\dimen361
+\TX@old@table=\dimen362
+\TX@old@col=\dimen363
+\TX@target=\dimen364
+\TX@delta=\dimen365
+\TX@cols=\count388
+\TX@ftn=\toks46
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/siunitx/siunitx.sty
+Package: siunitx 2025-07-09 v3.4.14 A comprehensive (SI) units package
+\l__siunitx_number_uncert_offset_int=\count389
+\l__siunitx_number_exponent_fixed_int=\count390
+\l__siunitx_number_min_decimal_int=\count391
+\l__siunitx_number_min_integer_int=\count392
+\l__siunitx_number_round_precision_int=\count393
+\l__siunitx_number_lower_threshold_int=\count394
+\l__siunitx_number_upper_threshold_int=\count395
+\l__siunitx_number_group_first_int=\count396
+\l__siunitx_number_group_size_int=\count397
+\l__siunitx_number_group_minimum_int=\count398
+\l__siunitx_angle_tmp_dim=\dimen366
+\l__siunitx_angle_marker_box=\box76
+\l__siunitx_angle_unit_box=\box77
+\l__siunitx_compound_count_int=\count399
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/translations/translations.sty
+Package: translations 2022/02/05 v1.12 internationalization of LaTeX2e packages (CN)
+)
+\l__siunitx_table_tmp_box=\box78
+\l__siunitx_table_tmp_dim=\dimen367
+\l__siunitx_table_column_width_dim=\dimen368
+\l__siunitx_table_integer_box=\box79
+\l__siunitx_table_decimal_box=\box80
+\l__siunitx_table_uncert_box=\box81
+\l__siunitx_table_before_box=\box82
+\l__siunitx_table_after_box=\box83
+\l__siunitx_table_before_dim=\dimen369
+\l__siunitx_table_carry_dim=\dimen370
+\l__siunitx_unit_tmp_int=\count400
+\l__siunitx_unit_position_int=\count401
+\l__siunitx_unit_total_int=\count402
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/newtx/TeXGyreTermesX.fontspec)
+
+Package fontspec Info: 
+(fontspec)             TeXGyreTermesX-Regular scale = 1.
+
+
+Package fontspec Info: 
+(fontspec)             TeXGyreTermesX-Regular scale = 1.
+
+
+Package fontspec Info: 
+(fontspec)             TeXGyreTermesX-Regular scale = 1.
+
+
+Package fontspec Info: 
+(fontspec)             TeXGyreTermesX-Bold scale = 1.
+
+
+Package fontspec Info: 
+(fontspec)             TeXGyreTermesX-Bold scale = 1.
+
+
+Package fontspec Info: 
+(fontspec)             TeXGyreTermesX-Italic scale = 1.
+
+
+Package fontspec Info: 
+(fontspec)             TeXGyreTermesX-Italic scale = 1.
+
+
+Package fontspec Info: 
+(fontspec)             TeXGyreTermesX-Slanted scale = 1.
+
+
+Package fontspec Info: 
+(fontspec)             TeXGyreTermesX-Slanted scale = 1.
+
+
+Package fontspec Info: 
+(fontspec)             TeXGyreTermesX-BoldItalic scale = 1.
+
+
+Package fontspec Info: 
+(fontspec)             TeXGyreTermesX-BoldItalic scale = 1.
+
+
+Package fontspec Info: 
+(fontspec)             TeXGyreTermesX-BoldSlanted scale = 1.
+
+
+Package fontspec Info: 
+(fontspec)             TeXGyreTermesX-BoldSlanted scale = 1.
+
+
+Package fontspec Info: 
+(fontspec)             Font family 'TeXGyreTermesX(0)' created for font
+(fontspec)             'TeXGyreTermesX' with options [Ligatures = TeX,Scale =
+(fontspec)             1,Extension = .otf,SmallCapsFeatures={RawFeature =
+(fontspec)             +pcap},RawFeature=-ss05,Ligatures=TeX,Extension =
+(fontspec)             .otf,UprightFont = TeXGyreTermesX-Regular,BoldFont =
+(fontspec)             TeXGyreTermesX-Bold,ItalicFont =
+(fontspec)             TeXGyreTermesX-Italic,BoldItalicFont =
+(fontspec)             TeXGyreTermesX-BoldItalic,SlantedFont =
+(fontspec)             *-Slanted,BoldSlantedFont= *-BoldSlanted,Numbers =
+(fontspec)             {Monospaced,Lining}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->s*[1]"[TeXGyreTermesX-Regular.otf]/OT:script=latn;language=dflt;-ss05;+tnum;+lnum;mapping=tex-text;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
+(fontspec)             <->s*[1]"[TeXGyreTermesX-Regular.otf]/OT:script=latn;language=dflt;-ss05;+tnum;+lnum;+smcp;+pcap;mapping=tex-text;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->s*[1]"[TeXGyreTermesX-Bold.otf]/OT:script=latn;language=dflt;-ss05;+tnum;+lnum;mapping=tex-text;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.:
+(fontspec)             <->s*[1]"[TeXGyreTermesX-Bold.otf]/OT:script=latn;language=dflt;-ss05;+tnum;+lnum;+smcp;+pcap;mapping=tex-text;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->s*[1]"[TeXGyreTermesX-Italic.otf]/OT:script=latn;language=dflt;-ss05;+tnum;+lnum;mapping=tex-text;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
+(fontspec)             <->s*[1]"[TeXGyreTermesX-Italic.otf]/OT:script=latn;language=dflt;-ss05;+tnum;+lnum;+smcp;+pcap;mapping=tex-text;"
+(fontspec)             - 'slanted' (m/sl) with NFSS spec.:
+(fontspec)             <->s*[1]"[TeXGyreTermesX-Slanted.otf]/OT:script=latn;language=dflt;-ss05;+tnum;+lnum;mapping=tex-text;"
+(fontspec)             - 'slanted small caps'  (m/scsl) with NFSS spec.:
+(fontspec)             <->s*[1]"[TeXGyreTermesX-Slanted.otf]/OT:script=latn;language=dflt;-ss05;+tnum;+lnum;+smcp;+pcap;mapping=tex-text;"
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+(fontspec)             <->s*[1]"[TeXGyreTermesX-BoldItalic.otf]/OT:script=latn;language=dflt;-ss05;+tnum;+lnum;mapping=tex-text;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.:
+(fontspec)             <->s*[1]"[TeXGyreTermesX-BoldItalic.otf]/OT:script=latn;language=dflt;-ss05;+tnum;+lnum;+smcp;+pcap;mapping=tex-text;"
+(fontspec)             - 'bold slanted' (b/sl) with NFSS spec.:
+(fontspec)             <->s*[1]"[TeXGyreTermesX-BoldSlanted.otf]/OT:script=latn;language=dflt;-ss05;+tnum;+lnum;mapping=tex-text;"
+(fontspec)             - 'bold slanted small caps'  (b/scsl) with NFSS spec.:
+(fontspec)             <->s*[1]"[TeXGyreTermesX-BoldSlanted.otf]/OT:script=latn;language=dflt;-ss05;+tnum;+lnum;+smcp;+pcap;mapping=tex-text;"
+
+LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/m/n' will be
+(Font)              scaled to size 12.045pt on input line 195.
+Package translations Info: No language package found. I am going to use `english' as default language. on input line 195.
+ (./main.aux)
+\openout1 = `main.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 195.
+LaTeX Font Info:    ... okay on input line 195.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 195.
+LaTeX Font Info:    ... okay on input line 195.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 195.
+LaTeX Font Info:    ... okay on input line 195.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 195.
+LaTeX Font Info:    ... okay on input line 195.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 195.
+LaTeX Font Info:    ... okay on input line 195.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 195.
+LaTeX Font Info:    ... okay on input line 195.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 195.
+LaTeX Font Info:    ... okay on input line 195.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 195.
+LaTeX Font Info:    ... okay on input line 195.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 195.
+LaTeX Font Info:    ... okay on input line 195.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 195.
+LaTeX Font Info:    ... okay on input line 195.
+
+Package fontspec Info: 
+(fontspec)             Adjusting the maths setup (use [no-math] to avoid
+(fontspec)             this).
+
+\symlegacymaths=\mathgroup9
+LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 195.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 195.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 195.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 195.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 195.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 195.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 195.
+LaTeX Font Info:    Redeclaring math accent \check on input line 195.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 195.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 195.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 195.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 195.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 195.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 195.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 195.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 195.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 195.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 195.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 195.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 195.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 195.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 195.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 195.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 195.
+LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
+(Font)              `operators' in the math version `normal' on input line 195.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> TU/TeXGyreTermesX(0)/m/n on input line 195.
+LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
+(Font)              `operators' in the math version `bold' on input line 195.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> TU/TeXGyreTermesX(0)/m/n on input line 195.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  TU/TeXGyreTermesX(0)/m/n --> TU/TeXGyreTermesX(0)/m/n on input line 195.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> TU/TeXGyreTermesX(0)/m/it on input line 195.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> TU/TeXGyreTermesX(0)/b/n on input line 195.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 195.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 195.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  TU/TeXGyreTermesX(0)/m/n --> TU/TeXGyreTermesX(0)/b/n on input line 195.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> TU/TeXGyreTermesX(0)/b/it on input line 195.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 195.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 195.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: xetex
+*geometry* verbose mode - [ preamble ] result:
+* driver: xetex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(72.2698pt, 452.96826pt, 72.2698pt)
+* v-part:(T,H,B)=(72.2698pt, 700.50723pt, 72.2698pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=452.96826pt
+* \textheight=700.50723pt
+* \oddsidemargin=-0.00018pt
+* \evensidemargin=-0.00018pt
+* \topmargin=-40.00018pt
+* \headheight=15.0pt
+* \headsep=25.0pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=35.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+Package hyperref Info: Link coloring ON on input line 195.
+(./main.out) (./main.out)
+\@outlinefile=\write4
+\openout4 = `main.out'.
+
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: subfig package v1.3 is loaded.
+Package caption Info: End \AtBeginDocument code.
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/translations/translations-basic-dictionary-english.trsl
+File: translations-basic-dictionary-english.trsl (english translation file `translations-basic-dictionary')
+)
+Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 195.
+LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/m/n' will be
+(Font)              scaled to size 26.09749pt on input line 201.
+LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/b/n' will be
+(Font)              scaled to size 26.09749pt on input line 201.
+LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/m/n' will be
+(Font)              scaled to size 18.06749pt on input line 203.
+ [1
+
+]
+LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/m/n' will be
+(Font)              scaled to size 15.05624pt on input line 215.
+ (./main.toc
+LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/b/n' will be
+(Font)              scaled to size 12.045pt on input line 1.
+LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/m/n' will be
+(Font)              scaled to size 8.0pt on input line 2.
+LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/m/n' will be
+(Font)              scaled to size 6.0pt on input line 2.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 2.
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 2.
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) [1
+
+
+])
+\tf@toc=\write5
+\openout5 = `main.toc'.
+
+ [2]
+第一章
+(./chapters/chapter1/part2-sand-sendiment.tex
+File: figure/sand-sample.jpg Graphic file (type bmp)
+<figure/sand-sample.jpg>
+ [1
+
+
+]
+File: figure/annular-3d-model.png Graphic file (type bmp)
+<figure/annular-3d-model.png>
+ [2]
+File: figure/chapter1/sand-mass-in-annular-VS-time.png Graphic file (type bmp)
+<figure/chapter1/sand-mass-in-annular-VS-time.png>
+File: figure/chapter1/sand-velocity-cloud-sections.png Graphic file (type bmp)
+<figure/chapter1/sand-velocity-cloud-sections.png>
+LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/m/n' will be
+(Font)              scaled to size 9.03374pt on input line 101.
+File: figure/chapter1/sand-volume-fraction-cloud-sections.png Graphic file (type bmp)
+<figure/chapter1/sand-volume-fraction-cloud-sections.png>
+ [3]
+File: figure/chapter1/sand-mass-in-annular-VS-time-flowrate.png Graphic file (type bmp)
+<figure/chapter1/sand-mass-in-annular-VS-time-flowrate.png>
+ [4]
+File: figure/sand-volume-fraction-vin-dot17.png Graphic file (type bmp)
+<figure/sand-volume-fraction-vin-dot17.png>
+LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/m/n' will be
+(Font)              scaled to size 5.0pt on input line 133.
+File: figure/sand-volume-fraction-vin-dot27.png Graphic file (type bmp)
+<figure/sand-volume-fraction-vin-dot27.png>
+File: figure/sand-volume-fraction-vin-dot69.png Graphic file (type bmp)
+<figure/sand-volume-fraction-vin-dot69.png>
+File: figure/chapter1/b-point-height-VS-flowrate.png Graphic file (type bmp)
+<figure/chapter1/b-point-height-VS-flowrate.png>
+File: figure/sand-volume-fraction-velocity-at-b-point-flowrate.png Graphic file (type bmp)
+<figure/sand-volume-fraction-velocity-at-b-point-flowrate.png>
+File: figure/chapter1/sand-mass-in-annular-VS-time-viscosity.png Graphic file (type bmp)
+<figure/chapter1/sand-mass-in-annular-VS-time-viscosity.png>
+File: figure/sand-volume-fraction-mu-1cp.png Graphic file (type bmp)
+<figure/sand-volume-fraction-mu-1cp.png>
+File: figure/sand-volume-fraction-mu-5cp.png Graphic file (type bmp)
+<figure/sand-volume-fraction-mu-5cp.png>
+File: figure/chapter1/b-point-height-VS-viscosity.png Graphic file (type bmp)
+<figure/chapter1/b-point-height-VS-viscosity.png>
+ [5] [6] [7]
+File: figure/sand-volume-fraction-velocity-at-b-point-viscosity.png Graphic file (type bmp)
+<figure/sand-volume-fraction-velocity-at-b-point-viscosity.png>
+ [8] [9]
+File: figure/tool-and-wellbore-simulation-model.png Graphic file (type bmp)
+<figure/tool-and-wellbore-simulation-model.png>
+File: figure/sand-distribution-annular-vin-dot37.png Graphic file (type bmp)
+<figure/sand-distribution-annular-vin-dot37.png>
+File: figure/sand-distribution-annular-vin-dot59.png Graphic file (type bmp)
+<figure/sand-distribution-annular-vin-dot59.png>
+ [10]) [11]
+第二章
+(./chapters/chapter2/part1-horizontal-sand.tex [12
+
+]
+File: figure/chapter2/horizontal-washing-experiment-setup.png Graphic file (type bmp)
+<figure/chapter2/horizontal-washing-experiment-setup.png>
+ [13] [14]
+File: figure/chapter2/IncomingReVStstar.png Graphic file (type bmp)
+<figure/chapter2/IncomingReVStstar.png>
+File: figure/chapter2/stagenation-with-inflection-point.png Graphic file (type bmp)
+<figure/chapter2/stagenation-with-inflection-point.png>
+File: figure/chapter2/bed-front-profile-VS-Rein.png Graphic file (type bmp)
+<figure/chapter2/bed-front-profile-VS-Rein.png>
+ [15] [16]
+File: figure/chapter2/bed-oscillation.png Graphic file (type bmp)
+<figure/chapter2/bed-oscillation.png>
+File: figure/chapter2/M-shaped-bed-height.png Graphic file (type bmp)
+<figure/chapter2/M-shaped-bed-height.png>
+ [17] [18]
+File: figure/chapter2/eta-gamma.png Graphic file (type bmp)
+<figure/chapter2/eta-gamma.png>
+ [19]
+File: figure/chapter2/bed-profile-guar-gel.png Graphic file (type bmp)
+<figure/chapter2/bed-profile-guar-gel.png>
+ [20]
+File: figure/chapter2/p-star-VS-t-star.png Graphic file (type bmp)
+<figure/chapter2/p-star-VS-t-star.png>
+File: figure/chapter2/Vs-star-VS-Rein.png Graphic file (type bmp)
+<figure/chapter2/Vs-star-VS-Rein.png>
+ [21]
+File: figure/chapter2/H-star-VS-Rein.png Graphic file (type bmp)
+<figure/chapter2/H-star-VS-Rein.png>
+File: figure/chapter2/Rel-VS-Rein.png Graphic file (type bmp)
+<figure/chapter2/Rel-VS-Rein.png>
+ [22] [23]
+File: figure/chapter2/phis-VS-Rein.png Graphic file (type bmp)
+<figure/chapter2/phis-VS-Rein.png>
+ [24] [25]) [26]
+第三章
+(./chapters/bib.tex [27
+
+] [28
+
+
+]) [29] (./chapters/appendix1.tex [30
+
+]
+
+LaTeX Warning: Reference `keliyunyi' on page 31 undefined on input line 52.
+
+
+LaTeX Warning: Reference `citimoni' on page 31 undefined on input line 53.
+
+
+LaTeX Warning: Reference `shuilimaichong' on page 31 undefined on input line 54.
+
+
+LaTeX Warning: Reference `siheyi' on page 31 undefined on input line 61.
+
+
+LaTeX Warning: Reference `darongliangqiangci' on page 31 undefined on input line 62.
+
+
+LaTeX Warning: Reference `duogongnengguolv' on page 31 undefined on input line 63.
+
+
+LaTeX Warning: Reference `kebianjingguaguan' on page 31 undefined on input line 64.
+
+
+LaTeX Warning: Reference `sanheyi' on page 31 undefined on input line 65.
+
+[31]
+
+LaTeX Warning: Reference `guaban' on page 32 undefined on input line 76.
+
+) [32] (./main.aux)
+ ***********
+LaTeX2e <2025-11-01>
+L3 programming layer <2020/03/25>
+ ***********
+
+
+LaTeX Warning: There were undefined references.
+
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: E10B104EFDDE45DB9E0A6B53F3FC913C;5766.
+ ) 
+Here is how much of TeX's memory you used:
+ 36497 strings out of 468174
+ 835884 string characters out of 5433150
+ 1198725 words of memory out of 5000000
+ 64580 multiletter control sequences out of 15000+600000
+ 641455 words of font info for 122 fonts, out of 8000000 for 9000
+ 1348 hyphenation exceptions out of 8191
+ 93i,13n,117p,1215b,1162s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+Output written on main.pdf (35 pages).
