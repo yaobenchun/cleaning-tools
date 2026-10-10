@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2026.7.19)  6 OCT 2026 19:59
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2026.7.19)  9 OCT 2026 17:11
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1235,144 +1235,98 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 LaTeX Font Info:    Trying to load font information for U+msb on input line 2.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1
-
-
-])
+))
 \tf@toc=\write5
 \openout5 = `main.toc'.
 
- [2]
-第一章
-(./chapters/chapter1/part2-sand-sendiment.tex
-File: figure/sand-sample.jpg Graphic file (type bmp)
-<figure/sand-sample.jpg>
  [1
 
 
 ]
-File: figure/annular-3d-model.png Graphic file (type bmp)
-<figure/annular-3d-model.png>
- [2]
-File: figure/chapter1/sand-mass-in-annular-VS-time.png Graphic file (type bmp)
-<figure/chapter1/sand-mass-in-annular-VS-time.png>
-File: figure/chapter1/sand-velocity-cloud-sections.png Graphic file (type bmp)
-<figure/chapter1/sand-velocity-cloud-sections.png>
+第一章
+(./chapters/chapter1/part3-iron-wire-sendiment.tex
+File: figure/iron-shavings-sample.jpg Graphic file (type bmp)
+<figure/iron-shavings-sample.jpg>
+File: figure/iron-wire-actual.jpg Graphic file (type bmp)
+<figure/iron-wire-actual.jpg>
 LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/m/n' will be
-(Font)              scaled to size 9.03374pt on input line 101.
-File: figure/chapter1/sand-volume-fraction-cloud-sections.png Graphic file (type bmp)
-<figure/chapter1/sand-volume-fraction-cloud-sections.png>
- [3]
-File: figure/chapter1/sand-mass-in-annular-VS-time-flowrate.png Graphic file (type bmp)
-<figure/chapter1/sand-mass-in-annular-VS-time-flowrate.png>
+(Font)              scaled to size 9.03374pt on input line 25.
+File: figure/iron-wire-model.jpg Graphic file (type bmp)
+<figure/iron-wire-model.jpg>
+ [1
+
+
+]
+File: figure/iron-wire-distribution-1cp-velocity-colored.png Graphic file (type bmp)
+<figure/iron-wire-distribution-1cp-velocity-colored.png>
+LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/m/n' will be
+(Font)              scaled to size 5.0pt on input line 87.
+File: figure/iron-wire-distribution-1dot7-cp-velocity-colored.png Graphic file (type bmp)
+<figure/iron-wire-distribution-1dot7-cp-velocity-colored.png>
+File: figure/iron-wire-mean-velocity-evolution-viscosity.jpg Graphic file (type bmp)
+<figure/iron-wire-mean-velocity-evolution-viscosity.jpg>
+File: figure/iron-wire-distribution-1dot7cp-0dot17mpers.png Graphic file (type bmp)
+<figure/iron-wire-distribution-1dot7cp-0dot17mpers.png>
+File: figure/iron-wire-distribution-1dot7cp-0dot27mpers.png Graphic file (type bmp)
+<figure/iron-wire-distribution-1dot7cp-0dot27mpers.png>
+ [2] [3]
+File: figure/iron-wire-particle-track-1dot7cp-0dot17mpers.jpg Graphic file (type bmp)
+<figure/iron-wire-particle-track-1dot7cp-0dot17mpers.jpg>
+File: figure/iron-wire-particle-track-1dot7cp-0dot27mpers.jpg Graphic file (type bmp)
+<figure/iron-wire-particle-track-1dot7cp-0dot27mpers.jpg>
+File: figure/chapter1/iron-wire-mean-velocity-evolution-incoming-velocity.png Graphic file (type bmp)
+<figure/chapter1/iron-wire-mean-velocity-evolution-incoming-velocity.png>
  [4]
-File: figure/sand-volume-fraction-vin-dot17.png Graphic file (type bmp)
-<figure/sand-volume-fraction-vin-dot17.png>
-LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/m/n' will be
-(Font)              scaled to size 5.0pt on input line 133.
-File: figure/sand-volume-fraction-vin-dot27.png Graphic file (type bmp)
-<figure/sand-volume-fraction-vin-dot27.png>
-File: figure/sand-volume-fraction-vin-dot69.png Graphic file (type bmp)
-<figure/sand-volume-fraction-vin-dot69.png>
-File: figure/chapter1/b-point-height-VS-flowrate.png Graphic file (type bmp)
-<figure/chapter1/b-point-height-VS-flowrate.png>
-File: figure/sand-volume-fraction-velocity-at-b-point-flowrate.png Graphic file (type bmp)
-<figure/sand-volume-fraction-velocity-at-b-point-flowrate.png>
-File: figure/chapter1/sand-mass-in-annular-VS-time-viscosity.png Graphic file (type bmp)
-<figure/chapter1/sand-mass-in-annular-VS-time-viscosity.png>
-File: figure/sand-volume-fraction-mu-1cp.png Graphic file (type bmp)
-<figure/sand-volume-fraction-mu-1cp.png>
-File: figure/sand-volume-fraction-mu-5cp.png Graphic file (type bmp)
-<figure/sand-volume-fraction-mu-5cp.png>
-File: figure/chapter1/b-point-height-VS-viscosity.png Graphic file (type bmp)
-<figure/chapter1/b-point-height-VS-viscosity.png>
- [5] [6] [7]
-File: figure/sand-volume-fraction-velocity-at-b-point-viscosity.png Graphic file (type bmp)
-<figure/sand-volume-fraction-velocity-at-b-point-viscosity.png>
- [8] [9]
-File: figure/tool-and-wellbore-simulation-model.png Graphic file (type bmp)
-<figure/tool-and-wellbore-simulation-model.png>
-File: figure/sand-distribution-annular-vin-dot37.png Graphic file (type bmp)
-<figure/sand-distribution-annular-vin-dot37.png>
-File: figure/sand-distribution-annular-vin-dot59.png Graphic file (type bmp)
-<figure/sand-distribution-annular-vin-dot59.png>
- [10]) [11]
+File: figure/iron-wire-distribution-1dot7cp-0dot27mpers-3angles.jpg Graphic file (type bmp)
+<figure/iron-wire-distribution-1dot7cp-0dot27mpers-3angles.jpg>
+ [5]
+File: figure/iron-wire-particle-track-1dot7cp-0dot27mpers-3angles.jpg Graphic file (type bmp)
+<figure/iron-wire-particle-track-1dot7cp-0dot27mpers-3angles.jpg>
+File: figure/chapter1/iron-wire-mean-velocity-evolution-5angles.png Graphic file (type bmp)
+<figure/chapter1/iron-wire-mean-velocity-evolution-5angles.png>
+) [6] [7]
 第二章
-(./chapters/chapter2/part1-horizontal-sand.tex [12
+[8
 
 ]
-File: figure/chapter2/horizontal-washing-experiment-setup.png Graphic file (type bmp)
-<figure/chapter2/horizontal-washing-experiment-setup.png>
- [13] [14]
-File: figure/chapter2/IncomingReVStstar.png Graphic file (type bmp)
-<figure/chapter2/IncomingReVStstar.png>
-File: figure/chapter2/stagenation-with-inflection-point.png Graphic file (type bmp)
-<figure/chapter2/stagenation-with-inflection-point.png>
-File: figure/chapter2/bed-front-profile-VS-Rein.png Graphic file (type bmp)
-<figure/chapter2/bed-front-profile-VS-Rein.png>
- [15] [16]
-File: figure/chapter2/bed-oscillation.png Graphic file (type bmp)
-<figure/chapter2/bed-oscillation.png>
-File: figure/chapter2/M-shaped-bed-height.png Graphic file (type bmp)
-<figure/chapter2/M-shaped-bed-height.png>
- [17] [18]
-File: figure/chapter2/eta-gamma.png Graphic file (type bmp)
-<figure/chapter2/eta-gamma.png>
- [19]
-File: figure/chapter2/bed-profile-guar-gel.png Graphic file (type bmp)
-<figure/chapter2/bed-profile-guar-gel.png>
- [20]
-File: figure/chapter2/p-star-VS-t-star.png Graphic file (type bmp)
-<figure/chapter2/p-star-VS-t-star.png>
-File: figure/chapter2/Vs-star-VS-Rein.png Graphic file (type bmp)
-<figure/chapter2/Vs-star-VS-Rein.png>
- [21]
-File: figure/chapter2/H-star-VS-Rein.png Graphic file (type bmp)
-<figure/chapter2/H-star-VS-Rein.png>
-File: figure/chapter2/Rel-VS-Rein.png Graphic file (type bmp)
-<figure/chapter2/Rel-VS-Rein.png>
- [22] [23]
-File: figure/chapter2/phis-VS-Rein.png Graphic file (type bmp)
-<figure/chapter2/phis-VS-Rein.png>
- [24] [25]) [26]
 第三章
-(./chapters/bib.tex [27
+(./chapters/bib.tex [9
 
-] [28
+] [10
 
 
-]) [29] (./chapters/appendix1.tex [30
+]) [11] (./chapters/appendix1.tex [12
 
 ]
 
-LaTeX Warning: Reference `keliyunyi' on page 31 undefined on input line 52.
+LaTeX Warning: Reference `keliyunyi' on page 13 undefined on input line 52.
 
 
-LaTeX Warning: Reference `citimoni' on page 31 undefined on input line 53.
+LaTeX Warning: Reference `citimoni' on page 13 undefined on input line 53.
 
 
-LaTeX Warning: Reference `shuilimaichong' on page 31 undefined on input line 54.
+LaTeX Warning: Reference `shuilimaichong' on page 13 undefined on input line 54.
 
 
-LaTeX Warning: Reference `siheyi' on page 31 undefined on input line 61.
+LaTeX Warning: Reference `siheyi' on page 13 undefined on input line 61.
 
 
-LaTeX Warning: Reference `darongliangqiangci' on page 31 undefined on input line 62.
+LaTeX Warning: Reference `darongliangqiangci' on page 13 undefined on input line 62.
 
 
-LaTeX Warning: Reference `duogongnengguolv' on page 31 undefined on input line 63.
+LaTeX Warning: Reference `duogongnengguolv' on page 13 undefined on input line 63.
 
 
-LaTeX Warning: Reference `kebianjingguaguan' on page 31 undefined on input line 64.
+LaTeX Warning: Reference `kebianjingguaguan' on page 13 undefined on input line 64.
 
 
-LaTeX Warning: Reference `sanheyi' on page 31 undefined on input line 65.
+LaTeX Warning: Reference `sanheyi' on page 13 undefined on input line 65.
 
-[31]
+[13]
 
-LaTeX Warning: Reference `guaban' on page 32 undefined on input line 76.
+LaTeX Warning: Reference `guaban' on page 14 undefined on input line 76.
 
-) [32] (./main.aux)
+) [14] (./main.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2020/03/25>
@@ -1382,15 +1336,15 @@ L3 programming layer <2020/03/25>
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: E10B104EFDDE45DB9E0A6B53F3FC913C;5766.
+(rerunfilecheck)             Checksum: 272B221BCA72A4515A337D544AF69F95;4841.
  ) 
 Here is how much of TeX's memory you used:
- 36497 strings out of 468174
- 835884 string characters out of 5433150
- 1198725 words of memory out of 5000000
- 64580 multiletter control sequences out of 15000+600000
+ 36231 strings out of 468174
+ 824709 string characters out of 5433150
+ 1194700 words of memory out of 5000000
+ 64337 multiletter control sequences out of 15000+600000
  641455 words of font info for 122 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 93i,13n,117p,1215b,1162s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 93i,13n,117p,1215b,1172s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.pdf (35 pages).
+Output written on main.pdf (16 pages).
