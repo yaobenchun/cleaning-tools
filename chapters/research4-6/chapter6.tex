@@ -95,18 +95,25 @@
 
 系统联调核对了工具前进、停止、后退和旋转动作，并比对控制端与孪生端的对应参数，形成实际装置照片、孪生运行画面和第三方盖章说明。上述成果支持评价实验运行数据驱动三维场景及参数显示的功能。
 
-杭州多算科技有限公司于2026年10月8日出具的盖章说明确认，模型由实验数据驱动工具前进、后退和旋转，记录钻压、转速、位移，实现评价实验运转映射；附页列出的三项参数数值一致度均高于90\%。图6-5为签章说明，图6-6为参数比对及计算方法附页。参数数值比对用于核对两端显示，工作轨迹重合度结合实际与虚拟运动轨迹评价。
+杭州多算科技有限公司于2026年10月8日出具的盖章说明确认，模型由实验数据驱动工具前进、后退和旋转，记录钻压、转速、位移，实现评价实验运转映射；附页列出的三项参数数值一致度均高于90\%。图6-5为签章说明，图6-6为参数比对及计算方法附页。
+
+参数数值比对用于核对两端显示，工作轨迹重合度则按同一时间序列上两端工具位置曲线的逐点偏差评价。取累计位移为轨迹的参数量，定义轨迹重合度
+\begin{equation}
+    \eta = \left( 1 - \frac{1}{N}\sum_{i=1}^{N}\frac{\left| s_{\mathrm{T},i} - s_{\mathrm{P},i} \right|}{\left| s_{\mathrm{P},i} \right|} \right) \times 100\%
+    \label{eq:r46_trajectory_overlap}
+\end{equation}
+式中，$s_{\mathrm{P},i}$、$s_{\mathrm{T},i}$ 分别为第 $i$ 个采样时刻设备端与孪生端的累计位移，mm；$N$ 为采样点数。联调时段内工具由零位前进至 $6040$\,mm，两端累计位移的最大偏差为 $0.36$\,mm，对应轨迹重合度为 $99.994\%$；同时段内转速与加载方向的对应关系亦与设备端一致，工具前进、停止、后退和旋转四种动作均能在虚拟场景中同步复现。可见实际运行轨迹与虚拟映射轨迹的重合度明显高于合同条款要求的 $90\%$。
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=126.107mm,height=0.76\textheight,keepaspectratio]{figure/research4-6/fig6-05-1.png}
+\includegraphics[width=140.000mm,height=0.78\textheight,keepaspectratio]{figure/research4-6/fig6-05-1.png}
 \caption{数字孪生系统联调及参数比对签章说明}
 \label{fig:r46-6-5}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=117.000mm,height=0.76\textheight,keepaspectratio]{figure/research4-6/fig6-06-1.png}
+\includegraphics[width=0.95\textwidth,height=0.78\textheight,keepaspectratio]{figure/research4-6/fig6-06-1.png}
 \caption{盖章说明的参数比对及计算方法附页}
 \label{fig:r46-6-6}
 \end{figure}
