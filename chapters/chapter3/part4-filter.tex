@@ -270,7 +270,7 @@ $n$---许用切应力与许用拉应力之比，取 $n=0.66$（按《机械设�
     \begin{aligned}
         T_{\max} &= \frac{[\tau] \cdot \pi \cdot (D^4 - d^4)}{16 \cdot D} \times 10^{-6}
                  = \frac{613.8 \times 3.14 \times (120.65^4 - 93.40^4)}{16 \times 120.65} \times 10^{-6} \\
-                 &= 65.60\,\text{kN} \cdot \text{m} > 18\,\text{kN} \cdot \text{m}
+                 &= 135.57\,\text{kN} \cdot \text{m} > 18\,\text{kN} \cdot \text{m}
     \end{aligned}
 \end{equation}
 满足设计要求。
@@ -408,7 +408,7 @@ $d$---NC38接头内孔直径，mm（按图纸取 $d = 44.45$\,mm）。
 \begin{equation}
 V = L \cdot A = L \cdot \frac{\pi \cdot (D^2 - d^2)}{4} \times 10^{-6}
 \end{equation}
-式中，$V$---过滤容量，L（设计指标 $\ge 15$\,L，见本节计算结果）；
+式中，$V$---过滤容量，L（附件对多功能过滤工具的碎屑存储量要求为 $\ge 30$\,L，单支工具按过滤腔几何容积计，组接使用时按合计容积计）；
 
 $L$---过滤腔长度，mm（取 4864.56\,mm，图号 GLGJ70012A--加长过滤套筒、GLGJ70021A--加长过滤外筒零件图标注的过滤段长度）；
 
@@ -425,10 +425,10 @@ $10^{-6}$---量纲换算系数，mm$^3$换算为L（$1\,\text{L} = 10^6\,\text{m
     \begin{aligned}
         V &= L \cdot A = L \cdot \frac{\pi \cdot (D^2 - d^2)}{4} \times 10^{-6} \\
         &= 4864.56 \times \frac{\pi \cdot (100.26^2 - 73.03^2)}{4} \times 10^{-6} \\
-        &= 18.0\,\text{L} \ge 15\,\text{L}
+        &= 18.0\,\text{L}
     \end{aligned}
 \end{equation}
-满足设计要求。
+即单支加长版过滤工具的过滤腔几何容积为 $18.0\,\text{L}$；按滤网孔隙率 $0.88$ 折算，其有效碎屑存储量为 $15.85\,\text{L}$，与表\ref{tab:filter_tool_params}所列的加长版碎屑存储量一致。附件对多功能过滤工具提出的碎屑存储量要求为 $\ge 30\,\text{L}$，单支加长版工具尚未达到该指标，两支加长版工具组接使用时几何容积为 $36.0\,\text{L}$、有效碎屑存储量为 $31.7\,\text{L}$，可满足 $\ge 30\,\text{L}$ 的要求；标准版与加长版各一支组接时有效存储量为 $22.75\,\text{L}$，仍低于该指标。因此，实际作业中应根据井筒碎屑量按加长版的支数配置过滤工具，井筒碎屑量较大的井段宜按两支加长版组接。工具的通径按套管规格系列化设计，9-5/8\inch 规格为 $\phi 68.28$\,mm，满足附件 $\ge 2.688''$ 的要求，7\inch 规格受套管尺寸限制取 $\phi 35.05$\,mm；允许转速满足 $\ge 120$\,rpm 的要求。
 
 
 各主要受力件的强度校核结果汇总见表~\ref{tab:force_data_filter}。
@@ -451,16 +451,16 @@ $10^{-6}$---量纲换算系数，mm$^3$换算为L（$1\,\text{L} = 10^6\,\text{m
         下接头最大拉力 $F_{\max5}$ & $2838.8\,\text{kN}$ \\
         材料许用切应力 $[\tau]$ & $613.8\,\text{MPa}$ \\
         最大扭矩（技术参数表许用值） & $39\,\text{kN}\cdot\text{m}$ \\
-        提升短节最大扭力 $T_{\max1}$ & $65.6\,\text{kN}\cdot\text{m}$ \\
+        提升短节最大扭力 $T_{\max1}$ & $135.6\,\text{kN}\cdot\text{m}$ \\
         滤进接头最大扭力 $T_{\max2}$ & $76.4\,\text{kN}\cdot\text{m}$ \\
         滤出接头最大扭力 $T_{\max3}$ & $78.5\,\text{kN}\cdot\text{m}$ \\
         下接头最大扭力 $T_{\max4}$ & $135.6\,\text{kN}\cdot\text{m}$ \\
-        过滤容量 & $18\,\text{L}$ \\
+        过滤腔几何容积 & $18.0\,\text{L}$（单支加长版，有效碎屑存储量 $15.85\,\text{L}$） \\
         \bottomrule % 底线
     \end{tabularx}
 \end{table}
 
-由表\ref{tab:force_data_filter}可知，过滤工具各受力件的抗拉能力均大于$1000\,\text{kN}$的设计指标（最小为滤出接头凹槽根部$1974.94\,\text{kN}$）；抗扭能力均大于$18\,\text{kN}\cdot\text{m}$的合同指标，其中以提升短节内螺纹根部的$65.6\,\text{kN}\cdot\text{m}$为最小，仍大于技术参数表所列的许用抗扭强度$39\,\text{kN}\cdot\text{m}$，故过滤工具的抗拉、抗扭强度均满足设计要求。
+由表\ref{tab:force_data_filter}可知，过滤工具各受力件的抗拉能力均大于$1000\,\text{kN}$的设计指标（最小为滤出接头凹槽根部$1974.94\,\text{kN}$）；抗扭能力均大于$18\,\text{kN}\cdot\text{m}$的合同指标，其中以滤进接头外螺纹根部的$76.4\,\text{kN}\cdot\text{m}$为最小，仍大于技术参数表所列的许用抗扭强度$39\,\text{kN}\cdot\text{m}$，故过滤工具的抗拉、抗扭强度均满足设计要求。
 
 
 \subsection{操作方式}
